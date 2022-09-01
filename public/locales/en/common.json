@@ -1,0 +1,6 @@
+{
+    "greetings": "Hello",
+    "shoppingcart": "You have {{ number }} items in your shopping cart",
+    "language-name-tr": "Türkçe",
+    "language-name-en": "English"
+}
