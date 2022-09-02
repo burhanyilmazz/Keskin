@@ -6,6 +6,7 @@ import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 
 import styles from '../../styles/Home.module.css'
+import { StaticI18nLink } from '../../components';
 
 export default function About() {
   const { t } = useTranslation('common')
@@ -20,7 +21,7 @@ export default function About() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>{t('language-name-tr')}</h1>
-
+        <StaticI18nLink href='/product'>HMF</StaticI18nLink>
       </main>
     </div>
   )

@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next';
 
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
+import { StaticI18nLink } from '../../components/';
 
 import styles from '../../styles/Home.module.css'
 
@@ -20,7 +21,8 @@ export default function Homepage() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>{t('greetings')}</h1>
-
+				<StaticI18nLink href='/about'>HMF</StaticI18nLink>
+				
       </main>
     </div>
   )

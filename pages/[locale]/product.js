@@ -6,6 +6,7 @@ import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 
 import styles from '../../styles/Home.module.css'
+import { StaticI18nLink } from '../../components';
 
 export default function Product() {
   const { t } = useTranslation('common')
@@ -20,7 +21,7 @@ export default function Product() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>{t('shoppingcart', {number: 10})}</h1>
-
+        <StaticI18nLink href='/'>yo yo</StaticI18nLink>
       </main>
     </div>
   )
