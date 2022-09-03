@@ -1,0 +1,19 @@
+.icon {
+line-height: 1;
+}
+
+.icon:before {
+font-family: keskin !important;
+font-style: normal;
+font-weight: normal !important;
+vertical-align: top;
+}
+
+
+  %icon-arrow {
+  content: "\f101";
+  }
+
+  .icon-arrow:before {
+  content: "\f101";
+  }

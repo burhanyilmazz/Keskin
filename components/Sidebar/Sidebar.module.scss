@@ -1,0 +1,239 @@
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 9999;
+  width: 100%;
+  background: rgba(31, 36, 43, 0.3);
+  /*  
+
+  &-product {
+    &__nav-bottom {
+      position: absolute;
+      bottom: 200px;
+
+      a {
+        display: flex;
+        color: #35373C;
+        font-weight: 600;
+        font-size: 12px;
+        align-items: center;
+        margin-bottom: 20px;
+
+        i {
+          margin-right: 20px;
+          font-weight: 300;
+
+          &::before {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &__bottom {
+      background: rgba($color: #35373C, $alpha: 0.04);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 100px;
+      height: 184px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--open {
+    .o-sidebar {
+      &__main {
+        background: #fff;
+        border-color: rgba(179, 186, 204, 0.3);
+      }
+      &__nav {
+        transform: translateX(-100%);
+        transition-delay: 0s;
+      }
+      &__product {
+        transition-delay: 0.2s;
+        transform: translateX(0);
+      }
+    }
+
+    & ~ .a-shadow {
+      z-index: 13;
+      opacity: 1;
+      transition-delay: 0.5s;
+    }
+  } */
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  max-width: 746px;
+  height: 100vh;
+  background: #f9f9fa;
+  top: 0;
+  right: 0;
+  //right: 689px;
+  padding: 128px 0 64px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: all 0.5s ease;
+  //transform: translateX(300%);
+
+  &__head {
+    padding-left: 96px;
+    padding-right: 48px;
+
+    h6 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 19px;
+      color: #1f242b;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 43px;
+      color: #1f242b;
+    }
+  }
+
+  &__foot {
+    padding-left: 96px;
+    padding-right: 48px;
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1f242b;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #1f242b;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  width: 443px;
+  height: 100vh;
+  background: #fff;
+  top: 0;
+  z-index: 2;
+  transition: all 0.5s ease;
+  transform: translateX(731px);
+  transition-delay: 0.2s;
+  display: block;
+
+  nav {
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    padding: 128px 100px 20px;
+
+    ul {
+      font-size: 32px;
+      font-weight: 500;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        position: relative;
+        line-height: 48px;
+        cursor: pointer;
+        color: #1F242B;
+        margin-bottom: 32px;
+
+        a {
+          color: #1F242B;
+        }
+
+        span {
+          display: flex;
+          transition: all 0.5s ease;
+
+          &:after {
+            width: 30px;
+            content: "+";
+            display: inline-flex;
+            position: absolute;
+            font-weight: normal;
+            margin-top: 0;
+            right: 0;
+          }
+        }
+
+        &:hover {
+          color: #FC6A10;
+          > a {
+            color: #2b5135;
+          }
+
+          &:after {
+            color: #FC6A10;
+          }
+        }
+      }
+
+      a {
+        color: #35373c;
+        display: flex;
+        width: calc(100% - 50px);
+        transition: all 0.5s ease;
+
+        &:hover {
+          color: #FC6A10 !important;
+        }
+      }
+
+      ul {
+        font-size: 20px;
+        font-weight: 400;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+
+        li {
+          line-height: 27px;
+          a {
+            color: #35373c;
+            padding: 8px 0;
+          }
+          span {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &--active {
+    color: #2b5135 !important;
+    > a {
+      color: #2b5135 !important;
+    }
+
+    span {
+      &:after {
+        color: #2b5135 !important;
+        content: "-" !important;
+      }
+    }
+
+    ul {
+      display: flex !important;
+    }
+  }
+}

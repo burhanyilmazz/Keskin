@@ -1,0 +1,81 @@
+@import 'fonts';
+@import 'icons';
+
+body {
+  background: #F9F9FA;
+  font-size: 16px;
+  color: #35373c;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
+  @media screen and (max-width: 1024px) {
+    padding-top: rem(90px);
+  }
+
+  &.paddless {
+    padding: 0;
+  }
+}
+
+html {
+  height: -webkit-fill-available;
+  @media screen and (max-width: 768px) {
+    overflow-x: hidden;
+  }
+}
+
+*,
+*::before,
+*::after {
+  outline: none;
+  box-sizing: border-box;
+}
+
+input,
+button,
+label,
+textarea,
+select,
+input::-webkit-input-placeholder {
+  font-family: "Satoshi", sans-serif;
+  appearance: none;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+i {
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+}
+i::before {
+  font-size: 1.5rem;
+  float: left;
+}
+
+[class*="icon-"] {
+  &::before {
+    font-family: "keskin" !important;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  padding-right: 48px;
+  padding-left: 48px;
+  margin-right: auto;
+  margin-left: auto;
+}

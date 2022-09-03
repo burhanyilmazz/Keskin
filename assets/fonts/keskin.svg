@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?> 
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <font id="keskin" horiz-adv-x="6">
+    <font-face font-family="keskin"
+      units-per-em="10" ascent="10"
+      descent="0" />
+    <missing-glyph horiz-adv-x="0" />
+    <glyph glyph-name="arrow"
+      unicode="&#xF101;"
+      horiz-adv-x="6" d=" M0.749648 2.0938L3.65965 5.0038L0.749648 7.9138C0.457148 8.2063 0.457148 8.6788 0.749648 8.9713C1.04215 9.263799 1.51465 9.263799 1.80715 8.9713L5.24965 5.5288C5.54215 5.2363 5.54215 4.7638 5.24965 4.4713L1.80715 1.0288C1.51465 0.7363 1.04215 0.7363 0.749648 1.0288C0.464648 1.3213 0.457148 1.8013 0.749648 2.0938z" />
+  </font>
+</defs>
+</svg>

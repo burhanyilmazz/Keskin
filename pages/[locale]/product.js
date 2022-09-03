@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 
-import styles from '../../styles/Home.module.css'
+import styles from '../../assets/styles/Home.module.scss'
 import { StaticI18nLink } from '../../components';
 
 export default function Product() {
