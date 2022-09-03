@@ -1,5 +1,8 @@
+import { Navigation, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import styles from './Sidebar.module.scss';
-import { StaticI18nLink } from '../';
+import { StaticI18nLink, SocialMedia, LinkButton, Card } from '../';
 
 export const Sidebar = () => {
   return (
@@ -10,12 +13,24 @@ export const Sidebar = () => {
           <p>11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!</p>
         </div>
         <div className={styles['main__body']}>
-          
+          <Swiper
+            modules={[Navigation, A11y]}
+            spaceBetween={24}
+            slidesPerView={'auto'}
+            navigation
+            scrollbar={{ draggable: true }}
+            className={'sidebar__slider'}
+          >
+            <SwiperSlide className={styles['main__slide']}><Card title={'Seramik ve Banyo Ürünleri'} href={'/product'} /></SwiperSlide>
+            <SwiperSlide className={styles['main__slide']}><Card title={'Parke Ürünleri'} href={'/product'} /></SwiperSlide>
+            <SwiperSlide className={styles['main__slide']}><Card title={'Boya Ürünleri'} href={'/product'} /></SwiperSlide>
+            <SwiperSlide className={styles['main__slide']}><Card title={'Seramik Ürünleri'} href={'/product'} /></SwiperSlide>
+          </Swiper>
         </div>
         <div className={styles['main__foot']}>
           <h3>E-Katalog</h3>
           <p>Güncel ürün kataloğumuz için lütfen aşağıdaki butona tıklayınız.</p>
-          <button>İndir</button>
+          <LinkButton href='#' text='İndir'/>
         </div>
       </div>
       <div className={styles['nav']}>
@@ -41,7 +56,7 @@ export const Sidebar = () => {
           </ul>
         </nav>
         <div className={styles['social-media']}>
-
+          <SocialMedia />
         </div>
       </div>
     </aside>
