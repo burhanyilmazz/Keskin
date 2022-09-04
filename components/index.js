@@ -5,3 +5,6 @@ export * from './SocialMedia';
 export * from './LinkButton';
 export * from './Card';
 export * from './Hamburger';
+export * from './Header';
+export * from './Carousel';
+export * from './Footer';

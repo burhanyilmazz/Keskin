@@ -4,7 +4,8 @@ import { useTranslation } from 'next-i18next';
 
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
-import { Sidebar, StaticI18nLink, Hamburger } from '../../components/';
+import {  StaticI18nLink } from '../../components/';
+import { Layout } from '../../layout'
 
 import styles from '../../assets/styles/Home.module.scss'
 
@@ -19,13 +20,10 @@ export default function Product() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Hamburger />
-      <Sidebar />
-      <main className={styles.main}>
+      <Layout>
         <h1 className={styles.title}>{t('greetings')}</h1>
 				<StaticI18nLink href='/about'>HMF</StaticI18nLink>
-				
-      </main>
+      </Layout>
     </div>
   )
 }

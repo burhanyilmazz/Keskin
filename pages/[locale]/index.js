@@ -4,12 +4,42 @@ import { useTranslation } from 'next-i18next';
 
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
-import { Sidebar, StaticI18nLink, Hamburger } from '../../components/';
+import { Layout } from '../../layout'
+import { Carousel } from '../../components/';
 
 import styles from '../../assets/styles/Home.module.scss'
 
+import { products } from '../../utils/Products';
+
 export default function Homepage() {
-  const { t } = useTranslation('common')
+  const { t } = useTranslation('common');
+
+  const carousel = [
+    {
+      title: 'NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
+      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
+      href: '/product',
+      image: '/images/dummy/carousel.jpg',
+      thumb: '/images/dummy/carousel.jpg',
+      category: 'Banyo / Seramik',
+    },
+    {
+      title: '2NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
+      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
+      href: '/product',
+      image: '/images/dummy/carousel.jpg',
+      thumb: '/images/dummy/carousel.jpg',
+      category: 'Banyo / Seramik2',
+    },
+    {
+      title: '3NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
+      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
+      href: '/product',
+      image: '/images/dummy/carousel.jpg',
+      thumb: '/images/dummy/carousel.jpg',
+      category: 'Banyo / Seramik3',
+    }
+  ]
 
   return (
     <div className={styles.container}>
@@ -19,13 +49,9 @@ export default function Homepage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Hamburger />
-      <Sidebar />
-      <main className={styles.main}>
-        <h1 className={styles.title}>{t('greetings')}</h1>
-				<StaticI18nLink href='/about'>HMF</StaticI18nLink>
-				
-      </main>
+      <Layout type={'transparent'} products={products}>
+        <Carousel data={carousel}/>
+      </Layout>
     </div>
   )
 }

@@ -7,6 +7,7 @@ import { getI18nPaths } from '../../getI18nPaths'
 
 import styles from '../../assets/styles/Home.module.scss'
 import { StaticI18nLink } from '../../components';
+import { Layout } from '../../layout'
 
 export default function About() {
   const { t } = useTranslation('common')
@@ -19,10 +20,10 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>{t('language-name-tr')}</h1>
-        <StaticI18nLink href='/product'>HMF</StaticI18nLink>
-      </main>
+      <Layout>
+        <h1 className={styles.title}>{t('greetings')}</h1>
+				<StaticI18nLink href='/about'>HMF</StaticI18nLink>
+      </Layout>
     </div>
   )
 }

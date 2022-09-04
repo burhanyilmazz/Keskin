@@ -1,17 +1,16 @@
 .link-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 4px 4px 4px 16px;
-  gap: 16px;
-  border: 1px solid #1f242b;
-  border-radius: 8px;
-  background: #fff;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-
   a {
     color: #1f242b;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 4px 4px 16px;
+    gap: 16px;
+    border: 1px solid #1f242b;
+    border-radius: 8px;
+    background: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   span {
@@ -23,11 +22,23 @@
     align-items: center;
     justify-content: center;
     margin-left: 16px;
-    
+
     i {
       &:before {
         font-size: 10px;
       }
+    }
+  }
+
+  &--transparent {
+    a {
+      color: #fff !important;
+      border-color: #fff;
+      background: transparent;
+    }
+
+    span {
+      background: rgba(255, 255, 255, 0.1) !important;
     }
   }
 }

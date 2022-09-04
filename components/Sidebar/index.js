@@ -3,52 +3,17 @@ import { useRouter } from "next/router";
 import { Navigation, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 
 import styles from './Sidebar.module.scss';
-import { StaticI18nLink, SocialMedia, LinkButton, Card } from '../';
+import { StaticI18nLink, SocialMedia, LinkButton, Card, Icon } from '../';
 
-export const Sidebar = () => {
-  const [list, setList] = useState([
-    {
-      title: "SIDEBAR.CORPARATE",
-      children: [
-        {
-          title: "SIDEBAR.CORPARATE.ABOUT",
-          href: '/about'
-        },
-        {
-          title: "SIDEBAR.CORPARATE.EXPORT",
-          href: '/product'
-        }
-      ]
-    },
-    {
-      title: "SIDEBAR.DEALER",
-      children: [
-        {
-          title: "SIDEBAR.CORPARATE.ABOUT",
-          href: '/about'
-        },
-        {
-          title: "SIDEBAR.CORPARATE.EXPORT",
-          href: '/product'
-        }
-      ]
-    },
-    {
-      title: "SIDEBAR.BLOG",
-      href: '/product4',
-    },
-    {
-      title: "SIDEBAR.CAREER",
-      href: '/product5'
-    },
-    {
-      title: "SIDEBAR.CONTACT",
-      href: '/product6'
-    },
-  ])
+import { navlist } from '../../utils/Nav';
+
+export const Sidebar = (props) => {
+  const { isShow, products } = props;
+  const [list, setList] = useState(navlist)
 
   const onClick = (event, index) => {
     list[index].isOpen = !list[index].isOpen;
@@ -65,25 +30,33 @@ export const Sidebar = () => {
   const { t } = useTranslation('common')
 
   return (
-    <aside className={styles['sidebar']}>
+    <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
       <div className={styles['main']}>
         <div className={styles['main__head']}>
           <h6>Ürün Grupları</h6>
           <p>11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!</p>
         </div>
         <div className={styles['main__body']}>
+          <div className={styles['navigation']}>
+            <div className='button-next'><Icon icon='arrow' /></div>
+            <div className='button-prev'><Icon icon='arrow' /></div>
+          </div>
           <Swiper
             modules={[Navigation, A11y]}
             spaceBetween={24}
             slidesPerView={'auto'}
-            navigation
-            scrollbar={{ draggable: true }}
+            navigation={{
+              nextEl: '.button-next',
+              prevEl: '.button-prev',
+            }}
             className={'sidebar__slider'}
           >
-            <SwiperSlide className={styles['main__slide']}><Card title={'Seramik ve Banyo Ürünleri'} href={'/product'} /></SwiperSlide>
-            <SwiperSlide className={styles['main__slide']}><Card title={'Parke Ürünleri'} href={'/product'} /></SwiperSlide>
-            <SwiperSlide className={styles['main__slide']}><Card title={'Boya Ürünleri'} href={'/product'} /></SwiperSlide>
-            <SwiperSlide className={styles['main__slide']}><Card title={'Seramik Ürünleri'} href={'/product'} /></SwiperSlide>
+            {
+              products.map((item, index) => {
+                return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item.title} href={'/product'} /></SwiperSlide>
+              })
+            }
+            
           </Swiper>
         </div>
         <div className={styles['main__foot']}>
@@ -129,4 +102,13 @@ export const Sidebar = () => {
       </div>
     </aside>
   )
+}
+
+Sidebar.propTypes = {
+	isShow: PropTypes.bool,
+  products: PropTypes.array
+};
+
+Sidebar.defaultProps = {
+	isShow: false,
 }

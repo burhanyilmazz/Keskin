@@ -5,10 +5,10 @@ import {Icon} from "../"
 import styles from './SocialMedia.module.scss';
 
 export const SocialMedia = (props) => { 
-  const { className } = props;
+  const { className, type } = props;
   
   return (
-    <ul className={classNames(styles['social-media'], className)}>
+    <ul className={classNames(styles['social-media'], {[styles['social-media--vertical']]: type === 'vertical'}, className)}>
       <li><a href="#" target="_blank"><Icon icon="instagram" /></a></li>
       <li><a href="#" target="_blank"><Icon icon="facebook" /></a></li>
       <li><a href="#" target="_blank"><Icon icon="linkedin" /></a></li>
@@ -18,5 +18,6 @@ export const SocialMedia = (props) => {
 }
 
 SocialMedia.propTypes = {
-	className: PropTypes.string
+	className: PropTypes.string,
+  type: PropTypes.string
 };

@@ -1,8 +1,8 @@
-@import 'fonts';
-@import 'icons';
+@import "fonts";
+@import "icons";
 
 body {
-  background: #F9F9FA;
+  background: #f9f9fa;
   font-size: 16px;
   color: #35373c;
   font-family: "Satoshi", sans-serif;
@@ -27,6 +27,8 @@ body {
 
 html {
   height: -webkit-fill-available;
+  padding: 0;
+  margin: 0;
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
   }
@@ -87,33 +89,110 @@ ul {
   margin: 0;
 }
 
-.sidebar__slider {
-  padding-left: 116px;
-  .swiper {
-    &-button {
-      &-prev, &-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #fff;
-        width: 52px;
-        height: 52px;
-        border: 1px solid #E8E9EC;
-        border-radius: 30px;
-        left: 0;
+.disable-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
 
-        &:after {
-          font-size: 8px;
-          color: #1F242B;
+.button {
+  &-prev,
+  &-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    width: 52px;
+    height: 52px;
+    border: 1px solid #e8e9ec;
+    border-radius: 30px;
+    left: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    i {
+      &:before {
+        transition: all 0.5s ease;
+        font-size: 12px;
+        color: #1f242b;
+      }
+    }
+
+    &:hover {
+      background-color: #fff;
+
+      i {
+        &:before {
+          color: #fc6a10;
         }
       }
+    }
+  }
 
-      &-next {
-        margin-top: -52px;
+  &-next {
+    margin-top: -52px;
+  }
+
+  &-prev {
+    margin-top: 10px;
+    transform: rotate(180deg);
+  }
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+}
+
+.sidebar__slider {
+  margin-left: 50px;
+}
+
+.carousel {
+  &__slider {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+
+    .swiper {
+      &-pagination {
+        position: absolute;
+        z-index: 22;
+        left: auto;
+        right: 330px;
+        bottom: 68px;
+        color: #fff;
+        width: 60px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
       }
 
-      &-prev {
-        margin-top: 10px;
+      &-button {
+        &-prev,
+        &-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: transparent;
+          width: 32px;
+          height: 32px;
+          border: 1px solid #e8e9ec;
+          border-radius: 30px;
+          left: auto;
+          right: 72px;
+          top: auto;
+          bottom: 112px;
+
+          &:after {
+            font-size: 8px;
+            color: #fff;
+          }
+        }
+
+        &-prev {
+          bottom: 64px;
+        }
       }
     }
   }

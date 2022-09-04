@@ -23,4 +23,12 @@
       }
     }
   }
+
+  &--vertical {
+    flex-direction: column;
+
+    li {
+      margin: 8px 0;
+    }
+  }
 }

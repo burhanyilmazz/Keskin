@@ -9,7 +9,7 @@ export const Hamburger = (props) => {
 
   const handleClick = () => {
     setIsChecked(!isChecked)
-    onClick && onClick();
+    onClick && onClick(!isChecked);
   }
   
   return (
