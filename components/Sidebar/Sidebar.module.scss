@@ -182,6 +182,7 @@
 
         li {
           line-height: 27px;
+          margin: 0;
           a {
             color: #35373c;
             padding: 8px 0;
@@ -196,21 +197,28 @@
     }
   }
 
-  &--active {
-    color: #2b5135 !important;
+   &--open {
+    color: #FC6A10 !important;
     > a {
-      color: #2b5135 !important;
+      color: #FC6A10 !important;
     }
 
     span {
       &:after {
-        color: #2b5135 !important;
+        color: #FC6A10 !important;
         content: "-" !important;
       }
     }
 
     ul {
       display: flex !important;
+    }
+  }
+
+  &--active {
+    color: #FC6A10 !important;
+    > a {
+      color: #FC6A10 !important;
     }
   }
 }

@@ -1,6 +1,14 @@
 {
-    "greetings": "Hello",
-    "shoppingcart": "You have {{ number }} items in your shopping cart",
+    "greetings": "Selam",
+    "shoppingcart": "Sepetinizde {{ number }} ürün var",
     "language-name-tr": "Türkçe",
-    "language-name-en": "English"
+    "language-name-en": "English",
+
+    "SIDEBAR.CORPARATE": "Kurumsal",
+    "SIDEBAR.CORPARATE.ABOUT": "Hakkımızda",
+    "SIDEBAR.CORPARATE.EXPORT": "İhracat",
+    "SIDEBAR.DEALER": "Bayilikler",
+    "SIDEBAR.BLOG": "Blog",
+    "SIDEBAR.CAREER": "Kariyer",
+    "SIDEBAR.CONTACT": "İletişim"
 }

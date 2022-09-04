@@ -8,7 +8,7 @@ export const StaticI18nLink = (props) => {
 
   const locale = props.locale || i18n.language || ''
 
-  if (!locale || props.locale === undefined) {
+  if (!locale) {
     const href = props.href || router.asPath
     return <Link {...props} href={href}>{props.children}</Link>
   } else {
