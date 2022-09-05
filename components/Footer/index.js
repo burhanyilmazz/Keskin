@@ -24,7 +24,7 @@ export const Footer = (props) => {
           <div className={styles['menu']}>
             <ul>
               {
-                navlist.map((item, index) => {
+                navlist?.map((item, index) => {
                   if (item?.children) {
                     return (
                       item.children.map((children, child) => {
@@ -42,7 +42,7 @@ export const Footer = (props) => {
             <h3>Ürün Grupları</h3>
             <ul>
               {
-                products.map((item, index) => {
+                products?.map((item, index) => {
                   return <li key={index}><StaticI18nLink href='/products'>{item.title}</StaticI18nLink></li>
                 })
               }

@@ -52,7 +52,7 @@ export const Sidebar = (props) => {
             className={'sidebar__slider'}
           >
             {
-              products.map((item, index) => {
+              products?.map((item, index) => {
                 return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item.title} href={'/product'} /></SwiperSlide>
               })
             }
@@ -69,7 +69,7 @@ export const Sidebar = (props) => {
         <nav>
           <ul>
             {
-              list.map((item, index) => {
+              list?.map((item, index) => {
                 if (item?.children) {
                   return (
                     <li 
