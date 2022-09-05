@@ -1,0 +1,58 @@
+.white {
+  background: #fff;
+}
+
+.section {
+  padding: 116px 0 132px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  h6 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #1f242b;
+  }
+}
+
+.content {
+  h2 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    margin: 64px 0;
+    color: #1f242b;
+  }
+
+  p {
+    width: 50%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #1f242b;
+    margin-bottom: 30px;
+  }
+}
+
+.image {
+  width: 593px;
+  height: 539px;
+  border-radius: 16px;
+  position: absolute;
+  right: 0;
+  bottom: -185px;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -24px;
+
+  &__item {
+    width: calc((100% / 6) - 24px);
+    margin: 16px 12px;
+  }
+}

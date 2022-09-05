@@ -16,7 +16,7 @@ export const Carousel = (props) => {
   const { t } = useTranslation('common');
 
   return (
-    <div className={styles['carousel']}>
+    <section className={styles['carousel']}>
       <Swiper
         modules={[Navigation, Pagination, A11y]}
         slidesPerView={1}
@@ -59,7 +59,7 @@ export const Carousel = (props) => {
           </div>
         </div>
       </Swiper>
-    </div>
+    </section>
   )
 }
 

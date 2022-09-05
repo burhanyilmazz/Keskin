@@ -1,8 +1,6 @@
 .social-media {
   display: flex;
   list-style: none;
-  width: 100%;
-  justify-content: center;
 
   li {
     margin: 0 8px;
@@ -14,19 +12,20 @@
       width: 38px;
       height: 38px;
       border-radius: 100%;
-      background: #F2F2F2;
-      color: #1F242B;
+      background: #f2f2f2;
+      color: #1f242b;
       transition: all 0.5s ease;
 
       &:hover {
-        color: #FC6A10;
+        color: #fc6a10;
       }
     }
   }
 
   &--vertical {
     flex-direction: column;
-
+    width: 100%;
+    justify-content: center;
     li {
       margin: 8px 0;
     }

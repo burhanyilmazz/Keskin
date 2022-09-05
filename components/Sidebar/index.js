@@ -27,7 +27,7 @@ export const Sidebar = (props) => {
   const router = useRouter();
   const route = `/${router.asPath.split('/')[2]}`;
 
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
 
   return (
     <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
@@ -98,6 +98,11 @@ export const Sidebar = (props) => {
         </nav>
         <div className={styles['social-media']}>
           <SocialMedia />
+        </div>
+        
+        <div className={styles['language']}>
+          <StaticI18nLink href='/' locale={'tr'}><a className={classNames({[styles['lang-active']] : i18n.language === 'tr' ? true : '' })}>TR</a></StaticI18nLink>
+          <StaticI18nLink href='/' locale={'en'}><a className={classNames({[styles['lang-active']] : i18n.language === 'en' ? true : '' })}>EN</a></StaticI18nLink>
         </div>
       </div>
     </aside>

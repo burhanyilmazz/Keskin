@@ -14,7 +14,7 @@ export const Card = (props) => {
         <StaticI18nLink href={href}>
           <a>
             <div className={styles['head']}>
-              <Image src={src} width={'100%'} height={'100%'} layout={'responsive'} />
+              <Image src={src} width={'100%'} height={'100%'} layout={'fixed'} />
               <div className={styles['arrow']}><Icon icon={'arrow'} /></div>
             </div>
             <div className={styles['foot']}>{title}</div>
