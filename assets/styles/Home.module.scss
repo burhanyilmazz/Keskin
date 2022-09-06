@@ -17,6 +17,7 @@
 }
 
 .content {
+  width: calc(100% - 600px);
   h2 {
     font-weight: 500;
     font-size: 32px;
@@ -26,7 +27,7 @@
   }
 
   p {
-    width: 50%;
+    width: 80%;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -41,7 +42,7 @@
   border-radius: 16px;
   position: absolute;
   right: 0;
-  bottom: -185px;
+  bottom: -285px;
 }
 
 .products {
@@ -54,5 +55,64 @@
   &__item {
     width: calc((100% / 6) - 24px);
     margin: 16px 12px;
+  }
+}
+
+.icon-boxes {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+  width: 70%;
+}
+
+.icon-box {
+  width: calc(33.333% - 16px);
+  margin: 8px;
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: calc(50% - 16px);
+  }
+}
+
+.wrap {
+  display: flex;
+
+  .content {
+    p {
+      width: 70%;
+    }
+  }
+}
+
+.blog {
+  z-index: 1;
+  .content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 72px;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blogs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: calc((100% - 1366px) / 2);
+
+  &__slide {
+    max-width: 376px;
+    padding: 20px 20px 40px;
+  }
+
+  &__slider {
+    margin-left: 50px;
   }
 }

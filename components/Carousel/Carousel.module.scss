@@ -1,3 +1,5 @@
+@import '../../assets/styles/functions.scss';
+
 .carousel {
   position: relative;
   z-index: 1;
@@ -15,6 +17,13 @@
     color: #fff;
 
     h1 {
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-size: rem(40px);
+      line-height: rem(50px);
+    }
+
+    h2 {
       margin-bottom: 24px;
       font-weight: 500;
       font-size: 40px;

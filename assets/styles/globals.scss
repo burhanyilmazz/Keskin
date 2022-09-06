@@ -2,8 +2,7 @@
 @import "icons";
 
 body {
-  background: #f9f9fa;
-  font-size: 16px;
+  background: #fff;
   color: #35373c;
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
@@ -16,10 +15,6 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
 
-  @media screen and (max-width: 1024px) {
-    padding-top: rem(90px);
-  }
-
   &.paddless {
     padding: 0;
   }
@@ -29,6 +24,7 @@ html {
   height: -webkit-fill-available;
   padding: 0;
   margin: 0;
+  font-size: 16px;
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
   }
@@ -52,6 +48,7 @@ input::-webkit-input-placeholder {
   box-sizing: border-box;
   border-radius: 0;
   box-shadow: none;
+  outline: 0;
 }
 
 i {
@@ -61,7 +58,7 @@ i {
 }
 
 i::before {
-  font-size: 1rem;
+  font-size: 16px;
   float: left;
 }
 
@@ -76,7 +73,13 @@ a {
 }
 
 .container {
-  //max-width: 1366px;
+  max-width: 1366px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+}
+.container-fluid {
   width: 100%;
   padding-right: 48px;
   padding-left: 48px;

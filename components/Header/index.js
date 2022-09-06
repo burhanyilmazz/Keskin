@@ -8,16 +8,16 @@ import {StaticI18nLink} from "../"
 import styles from './Header.module.scss';
 
 export const Header = (props) => { 
-  const { type } = props;
-  const [logoType, setLogoType] = useState(type)
+  const { transparent } = props;
+  const [colorLogo, setColorLogo] = useState(transparent)
   
   return (
-      <header className={classNames(styles['header'], {[styles['header--transparent']] : logoType !== "default" })}>
-        <div className='container'>
+      <header className={classNames(styles['header'], {[styles['header--transparent']] : colorLogo })}>
+        <div className='container-fluid'>
           <StaticI18nLink href='/'>
             <a>
-              { logoType === "default" && <Image src={'/images/content/logo/logo.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
-              { logoType !== "default" && <Image src={'/images/content/logo/logo-white.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
+              { !colorLogo && <Image src={'/images/content/logo/logo.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
+              { colorLogo && <Image src={'/images/content/logo/logo-white.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
             </a>
           </StaticI18nLink>
         </div>
@@ -26,9 +26,9 @@ export const Header = (props) => {
 }
 
 Header.propTypes = {
-	type: PropTypes.string
+	transparent: PropTypes.bool
 };
 
 Header.defaultProps = {
-	type: "default",
+	transparent: false
 }

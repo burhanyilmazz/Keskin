@@ -7,7 +7,7 @@ import {Icon, StaticI18nLink} from "../"
 import styles from './Card.module.scss';
 
 export const Card = (props) => { 
-  const { className, src, title, href } = props;
+  const { className, src, title, desc, href } = props;
   
   return (
       <div className={classNames(styles['card'], className)}>
@@ -17,7 +17,10 @@ export const Card = (props) => {
               <Image src={src} width={'100%'} height={'100%'} layout={'fixed'} />
               <div className={styles['arrow']}><Icon icon={'arrow'} /></div>
             </div>
-            <div className={styles['foot']}>{title}</div>
+            <div className={styles['foot']}>
+              <h2>{title}</h2>
+              { desc && <p>{desc}</p> }
+            </div>
           </a>
         </StaticI18nLink>
       </div>
@@ -29,6 +32,7 @@ Card.propTypes = {
 	src: PropTypes.string,
 	href: PropTypes.string,
 	title: PropTypes.string,
+	desc: PropTypes.string,
 };
 
 Card.defaultProps = {

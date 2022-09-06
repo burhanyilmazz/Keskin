@@ -7,6 +7,9 @@ const nextConfig = {
          unoptimized: true,
       },
    },
+   experimental: {
+      styledComponents: true
+    }
 }
 
 module.exports = nextConfig

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Hamburger.module.scss';
 
 export const Hamburger = (props) => { 
-  const { onClick } = props;
+  const { onClick, transparent } = props;
   const [isChecked, setIsChecked] = useState(false);
 
   const handleClick = () => {
@@ -13,7 +13,7 @@ export const Hamburger = (props) => {
   }
   
   return (
-    <div className={classNames(styles['menu-icon'], {[styles['active']] : isChecked } )} onClick={handleClick}>
+    <div className={classNames(styles['menu-icon'], {[styles['active']] : isChecked, [styles['menu-icon--transparent']] : transparent } )} onClick={handleClick}>
       <div>
         <span></span>
         <span></span>
@@ -24,4 +24,5 @@ export const Hamburger = (props) => {
 
 Hamburger.propTypes = {
 	onClick: PropTypes.func,
+  transparent: PropTypes.bool
 };

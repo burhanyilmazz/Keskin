@@ -6,12 +6,16 @@ import classNames from 'classnames';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
-import { Carousel, LinkButton, Card } from '../../components/';
+import { Carousel, LinkButton, Card, Icon, Newsletter, CardIcon } from '../../components/';
 import Image from 'next/image'
+
+import { Navigation, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '../../assets/styles/Home.module.scss'
 
 import { products } from '../../utils/Products';
+import { blogs } from '../../utils/Blog';
 
 export default function Homepage() {
   const { t } = useTranslation('common');
@@ -48,10 +52,9 @@ export default function Homepage() {
       <Head>
         <title>Keskin Yapı</title>
         <meta name="description" content="Keskin Yapı" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Layout type={'transparent'} products={products}>
+      <Layout transparent products={products}>
         <Carousel data={carousel}/>
 
         <section className={classNames(styles['section'], styles['white'])}>
@@ -87,13 +90,70 @@ export default function Homepage() {
         <section className={classNames(styles['section'], styles['white'])}>
           <div className='container'>
             <h6>Hizmetler</h6>
-            <div className={styles['content']}>
-              <h2>Kaliteli ve güvenilir hizmet!</h2>
-              <p>Geniş ürün yelpazemiz ile satış ve satış sonrası destek ekibimizle birlikte, kaliteli ve güvenilir hizmet anlayışını tüm müşterilerimizle buluşturuyoruz.</p>
+            <div className={styles['wrap']}>
+              <div className={styles['content']}>
+                <h2>Kaliteli ve güvenilir hizmet!</h2>
+                <p>Geniş ürün yelpazemiz ile satış ve satış sonrası destek ekibimizle birlikte, kaliteli ve güvenilir hizmet anlayışını tüm müşterilerimizle buluşturuyoruz.</p>
+              </div>
+              <div className={styles['icon-boxes']}>
+                <div className={styles['icon-box']}><CardIcon icon={'pin'} title={'Kolay Ulaşım'} desc={'Birçok lokasyona maksimum "30 dakika" uzaklıkta!'} /></div>
+                <div className={styles['icon-box']}><CardIcon icon={'park'} title={'Otopark'} desc={'Mağazamızda gelen müşterilerimiz için özel otopark alanı mevcuttur.'} /></div>
+                <div className={styles['icon-box']}><CardIcon icon={'qr'} title={'QR Ödeme'} desc={'20.000’nin üzerinde ürün çeşidi ile, seçtiğiniz ürünler için QR ile ödeme yapma kolaylığı ilk kez Keskin Yapı’da!'} /></div>
+                <div className={styles['icon-box']}><CardIcon vertical icon={'trasnport'} title={'Sevkiyat'} desc={'Geniş araç filomuz ve hızlı teslimat ilkemiz ile ihtiyacınız olan her şey anında kapınızda…'} /></div>
+                <div className={styles['icon-box']}><CardIcon vertical icon={'credit-card'} title={'Taksit İmkanı'} desc={'Tüm kredi kartlarında geçerli taksit imkanları ile bütçenizi zorlamadan alışveriş fırsatı sizi bekliyor.'} /></div>
+              </div>
             </div>
-            
           </div>
         </section>
+
+        <section className={classNames(styles['section'])}>
+          <div className='container'>
+            <h6>Kalite Politikamız</h6>
+            <div className={styles['content']}>
+              <h2>Çevreye ve topluma saygılı bir firmayız!</h2>
+              <p>Ürün ve hizmet kalitesinde sürdürülebilirliği sağlayarak, çevreye ve topluma örnek bir firma olup, iş ortaklarımızla güven içerisinde müşteri memnuniyetine yönelik karar alma, hizmet üretme ve dinamik çözüm ortaklığı ile sürekli gelişim ve ilerlemeyi sağlamak, etik değerlere saygı, eğitimden asla taviz vermeme gibi değerler çerçevesinde süreçlerimizi daha verimli hale getirmeyi hedefliyoruz.</p>
+              <LinkButton href='/about' text={t('MORE_INFO')} locale/>
+            </div>
+            <div className={styles['image']}>
+              <Image src='/images/content/homepage/quality.png' width={485} height={431} layout={'responsive'} />
+            </div>
+          </div>
+        </section>
+
+        <section className={classNames(styles['section'], styles['white'], styles['blog'])}>
+          <div className='container'>
+            <h6>Blog ve Haberler</h6>
+            <div className={styles['content']}>
+              <h2>Güncel haberler ve gelişmelerden haberdar olun!</h2>
+              <LinkButton href='/about' text={t('MORE_INFO')} locale />
+            </div>
+          </div>
+
+          <div className={styles['blogs']}>
+            <div className={styles['navigation']}>
+              <div className='button-next'><Icon icon='arrow' /></div>
+              <div className='button-prev'><Icon icon='arrow' /></div>
+            </div>
+            <Swiper
+              modules={[Navigation, A11y]}
+              spaceBetween={4}
+              slidesPerView={'auto'}
+              navigation={{
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+              }}
+              className={styles['blogs__slider']}
+            >
+              {
+                blogs?.map((item, index) => {
+                  return <SwiperSlide key={index} className={styles['blogs__slide']}><Card title={item.title} desc={item.description} href={'/product'} /></SwiperSlide>
+                })
+              }
+            </Swiper>
+          </div>
+        </section>
+
+        <Newsletter />
       </Layout>
     </>
   )

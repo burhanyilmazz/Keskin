@@ -18,34 +18,74 @@ vertical-align: top;
   content: "\f101";
   }
 
-  %icon-facebook {
+  %icon-credit-card {
   content: "\f102";
+  }
+
+  .icon-credit-card:before {
+  content: "\f102";
+  }
+
+  %icon-facebook {
+  content: "\f103";
   }
 
   .icon-facebook:before {
-  content: "\f102";
+  content: "\f103";
   }
 
   %icon-instagram {
-  content: "\f103";
+  content: "\f104";
   }
 
   .icon-instagram:before {
-  content: "\f103";
+  content: "\f104";
   }
 
   %icon-linkedin {
-  content: "\f104";
+  content: "\f105";
   }
 
   .icon-linkedin:before {
-  content: "\f104";
+  content: "\f105";
+  }
+
+  %icon-park {
+  content: "\f106";
+  }
+
+  .icon-park:before {
+  content: "\f106";
+  }
+
+  %icon-pin {
+  content: "\f107";
+  }
+
+  .icon-pin:before {
+  content: "\f107";
+  }
+
+  %icon-qr {
+  content: "\f108";
+  }
+
+  .icon-qr:before {
+  content: "\f108";
+  }
+
+  %icon-trasnport {
+  content: "\f109";
+  }
+
+  .icon-trasnport:before {
+  content: "\f109";
   }
 
   %icon-youtube {
-  content: "\f105";
+  content: "\f10a";
   }
 
   .icon-youtube:before {
-  content: "\f105";
+  content: "\f10a";
   }

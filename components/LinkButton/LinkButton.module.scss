@@ -1,5 +1,7 @@
 .link-button {
-  a {
+  display: inline-flex;
+  a,
+  button {
     color: #1f242b;
     display: inline-flex;
     align-items: center;
@@ -11,6 +13,7 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    cursor: pointer;
   }
 
   span {
@@ -31,7 +34,8 @@
   }
 
   &--transparent {
-    a {
+    a,
+    button {
       color: #fff !important;
       border-color: #fff;
       background: transparent;
