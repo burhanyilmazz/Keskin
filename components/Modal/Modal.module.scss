@@ -1,0 +1,32 @@
+.modal{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(31, 36, 43, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999999;
+  flex-direction: column;
+
+}
+
+.container {
+  max-width: 664px;
+  max-height: 100%;
+  width: 100%;
+  padding: 32px;
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  overflow: auto;
+  border-radius: 16px;
+}
+
+.close {
+  color: #fff;
+  margin-bottom: 40px;
+  cursor: pointer;
+}

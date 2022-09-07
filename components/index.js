@@ -15,3 +15,6 @@ export * from './LeftNav';
 export * from './TopBar';
 export * from './Breadcrumb';
 export * from './SeniorContact';
+export * from './Modal';
+export * from './FormTextarea';
+export * from './ContactForm';

@@ -26,82 +26,90 @@ vertical-align: top;
   content: "\f102";
   }
 
-  %icon-credit-card {
+  %icon-close {
   content: "\f103";
+  }
+
+  .icon-close:before {
+  content: "\f103";
+  }
+
+  %icon-credit-card {
+  content: "\f104";
   }
 
   .icon-credit-card:before {
-  content: "\f103";
+  content: "\f104";
   }
 
   %icon-download {
-  content: "\f104";
+  content: "\f105";
   }
 
   .icon-download:before {
-  content: "\f104";
+  content: "\f105";
   }
 
   %icon-facebook {
-  content: "\f105";
+  content: "\f106";
   }
 
   .icon-facebook:before {
-  content: "\f105";
+  content: "\f106";
   }
 
   %icon-instagram {
-  content: "\f106";
+  content: "\f107";
   }
 
   .icon-instagram:before {
-  content: "\f106";
+  content: "\f107";
   }
 
   %icon-linkedin {
-  content: "\f107";
+  content: "\f108";
   }
 
   .icon-linkedin:before {
-  content: "\f107";
+  content: "\f108";
   }
 
   %icon-park {
-  content: "\f108";
+  content: "\f109";
   }
 
   .icon-park:before {
-  content: "\f108";
+  content: "\f109";
   }
 
   %icon-pin {
-  content: "\f109";
+  content: "\f10a";
   }
 
   .icon-pin:before {
-  content: "\f109";
+  content: "\f10a";
   }
 
   %icon-qr {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   .icon-qr:before {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   %icon-trasnport {
-  content: "\f10b";
+  content: "\f10c";
   }
 
   .icon-trasnport:before {
-  content: "\f10b";
+  content: "\f10c";
   }
 
   %icon-youtube {
-  content: "\f10c";
+  content: "\f10d";
   }
 
   .icon-youtube:before {
-  content: "\f10c";
+  content: "\f10d";
   }

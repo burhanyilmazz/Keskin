@@ -208,3 +208,15 @@ ul {
   margin-top: 300px;
   //background: #F9F9FA;
 }
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 16px;
+
+  > * {
+    width: 100%;
+  }
+}

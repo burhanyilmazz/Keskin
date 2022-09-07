@@ -136,7 +136,7 @@ export default function Homepage() {
             </div>
             <Swiper
               modules={[Navigation, A11y]}
-              spaceBetween={4}
+              spaceBetween={24}
               slidesPerView={'auto'}
               navigation={{
                 nextEl: '.button-next',

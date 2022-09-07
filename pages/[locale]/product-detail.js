@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+import { useState } from 'react';
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
@@ -7,13 +8,17 @@ import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
 import Image from 'next/image'
 
+import { Navigation, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import styles from '../../assets/styles/ProductDetail.module.scss'
 
 import { products } from '../../utils/Products';
-import { LinkButton, TopBar, Card } from '../../components';
+import { LinkButton, TopBar, SeniorContact, Modal, FormInput, FormTextarea, Icon, Card, ContactForm } from '../../components';
 import classNames from 'classnames';
 
 export default function ProductDetail() {
+  const [modalOpen, setModalOpen] = useState(false);
   const { t } = useTranslation('common');
 
   const breadcrumbs = [
@@ -60,6 +65,47 @@ export default function ProductDetail() {
             </div>
           </div>
         </div>
+
+        <section className={classNames(styles['section'])}>
+          <SeniorContact onClick={() => setModalOpen(true)} />
+        </section>
+
+        <section className={classNames(styles['section'], styles['white'], styles['recommended'])}>
+          <div className='container'>
+            <div className={styles['content']}>
+              <h2>AGT Parke<br />Önerilen Ürünler</h2>
+            </div>
+          </div>
+
+          <div className={styles['recommended-list']}>
+            <div className={styles['navigation']}>
+              <div className='button-next'><Icon icon='arrow' /></div>
+              <div className='button-prev'><Icon icon='arrow' /></div>
+            </div>
+            <Swiper
+              modules={[Navigation, A11y]}
+              spaceBetween={24}
+              slidesPerView={'auto'}
+              navigation={{
+                nextEl: '.button-next',
+                prevEl: '.button-prev',
+              }}
+              className={styles['recommended__slider']}
+            >
+              {
+                products?.map((item, index) => {
+                  return <SwiperSlide key={index} className={styles['recommended__slide']}><Card title={item.title} desc={item.description} href={'/product'} /></SwiperSlide>
+                })
+              }
+            </Swiper>
+          </div>
+        </section>
+
+        {modalOpen && <Modal onClose={() => setModalOpen(false)}>
+          <div className={styles['modal']}>
+            <ContactForm />
+          </div>
+        </Modal> }
       </Layout>
     </>
   )
