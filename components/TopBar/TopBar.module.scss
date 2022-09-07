@@ -4,6 +4,7 @@
   position: absolute;
   z-index: 1;
   top: 0;
+  height: 100%;
 }
 
 .image {
@@ -18,7 +19,7 @@
   position: absolute;
   z-index: 99;
   width: 100%;
-  bottom: 77px;
+  top: 77px;
   
   h1 {
     font-weight: 500;
