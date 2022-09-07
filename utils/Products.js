@@ -1,28 +1,28 @@
-export const products = [
-  {
+export const products = [{
     id: 1,
     title: 'Seramik ve Banyo Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png',
     },
-    children: [
-      {
+    children: [{
         id: 11,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 111,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -32,7 +32,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -42,7 +43,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -52,17 +54,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 121,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -72,7 +75,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -82,7 +86,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -94,25 +99,26 @@ export const products = [
     title: 'Boya Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 21,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 211,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -122,7 +128,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -132,7 +139,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -142,17 +150,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 221,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -162,7 +171,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -172,7 +182,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -184,25 +195,26 @@ export const products = [
     title: 'Yapı Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 31,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 311,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -212,7 +224,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -222,7 +235,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -232,17 +246,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 321,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -252,7 +267,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -262,7 +278,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -274,25 +291,26 @@ export const products = [
     title: 'Parke Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 41,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 411,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -302,7 +320,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -312,7 +331,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -322,17 +342,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 421,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -342,7 +363,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -352,7 +374,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -364,25 +387,26 @@ export const products = [
     title: 'Hırdavet Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 51,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 511,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -392,7 +416,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -402,7 +427,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -412,17 +438,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 521,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -432,7 +459,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -442,7 +470,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -454,25 +483,26 @@ export const products = [
     title: 'Yalıtım Ürünleriri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 61,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 611,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -482,7 +512,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -492,7 +523,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -502,17 +534,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 621,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8336 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -522,7 +555,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -532,7 +566,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -544,25 +579,26 @@ export const products = [
     title: 'Restorasyon Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 71,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 711,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8337 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -572,7 +608,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -582,7 +619,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -592,17 +630,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 721,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8337 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -612,7 +651,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -622,7 +662,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -634,25 +675,26 @@ export const products = [
     title: 'Yapı Güçlendirme Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 81,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 811,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8338 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -662,7 +704,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -672,7 +715,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -682,17 +726,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 821,
             title: 'Effect Altay 8mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 8 mm laminant parke.<br /> 1,8338 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -702,7 +747,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -712,7 +758,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -724,25 +771,26 @@ export const products = [
     title: 'Elektrik Tesisatı Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 91,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 911,
             title: 'Effect Altay 9mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 9 mm laminant parke.<br /> 1,9339 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -752,7 +800,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -762,7 +811,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -772,17 +822,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 921,
             title: 'Effect Altay 9mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 9 mm laminant parke.<br /> 1,9339 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -792,7 +843,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -802,7 +854,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -814,25 +867,26 @@ export const products = [
     title: 'Su Tesisatı Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 101,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 1011,
             title: 'Effect Altay 10mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 10 mm laminant parke.<br /> 1,103310 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -842,7 +896,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -852,7 +907,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -862,17 +918,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 1021,
             title: 'Effect Altay 10mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 10 mm laminant parke.<br /> 1,103310 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -882,7 +939,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -892,7 +950,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -904,25 +963,26 @@ export const products = [
     title: 'Demir ve Metal Ürünleri',
     images: {
       thumbnail: '/images/dummy/card-thumb.jpg',
-      medium: '/images/dummy/card.jpg'
+      medium: '/images/dummy/card.jpg',
+      head: '/images/dummy/product-head.png'
     },
-    children: [
-      {
+    children: [{
         id: 111,
         title: 'Design Floor',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 1111,
             title: 'Effect Altay 11mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 11 mm laminant parke.<br /> 1,113311 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -932,7 +992,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -942,7 +1003,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]
@@ -952,17 +1014,18 @@ export const products = [
         title: 'AGT Parke',
         images: {
           thumbnail: '/images/dummy/card-thumb.jpg',
-          medium: '/images/dummy/card.jpg'
+          medium: '/images/dummy/card.jpg',
+          head: '/images/dummy/product-head.png'
         },
-        products: [
-          {
+        products: [{
             id: 1121,
             title: 'Effect Altay 11mm AC4 Laminant Parke',
             description: 'Koyu ton renk grubuna ait, Altay 11 mm laminant parke.<br /> 1,113311 m²’lik paket metrajına sahiptir.',
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -972,7 +1035,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           },
           {
@@ -982,7 +1046,8 @@ export const products = [
             files: '/images/dummy/product.jpg',
             images: {
               thumbnail: '/images/dummy/product-thumb.jpg',
-              medium: '/images/dummy/product.jpg'
+              medium: '/images/dummy/product.jpg',
+              head: '/images/dummy/product-head.png'
             },
           }
         ]

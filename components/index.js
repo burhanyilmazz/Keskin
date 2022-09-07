@@ -13,3 +13,5 @@ export * from './Newsletter';
 export * from './FormInput';
 export * from './LeftNav';
 export * from './TopBar';
+export * from './Breadcrumb';
+export * from './SeniorContact';

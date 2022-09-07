@@ -5,14 +5,15 @@ import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
+import Image from 'next/image'
 
-import styles from '../../assets/styles/ProductList.module.scss'
+import styles from '../../assets/styles/ProductDetail.module.scss'
 
 import { products } from '../../utils/Products';
-import { LeftNav, TopBar, Card } from '../../components';
+import { LinkButton, TopBar, Card } from '../../components';
 import classNames from 'classnames';
 
-export default function Product() {
+export default function ProductDetail() {
   const { t } = useTranslation('common');
 
   const breadcrumbs = [
@@ -43,21 +44,19 @@ export default function Product() {
       
       <Layout products={products}>
         <TopBar 
-          img={products[0].images.head}
-          title={products[0].title}
+          img={products[0].children[0].products[0].images.head}
+          title={products[0].children[0].products[0].title}
           breadcrumbs={breadcrumbs}
         />
         <div className='content'>
-          <div className={classNames('container', styles['product-list'])}>
-            <LeftNav products={products} />
-            <div className={styles['products']}>
-              {
-                products.map((item, index) => {
-                  return (
-                    <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product'} /></div>
-                  )
-                })
-              }
+          <div className={classNames('container', styles['product-detail'])}>
+            <div className={styles['text']}>
+              <h2>{products[0].children[0].products[0].title}</h2>
+              <p dangerouslySetInnerHTML={{__html: products[0].children[0].products[0].description}} />
+              <LinkButton href='#' text='TDS İndir' icon={'download'} className={styles['button']}/>
+            </div>
+            <div className={styles['image']}>
+              <Image src={products[0].children[0].products[0].images.medium} width={32} height={32} layout={'responsive'} /> 
             </div>
           </div>
         </div>

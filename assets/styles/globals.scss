@@ -201,3 +201,10 @@ ul {
     }
   }
 }
+
+.content {
+  position: relative;
+  z-index: 2;
+  margin-top: 300px;
+  //background: #F9F9FA;
+}
