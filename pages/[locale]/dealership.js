@@ -13,7 +13,7 @@ import { TopBar } from '../../components';
 import Image from 'next/image'
 import classNames from 'classnames';
 
-export default function Export() {
+export default function Dealership() {
   const { t } = useTranslation('common');
 
   const breadcrumbs = [

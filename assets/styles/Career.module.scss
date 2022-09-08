@@ -1,0 +1,48 @@
+.career{
+    background: #fff;
+    border-radius: 16px;
+    padding: 96px;
+    margin-bottom: 310px;
+}
+
+.content {
+    width: calc(100% - 600px);
+    h2 {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 43px;
+      margin: 64px 0;
+      color: #1f242b;
+    }
+  
+    p {
+      width: 80%;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1f242b;
+      margin-bottom: 30px;
+    }
+}
+  
+.image {
+    width: 593px;
+    height: 539px;
+    border-radius: 16px;
+    position: absolute;
+    right: 96px;
+    bottom: -110px;
+}
+
+.contact{
+    max-width: 1366px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    border-radius: 16px;
+    padding: 64px;
+    background: #fff;
+    box-shadow: 0px 28px 54px rgba(100, 116, 139, 0.1);
+    margin-bottom: 116px;
+}

@@ -8,6 +8,21 @@
   padding: 48px 96px;
   color: #fff;
   margin-bottom: 116px;
+
+  &--bg{
+    background: #F9F9FA url(/images/newsletter/bg-join.jpg) center center no-repeat;
+    background-size: cover;
+  
+    .content{
+      h3{
+        color: #1F242B;
+      }
+  
+      p{
+        color: rgba(31, 36, 43, 0.8);
+      }
+    }
+  }
 }
 
 .content {
