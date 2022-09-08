@@ -1,3 +1,5 @@
+@import '../../assets/styles/functions.scss';
+
 .sidebar {
   position: fixed;
   right: 0;
@@ -11,20 +13,20 @@
     background: rgba(31, 36, 43, 0.3);
     z-index: 999;
     .nav {
-      transform: translateX(731px);
+      transform: translateX(100%);
       transition-delay: 0.2s;
     }
     .main {
       transition-delay: 0s;
-      transform: translateX(1174px);
+      transform: translateX(150%);
     }
   }
 }
 
 .main {
   position: absolute;
-  width: 100%;
-  max-width: 746px;
+  width: 40%;
+  //max-width: 746px;
   height: 100vh;
   background: #f9f9fa;
   top: 0;
@@ -36,6 +38,7 @@
   transform: translateX(500%);
   transition: all 0.5s ease;
   transition-delay: 0.2s;
+  
 
   &__head {
     padding-left: 96px;
@@ -43,15 +46,15 @@
 
     h6 {
       font-weight: 500;
-      font-size: 14px;
-      line-height: 19px;
+      font-size: rem(14px);
+      line-height: rem(19px);
       color: #1f242b;
     }
 
     p {
       font-weight: 500;
-      font-size: 32px;
-      line-height: 43px;
+      font-size: rem(32px);
+      line-height: rem(43px);
       color: #1f242b;
     }
   }
@@ -73,8 +76,8 @@
     padding-right: 48px;
     h3 {
       font-weight: 500;
-      font-size: 24px;
-      line-height: 32px;
+      font-size: rem(24px);
+      line-height: rem(32px);
       color: #1f242b;
       margin-bottom: 5px;
     }
@@ -91,7 +94,7 @@
 
 .nav {
   position: absolute;
-  width: 443px;
+  width: 30%;
   height: 100vh;
   background: #fff;
   top: 0;
@@ -106,7 +109,7 @@
     padding: 128px 100px 20px;
 
     ul {
-      font-size: 32px;
+      font-size: rem(32px);
       font-weight: 500;
       padding: 0;
 
@@ -115,10 +118,10 @@
         align-items: flex-start;
         flex-wrap: wrap;
         position: relative;
-        line-height: 48px;
+        line-height: rem(48px);
         cursor: pointer;
         color: #1f242b;
-        margin-bottom: 32px;
+        margin-bottom: rem(32px);
 
         a {
           color: #1f242b;
@@ -163,14 +166,14 @@
       }
 
       ul {
-        font-size: 20px;
+        font-size: rem(20px);
         font-weight: 400;
         width: 100%;
         display: none;
         flex-direction: column;
 
         li {
-          line-height: 27px;
+          line-height: rem(27px);
           margin: 0;
           a {
             color: #35373c;
@@ -230,8 +233,8 @@
   bottom: 152px;
   left: 96px;
   font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: rem(20px);
+  line-height: rem(28px);
   a {
     color: rgba(31, 36, 43, 0.4);
     width: 49px;
