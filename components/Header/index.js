@@ -16,8 +16,8 @@ export const Header = (props) => {
         <div className='container-fluid'>
           <StaticI18nLink href='/'>
             <a>
-              { !colorLogo && <Image src={'/images/content/logo/logo.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
-              { colorLogo && <Image src={'/images/content/logo/logo-white.svg'} width={'181'} height={'36'} layout={'fixed'} /> }
+              { !colorLogo && <Image src={'/images/content/logo/logo.svg'} width={'181'} height={'36'} layout={'fixed'} alt={'Keskin Yapı'} /> }
+              { colorLogo && <Image src={'/images/content/logo/logo-white.svg'} width={'181'} height={'36'} layout={'fixed'} alt={'Keskin Yapı'} /> }
             </a>
           </StaticI18nLink>
         </div>

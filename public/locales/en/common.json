@@ -1,9 +1,4 @@
 {
-    "greetings": "Selam",
-    "shoppingcart": "Sepetinizde {{ number }} ürün var",
-    "language-name-tr": "Türkçe",
-    "language-name-en": "English",
-
     "SIDEBAR.CORPARATE": "Kurumsal",
     "SIDEBAR.CORPARATE.ABOUT": "Hakkımızda",
     "SIDEBAR.CORPARATE.EXPORT": "İhracat",
@@ -13,5 +8,44 @@
     "SIDEBAR.CONTACT": "İletişim",
 
     "MORE_INFO": "Daha Fazla Bilgi",
-    "ALL_BUTTON": "Tümünü Gör"
+    "ALL_BUTTON": "Tümünü Gör",
+
+    "HOME": {
+        "ABOUT": {
+            "TITLE" : "Hakkımızda",
+            "SUBTITLE": "1969 yılından bu yana yaşam alanlarınız için zarif çözümler sunuyoruz.", 
+            "DESC": "1969 yılında mütevazi bir şirket olarak temellerini attığımız Keskin Yapı, bugün onlarca ulusal ve uluslararası markanın distribütörlüğünü yaparken, 1000’den fazla ürün çeşitliliğiyle yaşam alanlarınız için zengin içeriği sunuyor. Toplamda 10.000m2 mağaza ve depolama alanıyla birlikte, 20 araçlık lojistik filosu sayesinde doğru ve hızlı teslimat sağlayarak sektörün lider firmalarından biri olmanın gururunu yaşamaktadır."
+        },
+        "PRODUCTS": {
+            "TITLE": "Ürün Grupları",
+            "SUBTITLE": "11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!"
+        },
+        "SERVICES": {
+            "TITLE": "Hizmetler",
+            "SUBTITLE": "Kaliteli ve güvenilir hizmet!",
+            "DESC": "Geniş ürün yelpazemiz ile satış ve satış sonrası destek ekibimizle birlikte, kaliteli ve güvenilir hizmet anlayışını tüm müşterilerimizle buluşturuyoruz.",
+            "ITEMS": {
+                "TITLE1": "Kolay Ulaşım",
+                "DESC1": "Birçok lokasyona maksimum ''30 dakika'' uzaklıkta!",
+                "TITLE2": "Otopark",
+                "DESC2": "Mağazamızda gelen müşterilerimiz için özel otopark alanı mevcuttur.",
+                "TITLE3": "QR Ödeme",
+                "DESC3": "20.000’nin üzerinde ürün çeşidi ile, seçtiğiniz ürünler için QR ile ödeme yapma kolaylığı ilk kez Keskin Yapı’da!",
+                "TITLE4": "Sevkiyat",
+                "DESC4": "Geniş araç filomuz ve hızlı teslimat ilkemiz ile ihtiyacınız olan her şey anında kapınızda...",
+                "TITLE5": "Taksit İmkanı",
+                "DESC5": "Tüm kredi kartlarında geçerli taksit imkanları ile bütçenizi zorlamadan alışveriş fırsatı sizi bekliyor."
+            }
+        },
+        "QUALITY": {
+            "TITLE": "Kalite Politikamız",
+            "SUBTITLE": "Çevreye ve topluma saygılı bir firmayız!",
+            "DESC": "Ürün ve hizmet kalitesinde sürdürülebilirliği sağlayarak, çevreye ve topluma örnek bir firma olup, iş ortaklarımızla güven içerisinde müşteri memnuniyetine yönelik karar alma, hizmet üretme ve dinamik çözüm ortaklığı ile sürekli gelişim ve ilerlemeyi sağlamak, etik değerlere saygı, eğitimden asla taviz vermeme gibi değerler çerçevesinde süreçlerimizi daha verimli hale getirmeyi hedefliyoruz."
+
+        },
+        "BLOG": {
+            "TITLE": "Blog ve Haberler",
+            "SUBTITLE": "Güncel haberler ve gelişmelerden haberdar olun!"
+        }
+    }
 }
