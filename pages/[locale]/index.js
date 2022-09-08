@@ -57,7 +57,7 @@ export default function Homepage() {
       <Layout transparent products={products}>
         <Carousel data={carousel}/>
 
-        <section className={classNames(styles['section'], styles['white'])}>
+        <section className={classNames(styles['section'], 'white-bg')}>
           <div className='container'>
             <h6>Hakkımızda</h6>
             <div className={styles['content']}>
@@ -87,7 +87,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'], styles['white'])}>
+        <section className={classNames(styles['section'], 'white-bg')}>
           <div className='container'>
             <h6>Hizmetler</h6>
             <div className={styles['wrap']}>
@@ -120,7 +120,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'], styles['white'], styles['blog'])}>
+        <section className={classNames(styles['section'], 'white-bg', styles['blog'])}>
           <div className='container'>
             <h6>Blog ve Haberler</h6>
             <div className={styles['content']}>
@@ -153,7 +153,11 @@ export default function Homepage() {
           </div>
         </section>
 
-        <Newsletter />
+
+        <section className={classNames(styles['section'], styles['newsletter'], 'white-bg')}>
+          <Newsletter />
+        </section>
+        
       </Layout>
     </>
   )

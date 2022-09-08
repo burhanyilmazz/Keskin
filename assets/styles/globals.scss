@@ -2,7 +2,7 @@
 @import "icons";
 
 body {
-  background: #fff;
+  background: #F9F9FA;
   color: #35373c;
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
@@ -206,7 +206,6 @@ ul {
   position: relative;
   z-index: 2;
   margin-top: 300px;
-  //background: #F9F9FA;
 }
 
 .form-group {
@@ -219,4 +218,8 @@ ul {
   > * {
     width: 100%;
   }
+}
+
+.white-bg {
+  background: #fff !important;
 }

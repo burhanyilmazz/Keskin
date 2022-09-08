@@ -4,7 +4,7 @@ import { Sidebar, Header, Hamburger, Footer } from '../components/';
 import styles from './Layout.module.scss';
 
 export const Layout = (props) => { 
-  const { transparent, products } = props;
+  const { transparent, products, className } = props;
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleOnClick = (event) => {
@@ -19,7 +19,7 @@ export const Layout = (props) => {
       <Header transparent={transparent} />
       <Hamburger transparent={transparent} onClick={(event) => handleOnClick(event)} />
       <Sidebar isShow={sidebarOpen} products={products} />
-      <main>
+      <main className={className}>
         {props.children}
       </main>
       <Footer products={products} />
@@ -28,7 +28,8 @@ export const Layout = (props) => {
 }
 
 Layout.propTypes = {
-	type: PropTypes.string
+	type: PropTypes.string,
+	className: PropTypes.string,
 };
 
 Layout.defaultProps = {

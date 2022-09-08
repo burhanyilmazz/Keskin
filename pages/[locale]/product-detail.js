@@ -47,7 +47,7 @@ export default function ProductDetail() {
         <meta name="description" content="Keskin Yapı" />
       </Head>
       
-      <Layout products={products}>
+      <Layout products={products} className='white-bg'>
         <TopBar 
           img={products[0].children[0].products[0].images.head}
           title={products[0].children[0].products[0].title}
