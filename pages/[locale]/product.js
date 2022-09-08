@@ -54,7 +54,7 @@ export default function Product() {
               {
                 products.map((item, index) => {
                   return (
-                    <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product'} /></div>
+                    <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product-detail'} /></div>
                   )
                 })
               }

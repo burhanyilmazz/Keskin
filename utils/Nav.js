@@ -8,24 +8,24 @@ export const navlist = [
       },
       {
         title: "SIDEBAR.CORPARATE.EXPORT",
-        href: '/product'
+        href: '/export'
       }
     ]
   },
   {
     title: "SIDEBAR.DEALER",
-    href: '/about'
+    href: '/dealership'
   },
   {
     title: "SIDEBAR.BLOG",
-    href: '/product4',
+    href: '/blog',
   },
   {
     title: "SIDEBAR.CAREER",
-    href: '/product5'
+    href: '/career'
   },
   {
     title: "SIDEBAR.CONTACT",
-    href: '/product6'
+    href: '/contact'
   },
 ]
