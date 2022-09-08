@@ -103,7 +103,7 @@ export default function ProductDetail() {
 
         {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className={styles['modal']}>
-            <ContactForm />
+            <ContactForm title={'İletişim Formu'} />
           </div>
         </Modal> }
       </Layout>

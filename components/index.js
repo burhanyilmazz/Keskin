@@ -18,3 +18,4 @@ export * from './SeniorContact';
 export * from './Modal';
 export * from './FormTextarea';
 export * from './ContactForm';
+export * from './FileInput';

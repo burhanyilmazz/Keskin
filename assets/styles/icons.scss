@@ -106,10 +106,18 @@ vertical-align: top;
   content: "\f10c";
   }
 
-  %icon-youtube {
+  %icon-upload {
   content: "\f10d";
   }
 
-  .icon-youtube:before {
+  .icon-upload:before {
   content: "\f10d";
+  }
+
+  %icon-youtube {
+  content: "\f10e";
+  }
+
+  .icon-youtube:before {
+  content: "\f10e";
   }

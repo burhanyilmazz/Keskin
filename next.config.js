@@ -6,10 +6,8 @@ const nextConfig = {
       images: {
          unoptimized: true,
       },
-   },
-   experimental: {
       styledComponents: true
-    }
+   },
 }
 
 module.exports = nextConfig

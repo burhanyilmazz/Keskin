@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import {FormInput, FormTextarea, LinkButton} from "../"
+import {FormInput, FormTextarea, LinkButton, FileInput} from "../"
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = (props) => { 
@@ -12,14 +12,16 @@ export const ContactForm = (props) => {
   
   return (
     <div className={classNames(styles['contact-form'], styles[className])}>
-      <h3>İletişim Formu</h3>
+      <h3>{title}</h3>
       <form>
         <div className='form-group'>
           <FormInput field='Adınız Soyadınız'  />
           <FormInput field='E-posta'  />
         </div>
         <div className='form-group'>
-          <FormInput field='Telefon'  />
+          <FormInput field='Telefon' />
+          {type === 'contact' && <FormInput field='Konu' /> }
+          {type === 'hr' && <FileInput /> }
         </div>
         <div className='form-group'>
           <FormTextarea field='Mesaj' rows={5} />

@@ -1,6 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import PropTypes from 'prop-types';
-import Image from 'next/image'
 
 import styles from './TopBar.module.scss';
 import { Breadcrumb } from '../';
@@ -10,7 +9,7 @@ export const TopBar = (props) => {
   
   return (
     <div className={styles['topbar']}>
-      <div className={styles['image']}><Image src={img}  layout={'fill'} /></div>
+      <div className={styles['image']}><img src={img} alt='' /></div>
       <div className={styles['content']}>
         <div className='container'>
           <h1>{title}</h1>

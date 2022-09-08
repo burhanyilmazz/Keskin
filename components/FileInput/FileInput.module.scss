@@ -1,0 +1,40 @@
+.file-input {
+  background-color: #fff;
+  box-sizing: border-box;
+  border: 1px solid #f2f3f4;
+  border-radius: 8px;
+  padding: 10px 24px;
+  color: #1f242b;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  box-sizing: border-box;
+  flex-basis: 50%;
+  max-width: calc(50% - 10px);
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #64748b;
+  margin-left: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  white-space: nowrap;
+  width: calc(100% - 25px);
+
+  span {
+    opacity: .5;
+  }
+}

@@ -9,9 +9,21 @@
 
 .image {
   width: 100%;
+  border-radius: 0px 0px 2vw 2vw;
+  overflow: hidden;
+  width: 100% !important;
+  display: flex !important;
+  
+  img {
+    width: 100%;
+  }
   > span {
-    border-radius: 0px 0px 32px 32px;
-    overflow: hidden;
+    /*   height: 100% !important;
+
+    img {
+      width: 100% !important;
+      object-fit: cover;
+    } */
   }
 }
 
@@ -19,8 +31,8 @@
   position: absolute;
   z-index: 99;
   width: 100%;
-  top: 77px;
-  
+  top: 158px;
+
   h1 {
     font-weight: 500;
     color: #ffffff;
