@@ -1,3 +1,5 @@
+@import '../../assets/styles/functions.scss';
+
 .footer {
   position: relative;
   background: #F9F9FA;
@@ -16,11 +18,11 @@
 
 .menu {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: rem(16px);
+  line-height: rem(22px);
   width: 20%;
   li {
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
     a {
       color: #1f242b;
       transition: all 0.5s ease;
@@ -35,21 +37,21 @@
 .products {
   width: calc(60% - 100px);
   h3 {
-    margin: 0 0 24px;
+    margin: 0 0 rem(24px);
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: rem(16px);
+    line-height: rem(22px);
     color: #1f242b;
   }
 
   ul {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: rem(14px);
+    line-height: rem(20px);
     column-count: 2;
     column-gap: 40px;
     li {
-      margin-bottom: 18px;
+      margin-bottom: rem(18px);
       width: 50%;
       a {
         color: #1f242b;
