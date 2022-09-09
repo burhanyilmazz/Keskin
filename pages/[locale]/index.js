@@ -57,7 +57,7 @@ export default function Homepage() {
       <Layout transparent products={products}>
         <Carousel data={carousel}/>
 
-        <section className={classNames(styles['section'], 'white-bg')}>
+        <section className={classNames('text', styles['section'], 'white-bg',)}>
           <div className='container'>
             <h6>{t('HOME.ABOUT.TITLE')}</h6>
             <div className={styles['content']}>
@@ -71,7 +71,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'])}>
+        <section className={classNames('text', styles['section'])}>
           <div className='container'>
             <h6>{t('HOME.PRODUCTS.TITLE')}</h6>
             <div className={styles['content']}>
@@ -87,7 +87,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'], 'white-bg')}>
+        <section className={classNames('text', styles['section'], 'white-bg')}>
           <div className='container'>
             <h6>{t('HOME.SERVICES.TITLE')}</h6>
             <div className={styles['wrap']}>
@@ -106,7 +106,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'])}>
+        <section className={classNames('text', styles['section'])}>
           <div className='container'>
             <h6>{t('HOME.QUALITY.TITLE')}</h6>
             <div className={styles['content']}>
@@ -120,7 +120,7 @@ export default function Homepage() {
           </div>
         </section>
 
-        <section className={classNames(styles['section'], 'white-bg', styles['blog'])}>
+        <section className={classNames('text', styles['section'], 'white-bg', styles['blog'])}>
           <div className='container'>
             <h6>{t('HOME.BLOG.TITLE')}</h6>
             <div className={styles['content']}>
@@ -155,7 +155,7 @@ export default function Homepage() {
 
 
         <section className={classNames(styles['section'], styles['newsletter'], 'white-bg')}>
-          <Newsletter title={'E-Bülten'} text={'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.'} type='subscription'/>
+          <Newsletter title={t('NEWSLETTER.NEWS_TITLE')} text={t('NEWSLETTER.NEWS_DESC')} type='subscription'/>
         </section>
         
       </Layout>

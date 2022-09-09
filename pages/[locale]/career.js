@@ -18,12 +18,8 @@ export default function Career() {
 
   const breadcrumbs = [
     {
-      title: 'Ürünler',
-      href: '/product'
-    },
-    {
-      title: 'Parke Ürünleri',
-      href: '/product'
+      title: t('CAREER.TITLE'),
+      href: '/career'
     }
   ]
 
@@ -40,25 +36,20 @@ export default function Career() {
           title={products[0].title}
           breadcrumbs={breadcrumbs}
         />
-        <div className='content'>
+        <div className='content text'>
           <div className={classNames('container', styles['career'])}>
-                <h6>Kariyer</h6>
-                <div className={styles['content']}>
-                    <h2>İşe alım süreçlerimizde tüm adaylarımız bizim için çok değerli!</h2>
-                    <p>Şirketimizi geleceğe taşıyacak, kurumsal değerlerimize sahip, işe en uygun nitelikteki adayları seçmek ve yerleştirmek amaçlanmaktadır. Bu sayede uzun vadeli, verimli ve etkin bir çalışma hayatı oluşturulacağına inanmaktayız. </p>
+          <h6>{t('CAREER.TITLE')}</h6>
+          <div className={styles['content']}>
+            <h2>{t('CAREER.SUBTITLE')}</h2>
+            <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />
+          </div>
 
-                    <p>İşe alım sürecimizde, şirket gelişim ve organizasyonel ihtiyaçlar doğrultusunda her yıl düzenli olarak planlanmaktadır. İşe alım sürecimiz, şirketimize ulaştırılan başvuruların değerlendirilmesi ile başlar. Özgeçmiş üzerinden yapılacak ön elemelerin ardından belirlenen kriterlere sahip adaylarımız iş görüşmelerine davet edilirler.</p>
-
-                    <p>Görüşmeye davet edilen adaylarımız, yetkinlikleri ve ilgili pozisyon için gerekli ise deneyimleri doğrultusunda değerlendirilirler. İlgili süreç, ihtiyaçlar doğrultusunda farklı ölçme ve değerlendirme araçları ile de desteklenir. Süreç uygun aday ile tamamlanır.</p>
-
-                    <p>Her çalışanın değer olarak kabul edildiği Keskin Yapı’da tüm adaylarımız da aynı şekilde bizler için değerlidir.</p>
-                </div>
-                <div className={styles['image']}>
-                    <Image src='/images/content/career/career.png' width={485} height={431} layout={'responsive'} />
-                </div>
+            <div className={styles['image']}>
+                <Image src='/images/content/career/career.png' width={485} height={431} layout={'responsive'} />
+            </div>
           </div>
           <div className={classNames('contact', styles['contact'])}>
-            <ContactForm title={'Kariyer Formu'} type = 'hr'/>
+            <ContactForm title={t('CAREER_FORM')} type = 'hr'/>
           </div>
         </div>
       </Layout>

@@ -1,4 +1,4 @@
-@import '../../assets/styles/functions.scss';
+@import "../../assets/styles/functions.scss";
 
 .newsletter {
   background: url(/images/newsletter/bg.jpg) center center no-repeat;
@@ -9,16 +9,17 @@
   color: #fff;
   margin-bottom: 116px;
 
-  &--bg{
-    background: #F9F9FA url(/images/newsletter/bg-join.jpg) center center no-repeat;
+  &--hr {
+    background: #f9f9fa url(/images/newsletter/bg-join.jpg) center center
+      no-repeat;
     background-size: cover;
-  
-    .content{
-      h3{
-        color: #1F242B;
+
+    .content {
+      h3 {
+        color: #1f242b;
       }
-  
-      p{
+
+      p {
         color: rgba(31, 36, 43, 0.8);
       }
     }
@@ -26,7 +27,7 @@
 }
 
 .content {
-  width: 30%;
+  width: rem(400px);
   display: flex;
   flex-direction: column;
 
@@ -42,6 +43,7 @@
     font-size: rem(16px);
     line-height: rem(24px);
     margin-bottom: rem(24px);
+    margin-top: 0;
   }
 
   > span {

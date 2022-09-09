@@ -1,43 +1,25 @@
-.export{
-    background: #fff;
-    border-radius: 16px;
-    padding: 96px;
-    margin-bottom: 310px;
-
-    h6 {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 19px;
-      color: #1F242B;
-      margin: 0;
-  }
+.export {
+  background: #fff;
+  border-radius: 16px;
+  padding: 96px;
+  margin-bottom: 310px;
 }
 
 .content {
-    width: calc(100% - 600px);
-    h2 {
-      font-weight: 500;
-      font-size: 32px;
-      line-height: 43px;
-      margin: 64px 0;
-      color: #1f242b;
-    }
-  
-    p {
-      width: 80%;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      color: #1f242b;
-      margin-bottom: 30px;
-    }
+  width: calc(100% - 400px);
 }
-  
+
 .image {
-    width: 593px;
-    height: 539px;
+  width: 593px;
+  height: 539px;
+  border-radius: 16px;
+  position: absolute;
+  right: 0;
+  bottom: -185px;
+
+  span {
+    box-shadow: 0px 28px 54px rgba(100, 116, 139, 0.1);
     border-radius: 16px;
-    position: absolute;
-    right: 0;
-    bottom: -285px;
+    overflow: hidden;
+  }
 }

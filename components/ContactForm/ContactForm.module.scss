@@ -1,8 +1,9 @@
+@import "../../assets/styles/functions.scss";
 .contact-form {
   h3 {
     font-weight: 500;
-    font-size: 20px;
-    line-height: 27px;
+    font-size: rem(20px);
+    line-height: rem(27px);
     color: #2c333e;
   }
   p {
@@ -12,4 +13,9 @@
     color: #64748b;
     margin: 0;
   }
+}
+
+.send {
+  display: flex;
+  margin-top: 32px;
 }

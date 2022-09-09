@@ -18,12 +18,12 @@ export default function About() {
 
   const breadcrumbs = [
     {
-      title: 'Ürünler',
-      href: '/product'
+      title: t('SIDEBAR.CORPARATE'),
+      href: '/about'
     },
     {
-      title: 'Parke Ürünleri',
-      href: '/product'
+      title: t('ABOUT.TITLE'),
+      href: '/about'
     }
   ]
 
@@ -31,47 +31,41 @@ export default function About() {
     <>
       <Head>
         <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
+        <meta name="description" content={t('ABOUT.SUBTITLE')} />
       </Head>
       
       <Layout products={products}>
         <TopBar 
           img={"/images/content/about/head.jpg"}
-          title={products[0].title}
+          title={t('ABOUT.TITLE')}
           breadcrumbs={breadcrumbs}
         />
-        <div className='content'>
+        <div className='content text'>
          <div className={classNames('container', styles['about'])}>
-               <h6>Hakkımızda</h6>
-               <div className={styles['content']}>
-                  <h2>1969 yılından bu yana...</h2>
-                  <p>1969 yılında mütevazi bir şirket olarak temellerini attığımız Keskin Yapı, bugün onlarca ulusal ve uluslararası markanın distribütörlüğünü yaparken, 1000’den fazla ürün çeşitliliğiyle yaşam alanlarınız için zengin içeriği sunuyor. Toplamda 10.000m2 mağaza ve depolama alanıyla birlikte, 20 araçlık lojistik filosu sayesinde doğru ve hızlı teslimat sağlayarak sektörün lider firmalarından biri olmanın gururunu yaşamaktadır.</p>
-
-                  <p>Keskin Yapı olarak Bakırköy’de NG Kütahya Seramik ana bayisi konumunda olup, 1.500 m2 kapalı alanda yaşam alanlarınız için etkileyici çözümlere ulaşmanızı sağlıyoruz. Ürün çeşitliliğimizi sürekli geliştiriyor olmamızın verdiği dinamiklikle; seramik ve banyo ürünlerinden boya ürünlerine, kaba inşaat malzemesinden elektrik malzemelerine kadar geniş yelpazelerde hizmet sunuyoruz.</p>
-
-                  <p>20.000 çeşide ulaşan geniş̧ ürün yelpazesini, dünyada kendini ispat etmiş̧ yerli ve yabancı birçok farklı firmanın bayisine veya satıcısına sunarak sektörde güçlü adımlarla ilerlemeye devam ediyoruz.</p>
-
-                  <p>20 araçlık güçlü lojistik filomuz, 60 kişilik deneyimli personelimiz, yılların getirmiş olduğu deneyimimiz ile ulusal ve uluslararası olarak hizmet vererek, pazarda etkin varlık gösteriyoruz. </p>
-                  <p>Ahmet Geyik’in torunları tarafından 2019 yılında kurulan Geyik Mimarlık ile entegre çalışarak, müşterilerimize modern ve kullanışlı çözümler üretiyoruz.</p>
-               </div>
-               <div className={styles['image']}>
-                  <Image src='/images/content/about/about.png' width={485} height={431} layout={'responsive'} />
-               </div>
-         </div>
-         <div className={classNames('container', styles['quality'])}>
-               <h6>Kalite Politikamız</h6>
-               <div className={styles['content']}>
-                  <h2>Çevreye ve topluma saygılı bir firmayız!</h2>
-                  <div className={classNames('policy', styles['policy'])}>
-                     <div className={styles['image']}>
-                           <Image src='/images/content/about/quality.png' width={485} height={431} layout={'responsive'} />
-                     </div>
-                     <p>Ürün ve hizmet kalitesinde sürdürülebilirliği sağlayarak, çevreye ve topluma örnek bir firma olup, iş ortaklarımızla güven içerisinde müşteri memnuniyetine yönelik karar alma, hizmet üretme ve dinamik çözüm ortaklığı ile sürekli gelişim ve ilerlemeyi sağlamak, etik değerlere saygı, eğitimden asla taviz vermeme gibi değerler çerçevesinde süreçlerimizi daha verimli hale getirmeyi hedefliyoruz.</p>
-                  </div>
-               </div>
-         </div>
-        <section className={classNames(styles['section'], styles['newsletter'])}>
-            <Newsletter type='joinUs' title={'Ekibimize Katıl'} text={'İşe alım süreçlerimizde tüm adaylarımız bizim için çok değerli!'} />
+            <h6>{t('ABOUT.TITLE')}</h6>
+            <div className={styles['content']}>
+              <h2>{t('ABOUT.SUBTITLE')}</h2>
+              <div dangerouslySetInnerHTML={{__html: t('ABOUT.DESC')}} />
+            </div>
+            <div className={styles['image']}>
+              <Image src='/images/content/about/about.png' width={485} height={431} layout={'responsive'} />
+            </div>
+          </div>
+        <div className={classNames('container', styles['quality'])}>
+          <h6>{t('HOME.QUALITY.TITLE')}</h6>
+          <div className={styles['content']}>
+            <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
+              
+            <div className={classNames('policy', styles['policy'])}>
+              <div className={styles['image']}>
+                <Image src='/images/content/about/quality.png' width={485} height={431} layout={'responsive'} />
+              </div>
+              <p>{t('HOME.QUALITY.DESC')}</p>            
+            </div>
+          </div>
+        </div>
+        <section className={classNames(styles['newsletter'], 'white-bg')}>
+          <Newsletter type='joinUs' title={t('NEWSLETTER.HR_TITLE')} text={t('NEWSLETTER.HR_DESC')} />
         </section>
         </div>
       </Layout>

@@ -1,4 +1,11 @@
 .file-input {
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+}
+
+.wrap {
   background-color: #fff;
   box-sizing: border-box;
   border: 1px solid #f2f3f4;
@@ -14,13 +21,6 @@
   align-items: center;
   height: 48px;
   box-sizing: border-box;
-  flex-basis: 50%;
-  max-width: calc(50% - 10px);
-
-  input {
-    position: absolute;
-    opacity: 0;
-  }
 }
 
 .text {
@@ -30,11 +30,11 @@
   color: #64748b;
   margin-left: 13px;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   white-space: nowrap;
   width: calc(100% - 25px);
 
   span {
-    opacity: .5;
+    opacity: 0.5;
   }
 }

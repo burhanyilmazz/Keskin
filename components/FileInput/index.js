@@ -4,7 +4,7 @@ import styles from './FileInput.module.scss';
 import { Icon } from '../';
 
 export const FileInput = (props) => { 
-  const { name, onChange, accept, maxFileSize } = props;
+  const { name, onChange, accept, maxFileSize, field } = props;
 
   const handleOnChange = (event, index) => {
     const uploadFileSize = (event.target.files[0].size / 1024);
@@ -26,16 +26,18 @@ export const FileInput = (props) => {
   
   return (
     <div className={styles['file-input']}>
-      <Icon icon={'upload'} />
-      <div className={styles['text']}>
-        Dosya Seçin <span>(Pdf, Docx, Jpeg, Max 8MB)</span>
+      <div className={styles['wrap']}>
+        <Icon icon={'upload'} />
+        <div className={styles['text']}>
+          {field} <span>(Pdf, Docx, Jpeg, Max 8MB)</span>
+        </div>
+        <input 
+          type='file' 
+          name={name} 
+          onChange={(event) => handleOnChange(event, index, item)}
+          accept={accept}
+        />
       </div>
-      <input 
-        type='file' 
-        name={name} 
-        onChange={(event) => handleOnChange(event, index, item)}
-        accept={accept}
-      />
     </div>
   )
 }

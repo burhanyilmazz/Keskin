@@ -18,12 +18,12 @@ export default function Export() {
 
   const breadcrumbs = [
     {
-      title: 'Ürünler',
-      href: '/product'
+      title: t('SIDEBAR.CORPARATE'),
+      href: '/export'
     },
     {
-      title: 'Parke Ürünleri',
-      href: '/product'
+      title: t('EXPORT.TITLE'),
+      href: '/export'
     }
   ]
 
@@ -31,25 +31,21 @@ export default function Export() {
     <>
       <Head>
         <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
+        <meta name="description" content={t('EXPORT.SUBTITLE')} />
       </Head>
       
       <Layout products={products}>
         <TopBar 
           img={"/images/content/export/head.jpg"}
-          title={products[0].title}
+          title={t('EXPORT.TITLE')}
           breadcrumbs={breadcrumbs}
         />
-        <div className='content'>
+        <div className='content text'>
           <div className={classNames('container', styles['export'])}>
-          <h6>İhracat</h6>
+          <h6>{t('EXPORT.TITLE')}</h6>
           <div className={styles['content']}>
-            <h2> 3 kıta, 28 farklı ülkede ihracatımızı gerçekleştiriyoruz!</h2>
-            <p>Keskin Yapı olarak yurtdışında da ülkemizi gururla temsil ederek başta Avrupa olmak üzere 3 kıta 28 farklı ülkeye ihracatımızı gerçekleştirmekteyiz. </p>
-
-            <p>Üreticiler ile dünyayı buluşturan firmamız, müşterilerimize dünya standartlarının üzerinde bir kalite ile seramik, vitrifiye, sıhhi tesisat ve elektrik malzemeleri gibi pek çok ürünü ve markayı ulaştırmayı hedeflemektedir. </p>
-
-            <p>Zamanında sevkiyat ve şeffaf bir çalışma ile müşterilerimizin bize gösterdiği güven ve inancın sorumluluğunu üstlendiğimizden emin oluruz. Bunu yaparken her adımımıza inanarak hem iç̧ hem de dış̧ paydaşlarımıza değer kattığımızı ümit ediyoruz. </p>
+            <h2>{t('EXPORT.SUBTITLE')}</h2>
+            <div dangerouslySetInnerHTML={{__html: t('EXPORT.DESC')}} />
           </div>
           <div className={styles['image']}>
             <Image src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />

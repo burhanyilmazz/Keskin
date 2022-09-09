@@ -43,8 +43,8 @@ export default function ProductDetail() {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
+        <title>Keskin Yapı | {products[0].children[0].products[0].title}</title>
+        <meta name="description" content={products[0].children[0].products[0].description} />
       </Head>
       
       <Layout products={products} className='white-bg'>
@@ -73,7 +73,11 @@ export default function ProductDetail() {
         <section className={classNames(styles['section'], styles['white'], styles['recommended'])}>
           <div className='container'>
             <div className={styles['content']}>
-              <h2>AGT Parke<br />Önerilen Ürünler</h2>
+              <h2>
+                {products[0].children[0].products[0].title}
+                <br />
+                {t('RECOMMEND_PRODUCT')}
+              </h2>
             </div>
           </div>
 
@@ -103,7 +107,7 @@ export default function ProductDetail() {
 
         {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className={styles['modal']}>
-            <ContactForm title={'İletişim Formu'} />
+            <ContactForm title={t('CONTACT_FORM')} />
           </div>
         </Modal> }
       </Layout>

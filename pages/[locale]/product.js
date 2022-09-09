@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
@@ -13,7 +12,6 @@ import { LeftNav, TopBar, Card } from '../../components';
 import classNames from 'classnames';
 
 export default function Product() {
-  const { t } = useTranslation('common');
 
   const breadcrumbs = [
     {
@@ -37,8 +35,8 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
+        <title>Keskin Yapı | {products[0].title}</title>
+        <meta name="description" content={products[0].title} />
       </Head>
       
       <Layout products={products}>

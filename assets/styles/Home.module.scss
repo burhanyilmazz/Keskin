@@ -5,34 +5,10 @@
   position: relative;
   width: 100%;
   z-index: 2;
-  
-  h6 {
-    margin: 0;
-    font-weight: 500;
-    font-size: rem(14px);
-    line-height: rem(19px);
-    color: #1f242b;
-  }
 }
 
 .content {
   width: calc(100% - 600px);
-  h2 {
-    font-weight: 500;
-    font-size: rem(32px);
-    line-height: rem(43px);
-    margin: rem(64px) 0;
-    color: #1f242b;
-  }
-
-  p {
-    width: 80%;
-    font-weight: 400;
-    font-size: rem(16px);
-    line-height: rem(24px);
-    color: #1f242b;
-    margin-bottom: rem(30px);
-  }
 }
 
 .image {
