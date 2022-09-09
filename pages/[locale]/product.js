@@ -4,6 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
+import { useTranslation } from 'next-i18next';
 
 import styles from '../../assets/styles/ProductList.module.scss'
 
@@ -32,9 +33,12 @@ export default function Product() {
     }
   ]
 
+  const { i18n } = useTranslation('common');
+
   return (
     <>
       <Head>
+        <html lang={i18n.language} />
         <title>Keskin Yapı | {products[0].title}</title>
         <meta name="description" content={products[0].title} />
       </Head>

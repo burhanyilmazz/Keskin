@@ -19,7 +19,7 @@ import classNames from 'classnames';
 
 export default function ProductDetail() {
   const [modalOpen, setModalOpen] = useState(false);
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
 
   const breadcrumbs = [
     {
@@ -43,6 +43,7 @@ export default function ProductDetail() {
   return (
     <>
       <Head>
+        <html lang={i18n.language} />
         <title>Keskin Yapı | {products[0].children[0].products[0].title}</title>
         <meta name="description" content={products[0].children[0].products[0].description} />
       </Head>

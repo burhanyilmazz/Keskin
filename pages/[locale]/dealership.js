@@ -14,7 +14,7 @@ import Image from 'next/image'
 import classNames from 'classnames';
 
 export default function Dealership() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
 
   const breadcrumbs = [
     {
@@ -192,6 +192,7 @@ export default function Dealership() {
   return (
     <>
       <Head>
+        <html lang={i18n.language} />
         <title>Keskin Yapı</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
