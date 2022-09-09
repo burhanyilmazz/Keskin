@@ -30,7 +30,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <html lang={i18n.language} />
+        {/* <html lang={i18n.language} /> */}
         <title>Keskin Yapı</title>
         <meta name="description" content={t('ABOUT.SUBTITLE')} />
       </Head>
