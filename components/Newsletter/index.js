@@ -17,7 +17,7 @@ export const Newsletter = (props) => {
         <div className={styles['content']}>
           <h3>{title}</h3>
           <p>{text}</p>
-          {type === 'subscription' && <FormInput field='E-posta adresiniz'  /> }
+          {type === 'subscription' && <FormInput field='E-posta adresiniz' name={'email'} /> }
           {type === 'subscription' &&<span>{t('AGREEMENT_INFO')}</span>}
           {type === 'joinUs' && <LinkButton text={t('MORE_INFO')} href='/career' /> }
           {type === 'subscription' && <LinkButton text={t('NEWSLETTER_BUTTON')} button transparent />}

@@ -21,7 +21,7 @@ export const SearchBar = (props) => {
           <form>
             <div className={styles['input']}>
               <div className={styles['input-icon']}><Icon icon={'search'} /></div>
-              <FormInput field={t('SEARCH.BAR.INPUT')} className={styles['search-input']} />
+              <FormInput field={t('SEARCH.BAR.INPUT')} className={styles['search-input']} name={'search'} />
               <div className={styles['input-submit']}><Icon icon={'enter'} /></div>
             </div>
           </form>
