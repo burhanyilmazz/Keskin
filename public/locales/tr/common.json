@@ -26,6 +26,11 @@
     "FORM.MESSAGE": "Mesaj",
     "FORM.CHOOSE": "Dosya Seçin",
 
+    "FOOTER": {
+        "IMAGE": "Sitedeki görsel materyaller izinsiz kullanılamaz.",
+        "COPYRIGHT": "2022 Keskin Yapı Tüm Hakları Saklıdır"
+    },
+
     "SEARCH": {
         "BAR": {
             "TITLE": "Ne Aramıştınız?",

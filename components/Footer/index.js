@@ -19,7 +19,7 @@ export const Footer = (props) => {
       <div className='container'>
         <div className={styles['top']}>
           <div className={styles['logo']}>
-            <StaticI18nLink href='/'><a><Image src={'/images/content/logo/logo-vertical.svg'} width={'113'} height={'64'} layout={'fixed'} /></a></StaticI18nLink>
+            <StaticI18nLink href='/'><a><Image src={'/images/content/logo/logo-vertical.svg'} width={'113'} height={'64'} layout={'fixed'} alt={'Keskin Yapı'} /></a></StaticI18nLink>
           </div>
           <div className={styles['menu']}>
             <ul>
@@ -39,7 +39,7 @@ export const Footer = (props) => {
             </ul>
           </div>
           <div className={styles['products']}>
-            <h3>Ürün Grupları</h3>
+            <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
             <ul>
               {
                 products?.map((item, index) => {
@@ -52,7 +52,7 @@ export const Footer = (props) => {
             <SocialMedia type={'vertical'} />
           </div>
           <div className={styles['fikirmod']}>
-            <Image src={'/images/content/logo/fikirmod.svg'} width={'65'} height={'14'} layout={'fixed'} />
+            <a href='https://wwww.fikirmod.com.tr' target='_blank' rel="noreferrer"><Image src={'/images/content/logo/fikirmod.svg'} width={'65'} height={'14'} layout={'fixed'} alt={'Fikirmod'} /></a>
           </div>
           <div className={styles['up']} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
             <Icon icon='arrow' />
@@ -61,8 +61,8 @@ export const Footer = (props) => {
       </div>
       <div className={styles['bottom']}>
         <div className={classNames('container', styles['container'])}>
-          <span>&copy; 2022 Keskinyapı Tüm Hakları Saklıdır</span>
-          <span>Sitedeki görsel materyaller izinsiz kullanılamaz.</span>
+          <span>&copy; {t('FOOTER.COPYRIGHT')}</span>
+          <span>{t('FOOTER.IMAGE')}</span>
         </div>
       </div>
     </div>
