@@ -33,9 +33,6 @@
     &[data-dirty="true"],
     &[data-dirty-important="true"],
     &:focus {
-      /* padding-top: rem(12px);
-      padding-bottom: 0; */
-
       & ~ label {
         transform: translate(24px, 7px) scale(0.75);
       }

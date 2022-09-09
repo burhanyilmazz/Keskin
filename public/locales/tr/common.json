@@ -15,6 +15,9 @@
     "CONTACT_FORM": "İletişim Formu",
     "CAREER_FORM": "Kariyer Formu",
     "SEND": "Gönder",
+    "DOWNLOAD": "İndir",
+    "CATALOG": "E-Katalog",
+    "CATALOG.DESC": "Güncel ürün kataloğumuz için lütfen aşağıdaki butona tıklayınız.",
 
     "FORM.NAME": "Adınız Soyadınız",
     "FORM.EMAIL": "E-posta",
@@ -22,6 +25,14 @@
     "FORM.PHONE": "Telefon",
     "FORM.MESSAGE": "Mesaj",
     "FORM.CHOOSE": "Dosya Seçin",
+
+    "SEARCH": {
+        "BAR": {
+            "TITLE": "Ne Aramıştınız?",
+            "DESC": "Ürün hizmet ve daha fazlası",
+            "INPUT": "Arama"
+        }
+    },
 
     "NEWSLETTER": {
         "NEWS_TITLE" : "E-Bülten",

@@ -33,8 +33,8 @@ export const Sidebar = (props) => {
     <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
       <div className={styles['main']}>
         <div className={styles['main__head']}>
-          <h6>Ürün Grupları</h6>
-          <p>11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!</p>
+          <h6>{t('HOME.PRODUCTS.TITLE')}</h6>
+          <p>{t('HOME.PRODUCTS.SUBTITLE')}</p>
         </div>
         <div className={styles['main__body']}>
           <div className={styles['navigation']}>
@@ -60,9 +60,9 @@ export const Sidebar = (props) => {
           </Swiper>
         </div>
         <div className={styles['main__foot']}>
-          <h3>E-Katalog</h3>
-          <p>Güncel ürün kataloğumuz için lütfen aşağıdaki butona tıklayınız.</p>
-          <LinkButton href='#' text='İndir'/>
+          <h3>{t('CATALOG')}</h3>
+          <p>{t('CATALOG.DESC')}</p>
+          <LinkButton href='#' text={t('DOWNLOAD')}/>
         </div>
       </div>
       <div className={styles['nav']}>

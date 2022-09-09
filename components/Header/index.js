@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Image from 'next/image'
@@ -9,10 +9,16 @@ import styles from './Header.module.scss';
 
 export const Header = (props) => { 
   const { transparent } = props;
-  const [colorLogo, setColorLogo] = useState(transparent)
+  const [colorLogo, setColorLogo] = useState(transparent);
+  const [search, setSearch] = useState(transparent);
+
+  useEffect(() => {
+    setColorLogo(transparent)
+    setSearch(!transparent)
+  }, [transparent])
   
   return (
-      <header className={classNames(styles['header'], {[styles['header--transparent']] : colorLogo })}>
+      <header className={classNames(styles['header'], {[styles['header--transparent']] : colorLogo, [styles['header--search']] : search })}>
         <div className='container-fluid'>
           <StaticI18nLink href='/'>
             <a>
@@ -26,9 +32,11 @@ export const Header = (props) => {
 }
 
 Header.propTypes = {
-	transparent: PropTypes.bool
+	transparent: PropTypes.bool,
+	search: PropTypes.bool
 };
 
 Header.defaultProps = {
-	transparent: false
+	transparent: false,
+	search: false
 }

@@ -50,74 +50,90 @@ vertical-align: top;
   content: "\f105";
   }
 
-  %icon-facebook {
+  %icon-enter {
   content: "\f106";
+  }
+
+  .icon-enter:before {
+  content: "\f106";
+  }
+
+  %icon-facebook {
+  content: "\f107";
   }
 
   .icon-facebook:before {
-  content: "\f106";
+  content: "\f107";
   }
 
   %icon-instagram {
-  content: "\f107";
+  content: "\f108";
   }
 
   .icon-instagram:before {
-  content: "\f107";
+  content: "\f108";
   }
 
   %icon-linkedin {
-  content: "\f108";
+  content: "\f109";
   }
 
   .icon-linkedin:before {
-  content: "\f108";
+  content: "\f109";
   }
 
   %icon-park {
-  content: "\f109";
+  content: "\f10a";
   }
 
   .icon-park:before {
-  content: "\f109";
+  content: "\f10a";
   }
 
   %icon-pin {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   .icon-pin:before {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   %icon-qr {
-  content: "\f10b";
+  content: "\f10c";
   }
 
   .icon-qr:before {
-  content: "\f10b";
+  content: "\f10c";
+  }
+
+  %icon-search {
+  content: "\f10d";
+  }
+
+  .icon-search:before {
+  content: "\f10d";
   }
 
   %icon-trasnport {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   .icon-trasnport:before {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   %icon-upload {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   .icon-upload:before {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   %icon-youtube {
-  content: "\f10e";
+  content: "\f110";
   }
 
   .icon-youtube:before {
-  content: "\f10e";
+  content: "\f110";
   }

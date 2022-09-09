@@ -1,0 +1,88 @@
+@import "../../assets/styles/functions.scss";
+
+.search {
+  position: fixed;
+  top: 0;
+  padding-top: 80px;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  width: 100%;
+  transition: all 0.5s ease;
+
+  &--open {
+    z-index: 9;
+    background: rgba(31, 36, 43, 0.3);
+
+    .wrap {
+      transform: translateY(0);
+    }
+  }
+
+  &-input {
+    input {
+      padding: 32px 24px 32px 60px;
+
+      &[data-dirty="true"],
+      &[data-dirty-important="true"],
+      &:focus {
+        & ~ label {
+          transform: translate(60px, 15px) scale(0.75);
+        }
+      }
+    }
+
+    label {
+      transform: translate(60px, 32px) scale(1);
+      color: rgba(100, 116, 139, 0.5);
+    }
+  }
+}
+
+.wrap {
+  background: #f9f9fa;
+  padding: 64px 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease;
+
+  h4 {
+    font-weight: 500;
+    font-size: rem(32px);
+    line-height: rem(43px);
+    color: #1f242b;
+    margin: 0;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: rem(20px);
+    color: #64748b;
+  }
+}
+
+.input {
+  position: relative;
+
+  &-icon {
+    position: absolute;
+    z-index: 2;
+    left: 27px;
+    top: 30px;
+    display: flex;
+  }
+
+  &-submit {
+    position: absolute;
+    z-index: 2;
+    right: 27px;
+    top: 30px;
+    display: flex;
+  }
+
+  i {
+    &:before {
+      font-size: 24px;
+    }
+  }
+}

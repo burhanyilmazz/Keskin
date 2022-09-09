@@ -115,7 +115,7 @@ export default function Homepage() {
               <LinkButton href='/about' text={t('MORE_INFO')} locale/>
             </div>
             <div className={classNames(styles['image'], 'image')}>
-              <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} />
+              <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.QUALITY.TITLE')} />
             </div>
           </div>
         </section>
