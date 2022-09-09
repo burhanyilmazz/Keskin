@@ -19,3 +19,4 @@ export * from './Modal';
 export * from './FormTextarea';
 export * from './ContactForm';
 export * from './FileInput';
+export * from './SearchIcon';

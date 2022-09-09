@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import styles from './Hamburger.module.scss';
+import styles from './SearchIcon.module.scss';
 
-export const Hamburger = (props) => { 
+export const SearchIcon = (props) => { 
   const { onClick, transparent, isOpen } = props;
   const [isChecked, setIsChecked] = useState(isOpen);
 
@@ -17,21 +17,20 @@ export const Hamburger = (props) => {
   }, [isOpen])
   
   return (
-    <div className={classNames(styles['menu-icon'], {[styles['active']] : isChecked, [styles['menu-icon--transparent']] : transparent } )} onClick={handleClick}>
+    <div className={classNames(styles['search-icon'], {[styles['active']] : isChecked, [styles['search-icon--transparent']] : transparent } )} onClick={handleClick}>
       <div>
-        <span></span>
-        <span></span>
+        <span className={classNames({[styles['close']] : isChecked} )}></span>
       </div>
     </div>
   )
 }
 
-Hamburger.propTypes = {
+SearchIcon.propTypes = {
 	onClick: PropTypes.func,
   transparent: PropTypes.bool,
   isOpen: PropTypes.bool
 };
 
-Hamburger.defaultProps = {
+SearchIcon.defaultProps = {
 	isOpen: false
 }
