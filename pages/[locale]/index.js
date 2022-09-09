@@ -18,7 +18,7 @@ import { products } from '../../utils/Products';
 import { blogs } from '../../utils/Blog';
 
 export default function Homepage() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation('common');
 
   const carousel = [
     {
@@ -50,7 +50,6 @@ export default function Homepage() {
   return (
     <>
       <Head>
-        <html lang={i18n.language} />
         <title>Keskin Yapı</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
