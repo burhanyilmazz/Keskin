@@ -47,7 +47,7 @@ export default function Export() {
             <h2>{t('EXPORT.SUBTITLE')}</h2>
             <div dangerouslySetInnerHTML={{__html: t('EXPORT.DESC')}} />
           </div>
-          <div className={styles['image']}>
+          <div className={classNames(styles['image'], 'image')}>
             <Image src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />
           </div>
           </div>

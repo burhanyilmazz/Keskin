@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Sidebar, Header, Hamburger, Footer } from '../components/';
 import styles from './Layout.module.scss';
@@ -6,6 +6,11 @@ import styles from './Layout.module.scss';
 export const Layout = (props) => { 
   const { transparent, products, className } = props;
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    document.querySelector('html').classList.remove('disable-scroll')
+  }, [])
+  
 
   const handleOnClick = (event) => {
     event 

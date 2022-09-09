@@ -65,8 +65,8 @@ export default function Homepage() {
               <p>{t('HOME.ABOUT.DESC')}</p>
               <LinkButton href='/about' text={t('MORE_INFO')} locale/>
             </div>
-            <div className={styles['image']}>
-              <Image src='/images/content/homepage/about.png' width={485} height={431} layout={'responsive'} alt={t('HOME.ABOUT.TITLE')} />
+            <div className={classNames(styles['image'], 'image')}>
+              <Image src='/images/content/homepage/about.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.ABOUT.TITLE')} />
             </div>
           </div>
         </section>
@@ -114,8 +114,8 @@ export default function Homepage() {
               <p>{t('HOME.QUALITY.DESC')}</p>
               <LinkButton href='/about' text={t('MORE_INFO')} locale/>
             </div>
-            <div className={styles['image']}>
-              <Image src='/images/content/homepage/quality.png' width={485} height={431} layout={'responsive'} />
+            <div className={classNames(styles['image'], 'image')}>
+              <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} />
             </div>
           </div>
         </section>

@@ -1,9 +1,9 @@
 @import "fonts";
 @import "icons";
-@import './functions.scss';
+@import "./functions.scss";
 
 body {
-  background: #F9F9FA;
+  background: #f9f9fa;
   color: #35373c;
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
@@ -248,5 +248,12 @@ ul {
     line-height: rem(24px);
     color: #1f242b;
     margin-bottom: rem(30px);
+  }
+}
+
+.image {
+  span {
+    box-shadow: 0px 28px 54px rgba(100, 116, 139, 0.1);
+    border-radius: 16px;
   }
 }

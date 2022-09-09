@@ -47,8 +47,8 @@ export default function About() {
               <h2>{t('ABOUT.SUBTITLE')}</h2>
               <div dangerouslySetInnerHTML={{__html: t('ABOUT.DESC')}} />
             </div>
-            <div className={styles['image']}>
-              <Image src='/images/content/about/about.png' width={485} height={431} layout={'responsive'} />
+            <div className={classNames(styles['image'], 'image')}>
+              <Image src='/images/content/about/about.jpg' width={442} height={480} layout={'responsive'} />
             </div>
           </div>
         <div className={classNames('container', styles['quality'])}>
@@ -57,8 +57,8 @@ export default function About() {
             <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
               
             <div className={classNames('policy', styles['policy'])}>
-              <div className={styles['image']}>
-                <Image src='/images/content/about/quality.png' width={485} height={431} layout={'responsive'} />
+              <div className={classNames(styles['image'], 'image')}>
+                <Image src='/images/content/about/quality.jpg' width={572} height={480} layout={'responsive'} />
               </div>
               <p>{t('HOME.QUALITY.DESC')}</p>            
             </div>

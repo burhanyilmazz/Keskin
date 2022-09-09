@@ -38,14 +38,14 @@ export default function Career() {
         />
         <div className='content text'>
           <div className={classNames('container', styles['career'])}>
-          <h6>{t('CAREER.TITLE')}</h6>
-          <div className={styles['content']}>
-            <h2>{t('CAREER.SUBTITLE')}</h2>
-            <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />
-          </div>
+            <h6>{t('CAREER.TITLE')}</h6>
+            <div className={styles['content']}>
+              <h2>{t('CAREER.SUBTITLE')}</h2>
+              <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />
+            </div>
 
-            <div className={styles['image']}>
-                <Image src='/images/content/career/career.png' width={485} height={431} layout={'responsive'} />
+            <div className={classNames(styles['image'], 'image')}>
+              <Image src='/images/content/career/career.jpg' width={442} height={480} layout={'responsive'} />
             </div>
           </div>
           <div className={classNames('contact', styles['contact'])}>
