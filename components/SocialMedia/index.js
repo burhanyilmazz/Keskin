@@ -9,10 +9,10 @@ export const SocialMedia = (props) => {
   
   return (
     <ul className={classNames(styles['social-media'], {[styles['social-media--vertical']]: type === 'vertical'}, className)}>
-      <li><a href="#" target="_blank"><Icon icon="instagram" /></a></li>
-      <li><a href="#" target="_blank"><Icon icon="facebook" /></a></li>
-      <li><a href="#" target="_blank"><Icon icon="linkedin" /></a></li>
-      <li><a href="#" target="_blank"><Icon icon="youtube" /></a></li>
+      <li><a href="#" target="_blank" aria-label='Keskin Yapı Instagram'><Icon icon="instagram" /></a></li>
+      <li><a href="#" target="_blank" aria-label='Keskin Yapı Facebook'><Icon icon="facebook" /></a></li>
+      <li><a href="#" target="_blank" aria-label='Keskin Yapı Linkedin'><Icon icon="linkedin" /></a></li>
+      <li><a href="#" target="_blank" aria-label='Keskin Yapı Youtebe'><Icon icon="youtube" /></a></li>
     </ul>
   )
 }
