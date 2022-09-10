@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 
 import styles from './SearchBar.module.scss';
-import { FormInput, Icon } from '../';
+import { Search } from '../';
 
 
 export const SearchBar = (props) => {
@@ -18,13 +18,7 @@ export const SearchBar = (props) => {
           <h4>{t('SEARCH.BAR.TITLE')}</h4>
           <p>{t('SEARCH.BAR.DESC')}</p>
 
-          <form>
-            <div className={styles['input']}>
-              <div className={styles['input-icon']}><Icon icon={'search'} /></div>
-              <FormInput field={t('SEARCH.BAR.INPUT')} className={styles['search-input']} name={'search'} />
-              <div className={styles['input-submit']}><Icon icon={'enter'} /></div>
-            </div>
-          </form>
+          <Search />
         </div>
       </div>
     </div>

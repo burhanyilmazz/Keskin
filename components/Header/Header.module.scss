@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 10;
   width: 100%;
-  background: #ffffff;
+  background: #fff;
   border-radius: 0px 0px 16px 16px;
   height: 80px;
   padding-top: 22px;
@@ -19,5 +19,6 @@
 
   &--search {
     border-radius: 0;
+    background: #fff !important;
   }
 }

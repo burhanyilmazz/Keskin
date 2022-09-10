@@ -21,3 +21,4 @@ export * from './ContactForm';
 export * from './FileInput';
 export * from './SearchIcon';
 export * from './SearchBar';
+export * from './Search';

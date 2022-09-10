@@ -12,11 +12,6 @@ export const Layout = (props) => {
     document.querySelector('html').classList.remove('disable-scroll')
   }, [])
   
- /*  useEffect(() => {
-    setHeaderTransparent(!headerTransparent)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchOpen]) */
-
   const handleOnClickNav = (event) => {
     event 
       ? document.querySelector('html').classList.add('disable-scroll') 
@@ -32,15 +27,15 @@ export const Layout = (props) => {
     setSidebarOpen(false)
     setSearchOpen(event)
     setHeaderTransparent(!event)
-  }
 
+  }
   
   return (
     <>
-      <Header transparent={headerTransparent} search={headerTransparent} />
-      <SearchIcon transparent={headerTransparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
+      <Header transparent={transparent} searchBox={searchOpen} />
+      <SearchIcon transparent={transparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
       <SearchBar isShow={searchOpen} />
-      <Hamburger transparent={headerTransparent} onClick={(event) => handleOnClickNav(event)} isOpen={sidebarOpen} />
+      <Hamburger transparent={transparent} onClick={(event) => handleOnClickNav(event)} isOpen={sidebarOpen} />
       <Sidebar isShow={sidebarOpen} products={products} />
       <main className={className}>
         {props.children}

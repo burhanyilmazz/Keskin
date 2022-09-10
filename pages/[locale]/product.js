@@ -35,7 +35,7 @@ export default function Product() {
   return (
     <>
       <Head>
-        <title>Keskin Yapı | {products[0].title}</title>
+        <title>Keskin Yapı</title>
         <meta name="description" content={products[0].title} />
       </Head>
       

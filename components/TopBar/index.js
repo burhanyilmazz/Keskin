@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import styles from './TopBar.module.scss';
 import { Breadcrumb } from '../';
+import classNames from 'classnames';
 
 export const TopBar = (props) => { 
   const { img, title, breadcrumbs } = props;
   
   return (
-    <div className={styles['topbar']}>
-      <div className={styles['image']}><img src={img} alt='' /></div>
+    <div className={classNames(styles['topbar'], {[styles['topbar--nonimg']]: !img})}>
+      { img && <div className={styles['image']}><img src={img} alt='' /></div> }
       <div className={styles['content']}>
         <div className='container'>
           <h1>{title}</h1>

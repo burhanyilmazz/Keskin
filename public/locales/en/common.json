@@ -36,7 +36,8 @@
             "TITLE": "Ne Aramıştınız?",
             "DESC": "Ürün hizmet ve daha fazlası",
             "INPUT": "Arama"
-        }
+        },
+        "TITLE": "Arama Sonuçları"
     },
 
     "NEWSLETTER": {

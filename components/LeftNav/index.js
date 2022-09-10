@@ -33,11 +33,11 @@ export const LeftNav = (props) => {
   const router = useRouter();
   const route = `/${router.asPath.split('/')[2]}`;
 
-  const { t, i18n } = useTranslation('common')
+  const { t } = useTranslation('common')
 
   return (
     <aside className={classNames(styles['left-nav'], {[styles['sidebar--open']] : isShow })}>
-      <h3>Ürün Grupları</h3>
+      <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
       <nav>
         <ul>
           {
@@ -49,12 +49,12 @@ export const LeftNav = (props) => {
                     key = {index}
                   >
                     <div className={styles['item']} onClick={(event) => onClick(event, index)}>
-                      <Image src='/images/content/homepage/about.png' width={32} height={32} layout={'fixed'} /> 
+                      <Image src={item.images.thumbnail} width={32} height={32} layout={'fixed'} /> 
                       <div>{item.title}</div>
                       <Icon icon={'arrow'} />
                     </div>
                     <ul>
-                      <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>Tümünü Gör <Icon icon={'arrow'} /></a></StaticI18nLink></li>
+                      <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
                       {
                         item.children.map((children, child) => {
                           if (route == children.href) item.isActive = true;
@@ -64,7 +64,7 @@ export const LeftNav = (props) => {
                               <li key={child} className={classNames({[styles['child--active']] : children.isActive, [styles['child--open']] : children.isOpen })}  >
                                 <div onClick={(event) => onClick(event, index, child)}>{children.title}</div>
                                 <ul>
-                                  <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>Tümünü Gör</StaticI18nLink></li>
+                                  <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>{t('ALL_BUTTON')}</StaticI18nLink></li>
                                   {
                                     children.products.map((product, i) => {
                                       return <li key={i} ><StaticI18nLink href={product.href}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
