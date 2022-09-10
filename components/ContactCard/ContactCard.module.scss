@@ -1,0 +1,117 @@
+.contact-card {
+  background: #fff;
+  width: 100%;
+}
+
+.directions {
+  position: relative;
+  background: #fff;
+  padding: 8px;
+  height: 177px;
+
+  .map-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 16px;
+    width: 104px;
+    height: 32px;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    top: 16px;
+    right: 16px;
+    z-index: 9;
+    color: #fc6a10;
+
+    i {
+      padding-left: 10px;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+  }
+
+  > span {
+    height: 160px !important;
+  }
+
+  .text {
+    position: absolute;
+    background: #ffffff;
+    padding: 16px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 16px;
+    color: #2c333e;
+    bottom: 16px;
+    width: calc(100% - 32px);
+    margin: 0 8px;
+    left: 8px;
+  }
+}
+
+.button {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 8px 8px;
+  gap: 8px;
+
+  h2 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #64748b;
+    margin: 0;
+  }
+  span {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
+    margin: 4px 0 0;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  i {
+    color: #fc6a10;
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.phone,
+.email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #f3f4f5;
+  border-radius: 8px;
+}

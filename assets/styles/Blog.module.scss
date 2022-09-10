@@ -1,6 +1,18 @@
-.blog{
-    background: #fff;
-    border-radius: 16px;
-    padding: 96px;
-    margin-bottom: 176px;
+.blog {
+  background: #fff;
+  display: flex;
 }
+
+.list {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #F9F9FA;
+  gap: 32px;
+  padding: 89px 48px;
+
+  > div {
+    width: calc(50% - 16px);
+  }
+}
+
