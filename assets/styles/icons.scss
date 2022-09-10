@@ -82,58 +82,74 @@ vertical-align: top;
   content: "\f109";
   }
 
-  %icon-park {
+  %icon-mail {
   content: "\f10a";
+  }
+
+  .icon-mail:before {
+  content: "\f10a";
+  }
+
+  %icon-map {
+  content: "\f10b";
+  }
+
+  .icon-map:before {
+  content: "\f10b";
+  }
+
+  %icon-park {
+  content: "\f10c";
   }
 
   .icon-park:before {
-  content: "\f10a";
+  content: "\f10c";
   }
 
   %icon-pin {
-  content: "\f10b";
+  content: "\f10d";
   }
 
   .icon-pin:before {
-  content: "\f10b";
+  content: "\f10d";
   }
 
   %icon-qr {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   .icon-qr:before {
-  content: "\f10c";
+  content: "\f10e";
   }
 
   %icon-search {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   .icon-search:before {
-  content: "\f10d";
+  content: "\f10f";
   }
 
   %icon-trasnport {
-  content: "\f10e";
+  content: "\f110";
   }
 
   .icon-trasnport:before {
-  content: "\f10e";
+  content: "\f110";
   }
 
   %icon-upload {
-  content: "\f10f";
+  content: "\f111";
   }
 
   .icon-upload:before {
-  content: "\f10f";
+  content: "\f111";
   }
 
   %icon-youtube {
-  content: "\f110";
+  content: "\f112";
   }
 
   .icon-youtube:before {
-  content: "\f110";
+  content: "\f112";
   }

@@ -22,3 +22,5 @@ export * from './FileInput';
 export * from './SearchIcon';
 export * from './SearchBar';
 export * from './Search';
+export * from './RightNav';
+export * from './ContactCard';

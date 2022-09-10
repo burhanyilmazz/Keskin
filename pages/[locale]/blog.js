@@ -9,7 +9,7 @@ import { Layout } from '../../layout'
 import styles from '../../assets/styles/Blog.module.scss'
 
 import { products } from '../../utils/Products';
-import { TopBar, Newsletter } from '../../components';
+import { TopBar, StaticI18nLink, Card, Icon, RightNav } from '../../components';
 import Image from 'next/image'
 import classNames from 'classnames';
 
@@ -41,11 +41,32 @@ export default function Blog() {
           breadcrumbs={breadcrumbs}
         />
         <div className='content'>
-         <div className={classNames('', styles['blog'])}>
-            <div className={styles['content']}>
-                  
+         <div className={classNames('container', styles['blog'])}>
+            <div className={styles['list']}>
+              <Card 
+                src="/images/content/blog/blog.jpg" 
+                title='Duvar Ses Yalıtımı'  
+                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
+              />
+              <Card 
+                src="/images/content/blog/blog.jpg" 
+                title='Duvar Ses Yalıtımı'  
+                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
+              />
+              <Card 
+                src="/images/content/blog/blog.jpg" 
+                title='Duvar Ses Yalıtımı'  
+                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
+              />
+              <Card 
+                src="/images/content/blog/blog.jpg" 
+                title='Duvar Ses Yalıtımı'  
+                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
+              />
             </div>
-         </div>
+
+            <RightNav mainTitle='Kategoriler' subTitle='Popüler Makaleler' title='Su Yalıtımı' text='24.08.2022' piece='3' />
+          </div>
         </div>
       </Layout>
     </>
