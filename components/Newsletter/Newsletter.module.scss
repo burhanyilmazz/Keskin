@@ -9,6 +9,14 @@
   color: #fff;
   margin-bottom: 116px;
 
+  @media screen and (max-width: 1024px) {
+    padding: 48px 60px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 48px 24px;
+  }
+
   &--hr {
     background: #f9f9fa url(/images/newsletter/bg-join.jpg) center center
       no-repeat;
@@ -30,6 +38,14 @@
   width: rem(400px);
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 1280px) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 
   h3 {
     font-weight: 500;

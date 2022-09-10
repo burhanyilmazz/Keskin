@@ -9,15 +9,47 @@
 
 .content {
   width: calc(100% - 600px);
+  @media screen and (max-width: 1200px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+
+    > div {
+      display: flex;
+    }
+  }
 }
 
 .image {
   width: 593px;
-  height: 539px;
   border-radius: 16px;
   position: absolute;
   right: 0;
   bottom: -285px;
+
+  @media screen and (max-width: 1440px) {
+    width: 50%;
+    right: 48px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 40%;
+    bottom: -205px;
+  }
+
+  @media screen and (max-width: 990px) {
+    right: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    bottom: auto;
+    right: auto;
+    position: relative;
+    margin-top: rem(60px);
+  }
 }
 
 .products {
@@ -30,6 +62,22 @@
   &__item {
     width: calc((100% / 6) - 24px);
     margin: 16px 12px;
+
+    @media screen and (max-width: 1366px) {
+      width: calc((100% / 5) - 24px);
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: calc((100% / 4) - 24px);
+    }
+
+    @media screen and (max-width: 860px) {
+      width: calc((100% / 3) - 24px);
+    }
+    @media screen and (max-width: 640px) {
+      width: calc((100% / 2) - 16px);
+      margin: 12px 6px;
+    }
   }
 }
 
@@ -39,24 +87,44 @@
   flex-wrap: wrap;
   margin: 0 -8px;
   width: 70%;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .icon-box {
   width: calc(33.333% - 16px);
   margin: 8px;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 8px 0;
+  }
+
   &:nth-child(4),
   &:nth-child(5) {
     width: calc(50% - 16px);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
 .wrap {
   display: flex;
+  
+  @media screen and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 
   .content {
     p {
       width: 70%;
+      @media screen and (max-width: 1200px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -70,8 +138,16 @@
     width: 100%;
     margin-bottom: 72px;
 
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
     h2 {
       margin-bottom: 0;
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 36px;
+      }
     }
   }
 }
@@ -81,6 +157,10 @@
   display: flex;
   align-items: center;
   padding-left: calc((100% - 1366px) / 2);
+
+  @media screen and (max-width: 1390px) {
+    padding-left: 24px;
+  }
 
   &__slide {
     max-width: 376px;

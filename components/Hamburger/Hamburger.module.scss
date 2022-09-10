@@ -10,6 +10,10 @@
   background: #F9F9FA;
   transition: all 0.5s ease;
   top: 16px;
+
+  @media screen and (max-width: 990px) {
+    right: 24px;
+  }
   
   &--transparent {
     background: rgba(255, 255, 255, 0.05) !important;

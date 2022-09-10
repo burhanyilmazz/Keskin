@@ -3,11 +3,18 @@
     input {
       padding: 32px 24px 32px 60px;
 
+      @media screen and (max-width: 768px) {
+        padding: 24px 24px 24px 60px;
+      }
+
       &[data-dirty="true"],
       &[data-dirty-important="true"],
       &:focus {
         & ~ label {
           transform: translate(60px, 15px) scale(0.75);
+          @media screen and (max-width: 768px) {
+            transform: translate(60px, 10px) scale(0.75);
+          }
         }
       }
     }
@@ -15,6 +22,10 @@
     label {
       transform: translate(60px, 32px) scale(1);
       color: rgba(100, 116, 139, 0.5);
+
+      @media screen and (max-width: 768px) {
+        transform: translate(60px, 26px) scale(1);
+      }
     }
   }
 }
@@ -28,6 +39,10 @@
     left: 27px;
     top: 30px;
     display: flex;
+
+    @media screen and (max-width: 768px) {
+      top: 22px;
+    }
   }
 
   &-submit {
@@ -36,6 +51,10 @@
     right: 27px;
     top: 30px;
     display: flex;
+
+    @media screen and (max-width: 768px) {
+      top: 22px;
+    }
   }
 
   i {

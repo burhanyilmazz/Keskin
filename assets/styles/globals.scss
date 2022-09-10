@@ -26,8 +26,17 @@ html {
   padding: 0;
   margin: 0;
   font-size: 7vw;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 990px) {
+    font-size: 9vw;
     overflow-x: hidden;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 12vw;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 17vw;
   }
 }
 
@@ -79,6 +88,11 @@ a {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+
+  @media screen and (max-width: 1390px) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
 .container-fluid {
   width: 100%;
@@ -86,6 +100,11 @@ a {
   padding-left: 48px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (max-width: 990px) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
 
 ul {
@@ -171,6 +190,16 @@ ul {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
+
+        @media screen and (max-width: 990px) {
+          right: auto;
+          left: 152px;
+          bottom: 48px;
+        }
+
+        @media screen and (max-width: 640px) {
+          left: 40px;
+        }
       }
 
       &-button {
@@ -189,6 +218,11 @@ ul {
           top: auto;
           bottom: 112px;
 
+          @media screen and (max-width: 990px) {
+            right: 48px;
+            bottom: 48px;
+          }
+
           &:after {
             font-size: 8px;
             color: #fff;
@@ -197,6 +231,10 @@ ul {
 
         &-prev {
           bottom: 64px;
+
+          @media screen and (max-width: 990px) {
+            bottom: 94px;
+          }
         }
       }
     }
@@ -232,13 +270,22 @@ ul {
     font-size: rem(14px);
     line-height: rem(19px);
     color: #1f242b;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 14px;
+    }
   }
+
   h2 {
     font-weight: 500;
     font-size: rem(32px);
     line-height: rem(43px);
     margin: rem(64px) 0;
     color: #1f242b;
+
+    @media screen and (max-width: 768px) {
+      margin: rem(48px) 0;
+    }
   }
 
   p {
@@ -248,6 +295,12 @@ ul {
     line-height: rem(24px);
     color: #1f242b;
     margin-bottom: rem(30px);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
