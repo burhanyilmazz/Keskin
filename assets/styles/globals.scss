@@ -326,3 +326,13 @@ ul {
     border-radius: 16px;
   }
 }
+
+#map {
+  height: 700px;
+  border-radius: 0px 0px 32px 32px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 100%;
+  z-index: 1;
+  top: 80px
+}
