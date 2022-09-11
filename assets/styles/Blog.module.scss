@@ -1,6 +1,11 @@
 .blog {
-  background: #fff;
+  background: #f9f9fa;
   display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
 }
 
 .list {
@@ -13,6 +18,21 @@
 
   > div {
     width: calc(50% - 16px);
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 32px 16px;
+    margin-top: 32px;
+    order: 2;
+
+    > div {
+      width: 100%;
+    }
   }
 }
 

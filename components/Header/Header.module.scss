@@ -11,6 +11,10 @@
 
   a {
     display: flex;
+
+    @media screen and (max-width: 320px) {
+      width: 140px;
+    }
   }
 
   &--transparent {

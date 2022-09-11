@@ -62,7 +62,7 @@ export const Sidebar = (props) => {
         <div className={styles['main__foot']}>
           <h3>{t('CATALOG')}</h3>
           <p>{t('CATALOG.DESC')}</p>
-          <LinkButton href='#' text={t('DOWNLOAD')}/>
+          <LinkButton href='#' text={t('DOWNLOAD')} icon={'download'} className={styles['download']} />
         </div>
       </div>
       <div className={styles['nav']}>
@@ -103,6 +103,10 @@ export const Sidebar = (props) => {
         <div className={styles['language']}>
           <StaticI18nLink href='/' locale={'tr'}><a className={classNames({[styles['lang-active']] : i18n.language === 'tr' ? true : '' })}>TR</a></StaticI18nLink>
           <StaticI18nLink href='/' locale={'en'}><a className={classNames({[styles['lang-active']] : i18n.language === 'en' ? true : '' })}>EN</a></StaticI18nLink>
+        </div>
+
+        <div className={styles['mobile-download']}>
+          <LinkButton href='#' text={t('CATALOG')} icon={'download'} className={styles['download']} />
         </div>
       </div>
     </aside>

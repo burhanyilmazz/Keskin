@@ -10,12 +10,17 @@
   transition: all 0.5s ease;
 
   @media screen and (max-width: 768px) {
-    height: calc(100% - 94px);
+    height: calc(100% - 80px);
   }
 
   &--open {
     background: rgba(31, 36, 43, 0.3);
     z-index: 999;
+
+    @media screen and (max-width: 768px) {
+      z-index: 9;
+    }
+
     .nav {
       transform: translateX(100%);
       transition-delay: 0.2s;
@@ -25,7 +30,7 @@
       }
 
       @media screen and (max-width: 768px) {
-        transform: translate(0, 94px);
+        transform: translate(0, 80px);
       }
     }
     .main {
@@ -232,6 +237,10 @@
           a {
             color: #35373c;
             padding: 8px 0;
+
+            @media screen and (max-width: 768px) {
+              padding: 14px 0;
+            }
           }
           span {
             &:after {
@@ -245,6 +254,11 @@
 
   &--open {
     color: #fc6a10 !important;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 5px !important;
+    }
+
     > a {
       color: #fc6a10 !important;
     }
@@ -275,13 +289,11 @@
 }
 
 .language {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 6px 16px;
   gap: 10px;
   position: absolute;
-  width: 142px;
-  height: 52px;
   background: #f9f9fa;
   border-radius: 8px;
   bottom: 152px;
@@ -297,6 +309,7 @@
   @media screen and (max-width: 768px) {
     bottom: 28px;
     left: 28px;
+    padding: 4px;
   }
   a {
     color: rgba(31, 36, 43, 0.4);
@@ -328,5 +341,24 @@
 
   @media screen and (max-width: 768px) {
     display: none;
+  }
+}
+
+.download {
+  i {
+    &:before {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.mobile-download {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline-flex;
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
   }
 }

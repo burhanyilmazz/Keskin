@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Image from 'next/image'
@@ -11,6 +12,7 @@ import styles from './Footer.module.scss';
 
 export const Footer = (props) => {
   const { products } = props;
+  const [isOpen, setIsOpen] = useState(false);
 
   const { t } = useTranslation('common')
   
@@ -38,8 +40,8 @@ export const Footer = (props) => {
               }
             </ul>
           </div>
-          <div className={styles['products']}>
-            <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
+          <div className={classNames(styles['products'], {[styles['products--open']]: isOpen})}>
+            <h3 onClick={() => setIsOpen(!isOpen)}>{t('HOME.PRODUCTS.TITLE')}</h3>
             <ul>
               {
                 products?.map((item, index) => {

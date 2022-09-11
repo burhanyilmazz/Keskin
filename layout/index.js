@@ -6,7 +6,7 @@ export const Layout = (props) => {
   const { transparent, products, className } = props;
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [headerTransparent, setHeaderTransparent] = useState(transparent);
+  const [headerTransparent, setHeaderTransparent] = useState(false);
 
   useEffect(() => {
     document.querySelector('html').classList.remove('disable-scroll')
@@ -18,6 +18,7 @@ export const Layout = (props) => {
       : document.querySelector('html').classList.remove('disable-scroll')
     setSidebarOpen(event)
     setSearchOpen(false)
+    setHeaderTransparent(event)
   }
 
   const handleOnClickSearch = (event) => {
@@ -26,13 +27,12 @@ export const Layout = (props) => {
       : document.querySelector('html').classList.remove('disable-scroll')
     setSidebarOpen(false)
     setSearchOpen(event)
-    setHeaderTransparent(!event)
-
+    setHeaderTransparent(event)
   }
   
   return (
     <>
-      <Header transparent={transparent} searchBox={searchOpen} />
+      <Header transparent={transparent} isChange={headerTransparent} />
       <SearchIcon transparent={transparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
       <SearchBar isShow={searchOpen} />
       <Hamburger transparent={transparent} onClick={(event) => handleOnClickNav(event)} isOpen={sidebarOpen} />

@@ -2,6 +2,10 @@
   background: #f9f9fa;
   display: flex;
 
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   h2 {
     font-size: 32px;
     font-weight: 500;
@@ -27,9 +31,20 @@
 }
 
 .blog-post {
-  padding: 64px 100px 64px 64px;
+  padding: 64px;
   width: 70%;
   background: #fff;
+
+  @media screen and (max-width: 1200px) {
+    padding: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 32px 16px;
+    margin-top: 32px;
+    order: 2;
+  }
 }
 
 .images {
@@ -41,12 +56,12 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
-    color: #1F242B;
+    color: #1f242b;
     display: block;
     margin: 48px 0 20px;
   }
 
-  ul{
+  ul {
     margin-left: -7px;
   }
 }

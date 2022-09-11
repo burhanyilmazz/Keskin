@@ -9,6 +9,9 @@ import { Layout } from '../../layout'
 import styles from '../../assets/styles/BlogDetail.module.scss'
 
 import { products } from '../../utils/Products';
+import { blogNav } from '../../utils/BlogNav';
+import { blogs } from '../../utils/Blog';
+
 import { TopBar, Card, RightNav, SocialMedia, Icon } from '../../components';
 import Image from 'next/image'
 import { Navigation, A11y } from 'swiper';
@@ -47,7 +50,7 @@ export default function Blogetail() {
           breadcrumbs={breadcrumbs}
         />
         <div className='content'>
-         <div className={classNames('container', styles['blog-detail'])}>
+          <div className={classNames('container', styles['blog-detail'])}>
             <div className={styles['blog-post']}>
               <div className={styles['desc']}>
                 <h3>24.08.2022</h3>
@@ -60,27 +63,26 @@ export default function Blogetail() {
               </div>
 
               <div className={styles['content']}>
-                <p>Kauçuk katkılı mantar levhalar, granül mantarların kauçuk ile karıştırılması sonucu hazırlanan bloklarından dilimlenmesiyle istenilen kalınlıklarda elde edilmektedir. Kauçuk mantar levhalar ses ve ısı izolasyonunu kusursuz yapması dolayısıyla inşaat sektöründe duvar, zemin ve çatılarda tercih edilmektedir. Ayrıca makine temellerinde vibrasyon emici olarak da kullanılmaktadır.
-                </p>
+                <p>Kauçuk katkılı mantar levhalar, granül mantarların kauçuk ile karıştırılması sonucu hazırlanan bloklarından dilimlenmesiyle istenilen kalınlıklarda elde edilmektedir. Kauçuk mantar levhalar ses ve ısı izolasyonunu kusursuz yapması dolayısıyla inşaat sektöründe duvar, zemin ve çatılarda tercih edilmektedir. Ayrıca makine temellerinde vibrasyon emici olarak da kullanılmaktadır.</p>
                 <p>Hammaddesi Mantar Meşesi ağacının kabuğu olan granül mantardan işlenerek elde edilen blok ve silindirlerden dilimlemek ve soyulmak suretiyle istenilen kalınlıklarda mantar şilte, mantar levha, mantar levhalar ve mantar rulolar elde edilir. Mantar şilte, Mantar levhalar ve mantar rulolar ses yalıtım, vibrasyon ve titreşim amaçlı oup genişkullanım alanlarına sahip malzemelerdir. Mantar şilteler ayrıca zemin altı, parke altı, şap altı uygulamalarında ses, ısı ve darbe emici özelliği sayesinde mükemmel bir yalıtım sağlar.</p>
                 <p>Zemin Ses İzolasyon Malzemeleri- Mantar Esaslı Şilte Kauçuk katkılı mantar levhalar, granül mantarların kauçuk ile karıştırılması sonucu hazırlanan bloklarından dilimlenmesiyle istenilen kalınlıklarda elde edilmektedir. Kauçuk mantar levhalar ses izolasyonunu kusursuza indirgemesi dolayısıyla inşaat alanında duvar, zemin ve çatılarda tercih edilmektedir. Ayrıca makine temellerinde vibrasyon emici olarak da kullanılmaktadır.</p>
               </div>
 
               <div className={styles['social-media']}>
-                <span>Yazıyı Paylaş</span>
+                <span>{t('SHARE')}</span>
                 <SocialMedia />
               </div>
             </div>
-            <RightNav mainTitle='Kategoriler' subTitle='Popüler Makaleler' title='Su Yalıtımı' text='24.08.2022' piece='3' />
+            <RightNav categories={blogNav} popular={blogs} />
           </div>
           
           <section className={classNames(styles['section'], styles['white'], styles['recommended'])}>
             <div className='container'>
               <div className={styles['content']}>
                 <h2>
-                İlgini Çekebilecek
+                  {t('INTERESTED')}
                   <br />
-                  Diğer Yazılar
+                  {t('OTHER_POSTS')}
                 </h2>
               </div>
             </div>

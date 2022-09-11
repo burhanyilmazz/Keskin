@@ -9,8 +9,10 @@ import { Layout } from '../../layout'
 import styles from '../../assets/styles/Blog.module.scss'
 
 import { products } from '../../utils/Products';
-import { TopBar, StaticI18nLink, Card, Icon, RightNav } from '../../components';
-import Image from 'next/image'
+import { blogNav } from '../../utils/BlogNav';
+import { blogs } from '../../utils/Blog';
+
+import { TopBar, Card,  RightNav } from '../../components';
 import classNames from 'classnames';
 
 export default function Blog() {
@@ -65,7 +67,7 @@ export default function Blog() {
               />
             </div>
 
-            <RightNav mainTitle='Kategoriler' subTitle='Popüler Makaleler' title='Su Yalıtımı' text='24.08.2022' piece='3' />
+            <RightNav categories={blogNav} popular={blogs} />
           </div>
         </div>
       </Layout>

@@ -8,14 +8,14 @@ import {StaticI18nLink} from "../"
 import styles from './Header.module.scss';
 
 export const Header = (props) => { 
-  const { transparent, searchBox } = props;
+  const { transparent, searchBox, isChange } = props;
   const [colorLogo, setColorLogo] = useState(transparent);
   const [search, setSearch] = useState(searchBox);
 
   useEffect(() => {
-    setColorLogo(transparent && searchBox ? false : transparent)
-    setSearch(searchBox)
-  }, [transparent, searchBox])
+    setColorLogo(transparent && isChange ? !isChange : transparent)
+    setSearch(isChange)
+  }, [transparent, searchBox, isChange])
   
   return (
       <header className={classNames(styles['header'], {[styles['header--transparent']] : transparent, [styles['header--search']] : search })}>
@@ -33,10 +33,12 @@ export const Header = (props) => {
 
 Header.propTypes = {
 	transparent: PropTypes.bool,
-	searchBox: PropTypes.bool
+	searchBox: PropTypes.bool,
+	isChange: PropTypes.bool,
 };
 
 Header.defaultProps = {
 	transparent: false,
-	searchBox: false
+	searchBox: false,
+	isChange: false,
 }
