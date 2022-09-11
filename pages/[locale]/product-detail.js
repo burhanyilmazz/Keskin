@@ -61,7 +61,7 @@ export default function ProductDetail() {
               <LinkButton href='#' text='TDS İndir' icon={'download'} className={styles['button']}/>
             </div>
             <div className={styles['image']}>
-              <Image src={products[0].children[0].products[0].images.medium} width={32} height={32} layout={'responsive'} /> 
+              <Image src={products[0].children[0].products[0].images.medium} width={'100%'} height={'100%'} layout={'responsive'} objectFit={'cover'} objectPosition={'center'} /> 
             </div>
           </div>
         </div>

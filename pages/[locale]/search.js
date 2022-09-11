@@ -9,6 +9,7 @@ import { Layout } from '../../layout'
 import styles from '../../assets/styles/Search.module.scss'
 
 import { products } from '../../utils/Products';
+import { blogs } from '../../utils/Blog';
 import { TopBar, Search, Card } from '../../components';
 
 export default function SearchPage() {
@@ -56,9 +57,16 @@ export default function SearchPage() {
 
               <div className={styles['blog-list']}>
                 {
-                  products.map((item, index) => {
+                  blogs.map((item, index) => {
                     return (
-                      <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product-detail'} /></div>
+                      <div key={index} className={styles['products__item']}>
+                        <Card 
+                          title={item.title} 
+                          desc={item.description} 
+                          href={'/blog-detail'} 
+                          src={item.images.medium}
+                        />
+                      </div>
                     )
                   })
                 }

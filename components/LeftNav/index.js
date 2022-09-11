@@ -6,13 +6,22 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 
 import styles from './LeftNav.module.scss';
-import { StaticI18nLink, Icon } from '../';
+import { StaticI18nLink, Icon, Hamburger } from '../';
 import Image from 'next/image'
 
 
 export const LeftNav = (props) => {
-  const { isShow, products } = props;
-  const [list, setList] = useState(products)
+  const { products } = props;
+  const [list, setList] = useState(products);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleClick = () => {
+    setIsChecked(!isChecked)
+
+    !isChecked 
+      ? document.querySelector('html').classList.add('disable') 
+      : document.querySelector('html').classList.remove('disable')
+  }
 
   const onClick = (event, index, child) => {
     if (child !== undefined) {
@@ -36,59 +45,73 @@ export const LeftNav = (props) => {
   const { t } = useTranslation('common')
 
   return (
-    <aside className={classNames(styles['left-nav'], {[styles['sidebar--open']] : isShow })}>
-      <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
-      <nav>
-        <ul>
-          {
-            list?.map((item, index) => {
-              if (item?.children) {
-                return (
-                  <li 
-                    className={classNames({[styles['parent--active']] : item.isActive, [styles['parent--open']] : item.isOpen })} 
-                    key = {index}
-                  >
-                    <div className={styles['item']} onClick={(event) => onClick(event, index)}>
-                      <Image src={item.images.thumbnail} width={32} height={32} layout={'fixed'} /> 
-                      <div>{item.title}</div>
-                      <Icon icon={'arrow'} />
-                    </div>
-                    <ul>
-                      <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
-                      {
-                        item.children.map((children, child) => {
-                          if (route == children.href) item.isActive = true;
+    <>
+      <div className={styles['mobile-nav']}>
+        <div className='container'>
+          <div className={styles['button']} onClick={handleClick}>{t('HOME.PRODUCTS.TITLE')} <Icon icon={'arrow'} /></div>
+        </div>
+      </div>
+      
+      <aside className={classNames(styles['left-nav'], {[styles['left-nav--open']] : isChecked })}>
+        <div className={styles['head']}>
+          <h5>{t('HOME.PRODUCTS.TITLE')}</h5>
+          <Hamburger isCloseImportant={true} onClick={handleClick} />
+        </div>
+        <div className={styles['wrap']}>
+          <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
+          <nav>
+            <ul>
+              {
+                list?.map((item, index) => {
+                  if (item?.children) {
+                    return (
+                      <li 
+                        className={classNames({[styles['parent--active']] : item.isActive, [styles['parent--open']] : item.isOpen })} 
+                        key = {index}
+                      >
+                        <div className={styles['item']} onClick={(event) => onClick(event, index)}>
+                          <Image src={item.images.thumbnail} width={32} height={32} layout={'fixed'} /> 
+                          <div>{item.title}</div>
+                          <Icon icon={'arrow'} />
+                        </div>
+                        <ul>
+                          <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
+                          {
+                            item.children.map((children, child) => {
+                              if (route == children.href) item.isActive = true;
 
-                          if (children?.products) {
-                            return (
-                              <li key={child} className={classNames({[styles['child--active']] : children.isActive, [styles['child--open']] : children.isOpen })}  >
-                                <div onClick={(event) => onClick(event, index, child)}>{children.title}</div>
-                                <ul>
-                                  <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>{t('ALL_BUTTON')}</StaticI18nLink></li>
-                                  {
-                                    children.products.map((product, i) => {
-                                      return <li key={i} ><StaticI18nLink href={product.href}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
-                                    })
-                                  }
-                                </ul>
-                              </li>
-                            )
+                              if (children?.products) {
+                                return (
+                                  <li key={child} className={classNames({[styles['child--active']] : children.isActive, [styles['child--open']] : children.isOpen })}  >
+                                    <div onClick={(event) => onClick(event, index, child)}>{children.title}</div>
+                                    <ul>
+                                      <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>{t('ALL_BUTTON')}</StaticI18nLink></li>
+                                      {
+                                        children.products.map((product, i) => {
+                                          return <li key={i} ><StaticI18nLink href={product.href}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
+                                        })
+                                      }
+                                    </ul>
+                                  </li>
+                                )
+                              }
+                              
+                              return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == children.href })} ><StaticI18nLink href={children.href}>{children.title}</StaticI18nLink></li>
+                            })
                           }
-                          
-                          return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == children.href })} ><StaticI18nLink href={children.href}>{children.title}</StaticI18nLink></li>
-                        })
-                      }
-                    </ul>
-                  </li>
-                )
-              }
+                        </ul>
+                      </li>
+                    )
+                  }
 
-              return <li key={index} className={classNames({[styles['nav--active']] : item.isActive || route == item.href })} ><StaticI18nLink href={item.href}>{item.title}</StaticI18nLink></li>
-            })
-          }
-        </ul>
-      </nav>
-    </aside>
+                  return <li key={index} className={classNames({[styles['nav--active']] : item.isActive || route == item.href })} ><StaticI18nLink href={item.href}>{item.title}</StaticI18nLink></li>
+                })
+              }
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </>
   )
 }
 

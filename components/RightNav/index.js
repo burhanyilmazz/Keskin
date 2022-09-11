@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image'
 import classNames from 'classnames';
@@ -10,16 +10,16 @@ import { useTranslation } from 'next-i18next';
 import styles from './RightNav.module.scss';
 
 export const RightNav = (props) => { 
-  const { categories, popular, isOpen } = props;
-  const [isChecked, setIsChecked] = useState(isOpen);
+  const { categories, popular } = props;
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleClick = () => {
-    setIsChecked(!isChecked)
-  }
+    setIsChecked(!isChecked);
 
-  useEffect(() => {
-    setIsChecked(isOpen)
-  }, [isOpen])
+    !isChecked 
+      ? document.querySelector('html').classList.add('disable') 
+      : document.querySelector('html').classList.remove('disable')
+  }
 
   const { t } = useTranslation('common');
   
@@ -74,10 +74,5 @@ export const RightNav = (props) => {
 
 RightNav.propTypes = {
 	categories: PropTypes.array,
-  popular: PropTypes.array,
-  isOpen: false
+  popular: PropTypes.array
 };
-
-RightNav.defaultProps = {
-	isOpen: false
-}

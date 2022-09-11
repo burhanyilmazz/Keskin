@@ -48,7 +48,7 @@ export default function Career() {
               <Image src='/images/content/career/career.jpg' width={442} height={480} layout={'responsive'} />
             </div>
           </div>
-          <div className={classNames('contact', styles['contact'])}>
+          <div className={classNames('container', 'contact', styles['contact'])}>
             <ContactForm title={t('CAREER_FORM')} type = 'hr'/>
           </div>
         </div>

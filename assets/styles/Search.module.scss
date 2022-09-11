@@ -23,14 +23,31 @@
   flex-wrap: wrap;
   gap: 24px;
   margin-top: 24px;
+  padding: 0;
 
   > div {
-    width: calc(25% - 24px);
+    width: calc(25% - 18px);
+
+    @media screen and (max-width: 990px) {
+      width: calc(33.333% - 18px);
+    }
+
+    @media screen and (max-width: 990px) {
+      width: calc(50% - 12px);
+    }
   }
 }
 
 .blog-list {
   > div {
-    width: calc(33% - 24px);
+    width: calc(33.333% - 18px);
+
+    @media screen and (max-width: 990px) {
+      width: calc(50% - 18px);
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }

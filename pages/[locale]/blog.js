@@ -45,26 +45,15 @@ export default function Blog() {
         <div className='content'>
          <div className={classNames('container', styles['blog'])}>
             <div className={styles['list']}>
-              <Card 
-                src="/images/content/blog/blog.jpg" 
-                title='Duvar Ses Yalıtımı'  
-                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
-              />
-              <Card 
-                src="/images/content/blog/blog.jpg" 
-                title='Duvar Ses Yalıtımı'  
-                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
-              />
-              <Card 
-                src="/images/content/blog/blog.jpg" 
-                title='Duvar Ses Yalıtımı'  
-                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
-              />
-              <Card 
-                src="/images/content/blog/blog.jpg" 
-                title='Duvar Ses Yalıtımı'  
-                desc='Duvar ses yalıtımı iki duvar arası ses geçişleri veya dışarıdan içeriye içeriden dışarıya geçiş yapan ses frekanslarını önleyebilmek amacıyla yüksek ses kesim...' 
-              />
+              {
+                blogs.map((item, index) => <Card 
+                  key={index}
+                  title={item.title} 
+                  desc={item.description} 
+                  href={'/blog-detail'} 
+                  src={item.images.medium}                
+                />
+              )}
             </div>
 
             <RightNav categories={blogNav} popular={blogs} />

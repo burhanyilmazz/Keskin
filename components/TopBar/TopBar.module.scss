@@ -1,3 +1,4 @@
+@import "../../assets/styles/functions.scss";
 .topbar {
   width: 100%;
   min-height: 300px;
@@ -34,15 +35,25 @@
   width: 100%;
   top: 158px;
 
+ 
+
   h1 {
     font-weight: 500;
     color: #ffffff;
-    font-size: 32px;
-    line-height: 43px;
+    font-size: rem(32px);
+    line-height: rem(43px);
     margin-left: 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
   }
 
   ul {
     margin-left: 40px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 0;
+    }
   }
 }

@@ -3,12 +3,27 @@
   border-radius: 16px;
   padding: 96px;
   margin-bottom: 115px;
+
+  @media screen and (max-width: 990px) {
+    padding: 64px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 24px;
+    padding-top: 48px !important;
+    margin-bottom: 54px;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 24px;
+  }
 }
 
 .image {
   width: 76.8px;
   height: 30px;
 }
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -23,6 +38,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width: 990px) {
+      width: calc(20% - 24px);
+    }
+
+    @media screen and (max-width: 768px) {
+      width: calc(33% - 24px);
+    }
+
+    @media screen and (max-width: 640px) {
+      width: calc(50% - 24px);
+    }
 
     span {
       width: 100% !important;
