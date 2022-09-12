@@ -7,7 +7,7 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 36.9638755, lng: 28.6848109}
+    coordinate: {lat: 36.9638755, lng: 28.6848109}
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 37.0343554, lng: 28.6873023}
+    coordinate: {lat: 37.0343554, lng: 28.6873023}
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 38.0343554, lng: 27.6873023}
+    coordinate: {lat: 38.0343554, lng: 27.6873023}
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 37.5343554, lng: 28.0873023}
+    coordinate: {lat: 37.5343554, lng: 28.0873023}
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 33.0243554, lng: 23.6873023}
+    coordinate: {lat: 33.0243554, lng: 23.6873023}
   },
   {
     id: 6,
@@ -57,6 +57,6 @@ export const contact = [
     fax: "+90 (212) 542 40 62",
     email: "info@keskinyapimarket.com.tr",
     image: "/images/dummy/contact.jpg",
-    coordinant: {lat: 34.0343554, lng: 26.6873023}
+    coordinate: {lat: 34.0343554, lng: 26.6873023}
   }
 ]

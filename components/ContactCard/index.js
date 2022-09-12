@@ -8,18 +8,21 @@ import { useTranslation } from 'next-i18next';
 import styles from './ContactCard.module.scss';
 
 export const ContactCard = (props) => { 
-  const { data, onClick } = props;
-
-  const handleOnClick = (coord) => {
-    onClick && onClick(coord);
-  }
+  const { data } = props;
 
   const { t } = useTranslation('common');
   
   return (
     <div className={styles['contact-card']}>
       <div className={styles['directions']}>
-        <div className={styles['map-btn']} onClick={(event) => handleOnClick(data.coordinant)}><span>{t('DIRECTIONS')}</span> <Icon icon={'map'} /></div>
+        <a 
+          href={`https://www.google.com/maps/dir//${data.coordinate.lat},${data.coordinate.lng}`} 
+          target={'_blank'} 
+          rel="noreferrer" 
+          className={styles['map-btn']}
+        >
+          <span>{t('DIRECTIONS')}</span> <Icon icon={'map'} />
+        </a>
         <Image src={data.image} width={'100%'} height={'100%'} layout={'responsive'} alt='' /> 
         <div className={styles['text']}>{data.title}</div>
       </div>
@@ -58,6 +61,5 @@ export const ContactCard = (props) => {
 }
 
 ContactCard.propTypes = {
-  onClick: PropTypes.func,
   data: PropTypes.object
 };

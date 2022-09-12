@@ -10,7 +10,6 @@ body {
   font-weight: 400;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -328,7 +327,7 @@ ul {
 }
 
 #map {
-  height: 700px;
+  height: rem(700px);
   border-radius: 0px 0px 32px 32px;
   overflow: hidden;
   position: absolute !important;
