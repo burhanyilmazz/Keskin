@@ -1,58 +1,63 @@
 /* eslint-disable jsx-a11y/alt-text */
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {Icon, LinkButton} from "../"
+import {Icon} from "../"
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next';
 
 import styles from './ContactCard.module.scss';
 
 export const ContactCard = (props) => { 
-  const { className, type, src } = props;
+  const { data, onClick } = props;
+
+  const handleOnClick = (coord) => {
+    onClick && onClick(coord);
+  }
 
   const { t } = useTranslation('common');
   
   return (
     <div className={styles['contact-card']}>
       <div className={styles['directions']}>
-        <div className={styles['map-btn']}><span>Yol Tarifi</span> <Icon icon={'map'} /></div>
-        <Image src={src} width={'100%'} height={'100%'} layout={'responsive'} alt='' /> 
-        <div className={styles['text']}>Showroom / Bakırköy Merkez Şube</div>
+        <div className={styles['map-btn']} onClick={(event) => handleOnClick(data.coordinant)}><span>{t('DIRECTIONS')}</span> <Icon icon={'map'} /></div>
+        <Image src={data.image} width={'100%'} height={'100%'} layout={'responsive'} alt='' /> 
+        <div className={styles['text']}>{data.title}</div>
       </div>
       <div className={styles['information']}>
-        <div className={styles['address']}>
-          <h2>Adres</h2>
-          <span>Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul</span>
-        </div>
-        <div className={styles['phone']}>
-          <div className={styles['left']}>
-            <h2>Telefon</h2>
-            <span>+90 (212) 542 40 61</span>
+
+        {data.address && <div className={classNames(styles['item'], styles['item--borderless'])}>
+          <div>
+            <h2>{t('FORM.ADDRESS')}</h2>
+            <span>{data.address}</span>
           </div>
-          <div className={styles['right']}>
-            <h2>Fax</h2>
-            <span>+90 (212) 542 40 62</span>
+        </div> }
+
+        {data.phone && <div className={styles['item']}>
+          <div>
+            <h2>{t('FORM.PHONE')}</h2>
+            <span>{data.phone}</span>
           </div>
-        </div>
-        <div className={styles['email']}>
-          <div className={styles['left']}>
-            <h2>E-mail</h2>
-            <span>info@keskinyapimarket.com.tr</span>
+          <div>
+            <h2>{t('FORM.FAX')}</h2>
+            <span>{data.fax}</span>
           </div>
-          <div className={styles['right']}>
+        </div> }
+
+        { data.email && <div className={styles['item']}>
+          <div>
+            <h2>{t('FORM.EMAIL')}</h2>
+            <span>{data.email}</span>
+          </div>
+          <div>
             <Icon icon={'mail'} />
           </div>
-        </div>
+        </div> }
       </div>
     </div>
   )
 }
 
 ContactCard.propTypes = {
-  src: PropTypes.string,
-  type: PropTypes.string
+  onClick: PropTypes.func,
+  data: PropTypes.object
 };
-
-ContactCard.defaultProps = {
-	src: "/images/dummy/contact.jpg",
-}

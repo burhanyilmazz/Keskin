@@ -23,6 +23,7 @@
     "INTERESTED": "İlgini Çekebilecek",
     "CATEGORIES": "Kategoriler",
     "POPULAR": "Popüler Makaleler",
+    "DIRECTIONS": "Yol Tarifi",
 
     "FORM.NAME": "Adınız Soyadınız",
     "FORM.EMAIL": "E-posta",
@@ -30,6 +31,8 @@
     "FORM.PHONE": "Telefon",
     "FORM.MESSAGE": "Mesaj",
     "FORM.CHOOSE": "Dosya Seçin",
+    "FORM.ADDRESS": "Adres",
+    "FORM.FAX": "Faks",
 
     "FOOTER": {
         "IMAGE": "Sitedeki görsel materyaller izinsiz kullanılamaz.",

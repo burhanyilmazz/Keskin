@@ -15,6 +15,7 @@ import { ContactCard } from '../../components/';
 import styles from '../../assets/styles/Contact.module.scss'
 
 import { products } from '../../utils/Products';
+import { contact } from '../../utils/Contact';
 
 export default function Contact() {
   const { t } = useTranslation('common');
@@ -160,6 +161,11 @@ export default function Contact() {
   });
 
 
+  const onClickMap = (event) => {
+    console.log(event)
+  }
+
+
   return (
     <>
       <Head>
@@ -169,15 +175,10 @@ export default function Contact() {
       
       <Layout products={products}>
         <div id="map" ref={googlemap} />
-        <div className='content'>
-          <div className={classNames('container', styles['contact'])}>
+        <div className={classNames('content', styles['contact'])}>
+          <div className='container'>
             <div className={styles['list']}>
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
-              <ContactCard />
+              { contact.map((item, index) => <ContactCard key={index} data={item} onClick={(event) => onClickMap(event)} /> )}
             </div>
           </div>
         </div>
