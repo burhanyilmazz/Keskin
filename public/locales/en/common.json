@@ -1,120 +1,120 @@
 {
-    "SIDEBAR.CORPARATE": "Kurumsal",
-    "SIDEBAR.CORPARATE.ABOUT": "Hakkımızda",
-    "SIDEBAR.CORPARATE.EXPORT": "İhracat",
-    "SIDEBAR.DEALER": "Bayilikler",
+    "SIDEBAR.CORPARATE": "Corparate",
+    "SIDEBAR.CORPARATE.ABOUT": "About Us",
+    "SIDEBAR.CORPARATE.EXPORT": "Export",
+    "SIDEBAR.DEALER": "Dealerships",
     "SIDEBAR.BLOG": "Blog",
-    "SIDEBAR.CAREER": "Kariyer",
-    "SIDEBAR.CONTACT": "İletişim",
+    "SIDEBAR.CAREER": "Career",
+    "SIDEBAR.CONTACT": "Contact",
 
-    "MORE_INFO": "Daha Fazla Bilgi",
-    "ALL_BUTTON": "Tümünü Gör",
-    "NEWSLETTER_BUTTON": "Bültene Kaydol",
-    "AGREEMENT_INFO": "Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.",
-    "RECOMMEND_PRODUCT": "Önerilen Ürünler",
-    "CONTACT_FORM": "İletişim Formu",
-    "CONTACT_FORM.TEXT": "İstanbul’da 6 farklı noktada yer alan showroomlarımız’dan ürünlerimize ulaşabilirsiniz!",
-    "CAREER_FORM": "Kariyer Formu",
-    "SEND": "Gönder",
-    "DOWNLOAD": "İndir",
-    "CATALOG": "E-Katalog",
-    "CATALOG.DESC": "Güncel ürün kataloğumuz için lütfen aşağıdaki butona tıklayınız.",
-    "SHARE": "Yazıyı Paylaş",
-    "OTHER_POSTS": "Diğer Yazılar",
-    "INTERESTED": "İlgini Çekebilecek",
-    "CATEGORIES": "Kategoriler",
-    "POPULAR": "Popüler Makaleler",
-    "DIRECTIONS": "Yol Tarifi",
+    "MORE_INFO": "More Info",
+    "ALL_BUTTON": "View all",
+    "NEWSLETTER_BUTTON": "Subscribe to Newsletter",
+    "AGREEMENT_INFO": "By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.",
+    "RECOMMEND_PRODUCT": "Recommended Products",
+    "CONTACT_FORM": "Contact Form",
+    "CONTACT_FORM.TEXT": "You can reach our products from our showrooms located at 6 different points in Istanbul!",
+    "CAREER_FORM": "Creer Form",
+    "SEND": "Send",
+    "DOWNLOAD": "Download",
+    "CATALOG": "E-Catalog",
+    "CATALOG.DESC": "Please click the button below for our current product catalog.",
+    "SHARE": "Share Post",
+    "OTHER_POSTS": "Other Posts",
+    "INTERESTED": "You May Be Interested",
+    "CATEGORIES": "Categories",
+    "POPULAR": "Popular Articles",
+    "DIRECTIONS": "Directions",
 
-    "FORM.NAME": "Adınız Soyadınız",
-    "FORM.EMAIL": "E-posta",
-    "FORM.SUBJECT": "Konu",
-    "FORM.PHONE": "Telefon",
-    "FORM.MESSAGE": "Mesaj",
-    "FORM.CHOOSE": "Dosya Seçin",
-    "FORM.ADDRESS": "Adres",
-    "FORM.FAX": "Faks",
+    "FORM.NAME": "Name Surname",
+    "FORM.EMAIL": "E-mail Adress",
+    "FORM.SUBJECT": "Topic",
+    "FORM.PHONE": "Phone",
+    "FORM.MESSAGE": "Your Message",
+    "FORM.CHOOSE": "Choose File",
+    "FORM.ADDRESS": "Address",
+    "FORM.FAX": "Fax",
 
     "FOOTER": {
-        "IMAGE": "Sitedeki görsel materyaller izinsiz kullanılamaz.",
-        "COPYRIGHT": "2022 Keskin Yapı Tüm Hakları Saklıdır"
+        "IMAGE": "Visual materials used on this site can not be used without permission.",
+        "COPYRIGHT": "2022 Keskin Yapı All Rights Reserved"
     },
 
     "SEARCH": {
         "BAR": {
-            "TITLE": "Ne Aramıştınız?",
-            "DESC": "Ürün hizmet ve daha fazlası",
-            "INPUT": "Arama"
+            "TITLE": "What are you looking for?",
+            "DESC": "Products, services and more",
+            "INPUT": "Search"
         },
-        "TITLE": "Arama Sonuçları"
+        "TITLE": "Search Results"
     },
 
     "NEWSLETTER": {
-        "NEWS_TITLE" : "E-Bülten",
-        "NEWS_DESC" : "Kampanya ve duyurulardan haberdar olmak için e-bültene abone olun.",
-        "HR_TITLE": "Ekibimize Katıl",
-        "HR_DESC": "İşe alım süreçlerimizde tüm adaylarımız bizim için çok değerli!"
+        "NEWS_TITLE": "E-Newsletter",
+        "NEWS_DESC": "Subscribe to the e-newsletter to be informed about campaigns and announcements.",
+        "HR_TITLE": "Join Our Team",
+        "HR_DESC": "All of our candidates are very valuable to us in the recruitment processes!"
     },
 
     "HOME": {
         "ABOUT": {
-            "TITLE" : "Hakkımızda",
-            "SUBTITLE": "1969 yılından bu yana yaşam alanlarınız için zarif çözümler sunuyoruz.", 
-            "DESC": "1969 yılında mütevazi bir şirket olarak temellerini attığımız Keskin Yapı, bugün onlarca ulusal ve uluslararası markanın distribütörlüğünü yaparken, 1000’den fazla ürün çeşitliliğiyle yaşam alanlarınız için zengin içeriği sunuyor. Toplamda 10.000m2 mağaza ve depolama alanıyla birlikte, 20 araçlık lojistik filosu sayesinde doğru ve hızlı teslimat sağlayarak sektörün lider firmalarından biri olmanın gururunu yaşamaktadır."
+            "TITLE": "About Us",
+            "SUBTITLE": "Since 1969, we offer elegant solutions for your living spaces.",
+            "DESC": "Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range.It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area."
         },
         "PRODUCTS": {
-            "TITLE": "Ürün Grupları",
-            "SUBTITLE": "11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!"
+            "TITLE": "Product Groups",
+            "SUBTITLE": "Easy access to thousands of national and international products in 11 different categories!"
         },
         "SERVICES": {
-            "TITLE": "Hizmetler",
-            "SUBTITLE": "Kaliteli ve güvenilir hizmet!",
-            "DESC": "Geniş ürün yelpazemiz ile satış ve satış sonrası destek ekibimizle birlikte, kaliteli ve güvenilir hizmet anlayışını tüm müşterilerimizle buluşturuyoruz.",
+            "TITLE": "Services",
+            "SUBTITLE": "Quality and reliable service!",
+            "DESC": "Together with our wide product range and our sales and after-sales support team, we bring together the understanding of quality and reliable service with all our customers.",
             "ITEMS": {
-                "TITLE1": "Kolay Ulaşım",
-                "DESC1": "Birçok lokasyona maksimum ''30 dakika'' uzaklıkta!",
-                "TITLE2": "Otopark",
-                "DESC2": "Mağazamızda gelen müşterilerimiz için özel otopark alanı mevcuttur.",
-                "TITLE3": "QR Ödeme",
-                "DESC3": "20.000’nin üzerinde ürün çeşidi ile, seçtiğiniz ürünler için QR ile ödeme yapma kolaylığı ilk kez Keskin Yapı’da!",
-                "TITLE4": "Sevkiyat",
-                "DESC4": "Geniş araç filomuz ve hızlı teslimat ilkemiz ile ihtiyacınız olan her şey anında kapınızda...",
-                "TITLE5": "Taksit İmkanı",
-                "DESC5": "Tüm kredi kartlarında geçerli taksit imkanları ile bütçenizi zorlamadan alışveriş fırsatı sizi bekliyor."
+                "TITLE1": "Easy Access",
+                "DESC1": "Maximum ''30 minutes'' away from many locations!",
+                "TITLE2": "Car Park",
+                "DESC2": "There is a private parking area for our customers who come to our store.",
+                "TITLE3": "QR Payment",
+                "DESC3": "With more than 20,000 product types, the ease of paying with QR for the products you choose is at Keskin Yapı for the first time!",
+                "TITLE4": "Delivery",
+                "DESC4": "With our wide vehicle fleet and fast delivery policy, everything you need is at your doorstep...",
+                "TITLE5": "Installment Opportunity",
+                "DESC5": "The opportunity to shop without straining your budget is waiting for you with installment opportunities available on all credit cards."
             }
         },
         "QUALITY": {
-            "TITLE": "Kalite Politikamız",
-            "SUBTITLE": "Çevreye ve topluma saygılı bir firmayız!",
-            "DESC": "Ürün ve hizmet kalitesinde sürdürülebilirliği sağlayarak, çevreye ve topluma örnek bir firma olup, iş ortaklarımızla güven içerisinde müşteri memnuniyetine yönelik karar alma, hizmet üretme ve dinamik çözüm ortaklığı ile sürekli gelişim ve ilerlemeyi sağlamak, etik değerlere saygı, eğitimden asla taviz vermeme gibi değerler çerçevesinde süreçlerimizi daha verimli hale getirmeyi hedefliyoruz."
+            "TITLE": "Our Quality Policy",
+            "SUBTITLE": "We are a company that respects the environment and society!",
+            "DESC": "By providing sustainability in product and service quality, it is an exemplary company for the environment and society, and we continue our processes within the framework of values such as making decisions for customer satisfaction in trust with our business partners, providing services, and ensuring continuous development and progress with dynamic solution partnership, respect for ethical values, and never compromising on education. We aim to make it more efficient."
 
         },
         "BLOG": {
-            "TITLE": "Blog ve Haberler",
-            "SUBTITLE": "Güncel haberler ve gelişmelerden haberdar olun!"
+            "TITLE": "Blog and News",
+            "SUBTITLE": "Be informed about current news and developments!"
         }
     },
 
-    "ABOUT" : {
-        "TITLE": "Hakkımızda",
-        "SUBTITLE": "1969 yılından bu yana...",
-        "DESC" : "<p>1969 yılında mütevazi bir şirket olarak temellerini attığımız Keskin Yapı, bugün onlarca ulusal ve uluslararası markanın distribütörlüğünü yaparken, 1000’den fazla ürün çeşitliliğiyle yaşam alanlarınız için zengin içeriği sunuyor. Toplamda 10.000m2 mağaza ve depolama alanıyla birlikte, 20 araçlık lojistik filosu sayesinde doğru ve hızlı teslimat sağlayarak sektörün lider firmalarından biri olmanın gururunu yaşamaktadır.</p> <p>Keskin Yapı olarak Bakırköy’de NG Kütahya Seramik ana bayisi konumunda olup, 1.500 m2 kapalı alanda yaşam alanlarınız için etkileyici çözümlere ulaşmanızı sağlıyoruz. Ürün çeşitliliğimizi sürekli geliştiriyor olmamızın verdiği dinamiklikle; seramik ve banyo ürünlerinden boya ürünlerine, kaba inşaat malzemesinden elektrik malzemelerine kadar geniş yelpazelerde hizmet sunuyoruz.</p><p>20.000 çeşide ulaşan geniş̧ ürün yelpazesini, dünyada kendini ispat etmiş̧ yerli ve yabancı birçok farklı firmanın bayisine veya satıcısına sunarak sektörde güçlü adımlarla ilerlemeye devam ediyoruz.</p><p>20 araçlık güçlü lojistik filomuz, 60 kişilik deneyimli personelimiz, yılların getirmiş olduğu deneyimimiz ile ulusal ve uluslararası olarak hizmet vererek, pazarda etkin varlık gösteriyoruz. </p><p>Ahmet Geyik’in torunları tarafından 2019 yılında kurulan Geyik Mimarlık ile entegre çalışarak, müşterilerimize modern ve kullanışlı çözümler üretiyoruz.</p>"
+    "ABOUT": {
+        "TITLE": "About Us",
+        "SUBTITLE": "Since 1969...",
+        "DESC": "<p>Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range. It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area.</p> <p>As Keskin Yapı, we are the main dealer of NG Kütahya Seramik in Bakırköy and provide you with impressive solutions for your living spaces in a closed area of 1,500 m2. With the dynamism of our continuous development of our product range; We offer a wide range of services from ceramic and bathroom products to paint products, from rough construction materials to electrical materials.</p><p>We continue to move forward with strong steps in the sector by offering a wide range of products, reaching 20,000 varieties, to the dealers or dealers of many different domestic and foreign companies that have proven themselves in the world.</p><p>We have an active presence in the market by serving nationally and internationally, with our strong logistics fleet of 20 vehicles, our experienced staff of 60, and our years of experience. </p><p>Working in integration with Geyik Architecture, which was founded in 2019 by Ahmet Geyik's grandchildren, we produce modern and useful solutions for our customers.</p>"
     },
 
-    "EXPORT" : {
-        "TITLE": "İhracat",
-        "SUBTITLE": "3 kıta, 28 farklı ülkede ihracatımızı gerçekleştiriyoruz!",
-        "DESC": "<p>Keskin Yapı olarak yurtdışında da ülkemizi gururla temsil ederek başta Avrupa olmak üzere 3 kıta 28 farklı ülkeye ihracatımızı gerçekleştirmekteyiz. </p><p>Üreticiler ile dünyayı buluşturan firmamız, müşterilerimize dünya standartlarının üzerinde bir kalite ile seramik, vitrifiye, sıhhi tesisat ve elektrik malzemeleri gibi pek çok ürünü ve markayı ulaştırmayı hedeflemektedir. </p><p>Zamanında sevkiyat ve şeffaf bir çalışma ile müşterilerimizin bize gösterdiği güven ve inancın sorumluluğunu üstlendiğimizden emin oluruz. Bunu yaparken her adımımıza inanarak hem iç̧ hem de dış̧ paydaşlarımıza değer kattığımızı ümit ediyoruz. </p>"
+    "EXPORT": {
+        "TITLE": "Export",
+        "SUBTITLE": "We export to 3 continents and 28 different countries!",
+        "DESC": "<p>As Keskin Yapı, we proudly represent our country abroad and export to 28 different countries on 3 continents, primarily Europe. </p><p>Our company, which brings the manufacturers and the world together, aims to deliver many products and brands such as ceramics, sanitary ware, sanitary ware and electrical materials to our customers with a quality above world standards. </p><p>We make sure that we take responsibility for the trust and belief that our customers show in us, with timely delivery and a transparent work. While doing this, we hope that we add value to both our internal and external stakeholders by believing in every step we take. </p>"
     },
 
     "DEALER": {
-        "TITLE": "Bayilikler",
-        "SUBTITLE": "Dürüstük ve güven ilkelerine bağlı kalarak, her daim alanında en büyük markalarla çözüm ortaklığını devam ettirerek büyümeye devam ediyoruz!"
+        "TITLE": "Dealerships",
+        "SUBTITLE": "We continue to grow by adhering to the principles of honesty and trust, and by continuing our solution partnership with the biggest brands in their fields!"
     },
 
-    "CAREER" : {
-        "TITLE": "Kariyer",
-        "SUBTITLE": "İşe alım süreçlerimizde tüm adaylarımız bizim için çok değerli!",
-        "DESC": "<p>Şirketimizi geleceğe taşıyacak, kurumsal değerlerimize sahip, işe en uygun nitelikteki adayları seçmek ve yerleştirmek amaçlanmaktadır. Bu sayede uzun vadeli, verimli ve etkin bir çalışma hayatı oluşturulacağına inanmaktayız.</p><p>İşe alım sürecimizde, şirket gelişim ve organizasyonel ihtiyaçlar doğrultusunda her yıl düzenli olarak planlanmaktadır. İşe alım sürecimiz, şirketimize ulaştırılan başvuruların değerlendirilmesi ile başlar. Özgeçmiş üzerinden yapılacak ön elemelerin ardından belirlenen kriterlere sahip adaylarımız iş görüşmelerine davet edilirler.</p><p>Görüşmeye davet edilen adaylarımız, yetkinlikleri ve ilgili pozisyon için gerekli ise deneyimleri doğrultusunda değerlendirilirler. İlgili süreç, ihtiyaçlar doğrultusunda farklı ölçme ve değerlendirme araçları ile de desteklenir. Süreç uygun aday ile tamamlanır.</p><p>Her çalışanın değer olarak kabul edildiği Keskin Yapı’da tüm adaylarımız da aynı şekilde bizler için değerlidir.</p>"
+    "CAREER": {
+        "TITLE": "Career",
+        "SUBTITLE": "All of our candidates are very valuable to us in our recruitment processes!",
+        "DESC": "<p>It is aimed to select and place the most suitable candidates for the job, who will carry our company to the future, who have our corporate values. In this way, we believe that a long-term, efficient and effective working life will be created.</p><p>In our recruitment process, it is regularly planned every year in line with company development and organizational needs. Our recruitment process starts with the evaluation of the applications submitted to our company. After the pre-selection on the CV, candidates who meet the determined criteria are invited to job interviews.</p><p>Candidates invited for an interview are evaluated based on their competencies and, if necessary, their experience for the relevant position. The related process is also supported by different measurement and evaluation tools in line with the needs. The process is completed with the appropriate candidate.</p><p>At Keskin Yapı, where every employee is accepted as a value, all of our candidates are equally valuable to us.</p>"
     }
 }
