@@ -42,7 +42,7 @@ export default function Export() {
         />
         <div className='content text'>
           <div className={classNames('container', styles['export'])}>
-          <h6>{t('EXPORT.TITLE')}</h6>
+          <div className='min-title'>{t('EXPORT.TITLE')}</div>
           <div className={styles['content']}>
             <h2>{t('EXPORT.SUBTITLE')}</h2>
             <div dangerouslySetInnerHTML={{__html: t('EXPORT.DESC')}} />
