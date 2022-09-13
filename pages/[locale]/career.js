@@ -38,7 +38,7 @@ export default function Career() {
         />
         <div className='content text'>
           <div className={classNames('container', styles['career'])}>
-            <h6>{t('CAREER.TITLE')}</h6>
+            <div className='min-title'>{t('CAREER.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('CAREER.SUBTITLE')}</h2>
               <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />

@@ -69,7 +69,7 @@ export default function Contact() {
 
             <div className={styles['form']}>
               <div className={styles['text']}>
-                <h6>{t('SIDEBAR.CONTACT')}</h6>
+                <div className='min-title'>{t('SIDEBAR.CONTACT')}</div>
                 <h3>{t('CONTACT_FORM.TEXT')}</h3>
               </div>
               <div className={styles['box']}>

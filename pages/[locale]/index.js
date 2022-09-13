@@ -59,7 +59,7 @@ export default function Homepage() {
 
         <section className={classNames('text', styles['section'], 'white-bg',)}>
           <div className='container'>
-            <h6>{t('HOME.ABOUT.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.ABOUT.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.ABOUT.SUBTITLE')}</h2>
               <p>{t('HOME.ABOUT.DESC')}</p>
@@ -73,7 +73,7 @@ export default function Homepage() {
 
         <section className={classNames('text', styles['section'])}>
           <div className='container'>
-            <h6>{t('HOME.PRODUCTS.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.PRODUCTS.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.PRODUCTS.SUBTITLE')}</h2>
             </div>
@@ -89,7 +89,7 @@ export default function Homepage() {
 
         <section className={classNames('text', styles['section'], 'white-bg')}>
           <div className='container'>
-            <h6>{t('HOME.SERVICES.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.SERVICES.TITLE')}</div>
             <div className={styles['wrap']}>
               <div className={styles['content']}>
                 <h2>{t('HOME.SERVICES.SUBTITLE')}</h2>
@@ -108,7 +108,7 @@ export default function Homepage() {
 
         <section className={classNames('text', styles['section'])}>
           <div className='container'>
-            <h6>{t('HOME.QUALITY.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.QUALITY.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
               <p>{t('HOME.QUALITY.DESC')}</p>
@@ -122,7 +122,7 @@ export default function Homepage() {
 
         <section className={classNames('text', styles['section'], 'white-bg', styles['blog'])}>
           <div className='container'>
-            <h6>{t('HOME.BLOG.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.BLOG.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.BLOG.SUBTITLE')}</h2>
               <LinkButton href='/about' text={t('MORE_INFO')} locale />

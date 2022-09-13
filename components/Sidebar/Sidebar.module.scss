@@ -73,11 +73,12 @@
       padding-left: 64px;
     }
 
-    h6 {
+    span {
       font-weight: 500;
       font-size: rem(14px);
       line-height: rem(19px);
       color: #1f242b;
+      display: flex;
     }
 
     p {

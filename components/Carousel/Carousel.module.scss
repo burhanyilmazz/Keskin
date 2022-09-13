@@ -98,14 +98,15 @@
       margin-left: 0;
     }
 
-    h6 {
+    span {
       margin: 0;
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
+      display: flex;
     }
 
-    h5 {
+    div {
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;

@@ -37,7 +37,7 @@ export default function SearchPage() {
 
           <div className={styles['search-list']}>
             <div className='container'>
-              <h6>{t('HOME.PRODUCTS.TITLE')}</h6>
+              <div className='min-title'>{t('HOME.PRODUCTS.TITLE')}</div>
 
               <div className={styles['product-list']}>
                 {
@@ -53,7 +53,7 @@ export default function SearchPage() {
 
           <div className={styles['search-list']}>
             <div className='container'>
-              <h6>{t('SIDEBAR.BLOG')}</h6>
+              <div className='min-title'>{t('SIDEBAR.BLOG')}</div>
 
               <div className={styles['blog-list']}>
                 {

@@ -54,8 +54,8 @@ export const Carousel = (props) => {
         <div className={styles['box']}>
           <div className={styles['box__image']}> <Image src={nextItem?.thumb} width={80} height={80} layout={'responsive'} objectFit={'cover'} alt={nextItem?.title} /></div>
           <div className={styles['box__text']}>
-            <h6>{nextItem?.category} </h6>
-            <h5>{nextItem?.title} </h5>
+            <span>{nextItem?.category} </span>
+            <div>{nextItem?.title} </div>
           </div>
         </div>
       </Swiper>

@@ -33,7 +33,7 @@ export const Sidebar = (props) => {
     <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
       <div className={styles['main']}>
         <div className={styles['main__head']}>
-          <h6>{t('HOME.PRODUCTS.TITLE')}</h6>
+          <span>{t('HOME.PRODUCTS.TITLE')}</span>
           <p>{t('HOME.PRODUCTS.SUBTITLE')}</p>
         </div>
         <div className={styles['main__body']}>

@@ -204,14 +204,12 @@ export default function Dealership() {
         />
         <div className='content text'>
           <div className={classNames('container', styles['dealership'])}>
-            <h6>{t('DEALER.TITLE')}</h6>
+						<div className='min-title'>{t('DEALER.TITLE')}</div>
             <div className={styles['content']}>
-							<h2>{t('DEALER.SUBTITLE')}</h2>
-							<ul className={styles['list']}>
-									{
-										dealer.map((item, index) => <li key={index}><Image src={item.image} width={76} height={30} layout={'responsive'} /></li> )
-									}
-							</ul>
+            <h2>{t('DEALER.SUBTITLE')}</h2>
+            <ul className={styles['list']}>
+							{ dealer.map((item, index) => <li key={index}><Image src={item.image} width={76} height={30} layout={'responsive'} /></li> )}
+            </ul>
             </div>
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function About() {
         />
         <div className='content text'>
           <div className={classNames('container', styles['about'])}>
-            <h6>{t('ABOUT.TITLE')}</h6>
+            <div className='min-title'>{t('ABOUT.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('ABOUT.SUBTITLE')}</h2>
               <div dangerouslySetInnerHTML={{__html: t('ABOUT.DESC')}} />
@@ -53,7 +53,7 @@ export default function About() {
           </div>
           
           <div className={classNames('container', styles['quality'])}>
-            <h6>{t('HOME.QUALITY.TITLE')}</h6>
+            <div className='min-title'>{t('HOME.QUALITY.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
                 
