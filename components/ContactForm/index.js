@@ -45,7 +45,7 @@ export const ContactForm = (props) => {
     <>
       <div className={classNames(styles['contact-form'], styles[className])}>
         <h3>{title}</h3>
-        <form onSubmit={formik.handleSubmit} noValidate>
+        <form onSubmit={formik.handleSubmit} noValidate encType="multipart/form-data">
           <div className='form-group'>
             <FormInput 
               field={t('FORM.NAME')}
@@ -80,6 +80,7 @@ export const ContactForm = (props) => {
                                 field={t('FORM.CHOOSE')}
                                 name={'cv'}
                                 {...formik.getFieldProps('cv')}
+                                accept="image/*,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                               /> }
           </div>
           <div className='form-group'>
