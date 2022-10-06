@@ -41,11 +41,7 @@ export default function SearchPage() {
 
               <div className={styles['product-list']}>
                 {
-                  products.map((item, index) => {
-                    return (
-                      <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product-detail'} /></div>
-                    )
-                  })
+                  products.map((item, index) => <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product-detail'} /></div> )
                 }
               </div>
             </div>
@@ -57,18 +53,7 @@ export default function SearchPage() {
 
               <div className={styles['blog-list']}>
                 {
-                  blogs.map((item, index) => {
-                    return (
-                      <div key={index} className={styles['products__item']}>
-                        <Card 
-                          title={item.title} 
-                          desc={item.description} 
-                          href={'/blog-detail'} 
-                          src={item.images.medium}
-                        />
-                      </div>
-                    )
-                  })
+                  blogs.map((item, index) => <div key={index} className={styles['products__item']}> <Card title={item.title}  desc={item.description}  href={'/blog-detail'}  src={item.images.medium} /></div>)
                 }
               </div>
             </div>
