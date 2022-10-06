@@ -15,17 +15,21 @@ const nextConfig = {
             destination: '/tr/about'
          },
          {
-            source: '/en/about',
-            destination: '/en/about'
-         },
-         {
             source: '/tr/kariyer',
             destination: '/tr/career'
          },
          {
-            source: '/en/career',
-            destination: '/en/career'
-         }
+            source: '/tr/iletisim',
+            destination: '/tr/contact'
+         },
+         {
+            source: '/tr/bayilikler',
+            destination: '/tr/dealership'
+         },
+         {
+            source: '/tr/ihracat',
+            destination: '/tr/export'
+         },
       ]
    }
 }

@@ -41,6 +41,7 @@ export const FormInput = (props) => {
         autoComplete = {autocomplete}
         autoFocus={autoFocus}
         id={name}
+        required={required}
       />
       {field && <label htmlFor={name}>{field} {required && <span>*</span>}</label> }
     </div>

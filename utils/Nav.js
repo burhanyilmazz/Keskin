@@ -4,28 +4,34 @@ export const navlist = [
     children: [
       {
         title: "SIDEBAR.CORPARATE.ABOUT",
-        href: '/about'
+        tr: '/hakkimizda',
+        en: '/about'
       },
       {
         title: "SIDEBAR.CORPARATE.EXPORT",
-        href: '/export'
+        tr: '/ihracat',
+        en: '/export'
       }
     ]
   },
   {
     title: "SIDEBAR.DEALER",
-    href: '/dealership'
+    tr: '/bayilikler',
+    en: '/dealership',
   },
   {
     title: "SIDEBAR.BLOG",
-    href: '/blog',
+    tr: '/blog',
+    en: '/blog',
   },
   {
     title: "SIDEBAR.CAREER",
-    href: '/career'
+    tr: '/kariyer',
+    en: '/career',
   },
   {
     title: "SIDEBAR.CONTACT",
-    href: '/contact'
+    tr: '/iletisim',
+    en: '/contact',
   },
 ]

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Image from 'next/image'
@@ -14,7 +14,7 @@ export const Footer = (props) => {
   const { products } = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
   
   return (
     <div className={styles['footer']}>
@@ -30,12 +30,12 @@ export const Footer = (props) => {
                   if (item?.children) {
                     return (
                       item.children.map((children, child) => {
-                        return <li key={child}><StaticI18nLink href={children.href}>{t(children.title)}</StaticI18nLink></li>
+                        return <li key={child}><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{t(children.title)}</StaticI18nLink></li>
                       })
                     )
                   }
 
-                  return <li key={index} ><StaticI18nLink href={item.href}>{t(item.title)}</StaticI18nLink></li>
+                  return <li key={index} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{t(item.title)}</StaticI18nLink></li>
                 })
               }
             </ul>

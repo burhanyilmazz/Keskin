@@ -81,9 +81,10 @@ export const Sidebar = (props) => {
                       <ul>
                         {
                           item.children.map((children, child) => {
-                            if (route == children.href) item.isActive = true;
+                            if (route == children.tr || route == children.en) item.isActive = true;
+                            const langItem = i18n.language === 'tr' ? children.tr : children.en;
                             
-                            return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == children.href })} ><StaticI18nLink href={children.href}>{t(children.title)}</StaticI18nLink></li>
+                            return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == langItem })} ><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{t(children.title)}</StaticI18nLink></li>
                           })
                         }
                       </ul>
@@ -91,7 +92,7 @@ export const Sidebar = (props) => {
                   )
                 }
 
-                return <li key={index} className={classNames({[styles['nav--active']] : item.isActive || route == item.href })} ><StaticI18nLink href={item.href}>{t(item.title)}</StaticI18nLink></li>
+                return <li key={index} className={classNames({[styles['nav--active']] : (route == item.tr || route == item.en) ? true : false })} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{t(item.title)}</StaticI18nLink></li>
               })
             }
           </ul>
