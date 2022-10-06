@@ -35,6 +35,12 @@
     "FORM.ADDRESS": "Address",
     "FORM.FAX": "Fax",
 
+    "VALIDATION.FORMAT": "Wrong format.",
+    "VALIDATION.GENERAL": "This field cannot be left blank.",
+
+    "MODAL.TITLE": "Success",
+    "MODAL.TEXT": "Your registration has been successful. You will be contacted as soon as possible.",
+
     "FOOTER": {
         "IMAGE": "Visual materials used on this site can not be used without permission.",
         "COPYRIGHT": "2022 Keskin Yapı All Rights Reserved"

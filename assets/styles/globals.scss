@@ -334,3 +334,55 @@ ul {
   z-index: 1;
   top: 80px;
 }
+
+.is-invalid {
+  position: relative;
+  margin-bottom: 10px;
+  input {
+    border-color: #ff3d71 !important;
+  }
+  pre {
+    display: flex !important;
+    color: #ff3d71;
+    font-size: 12px;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 500;
+    margin-top: 4px;
+    position: absolute;
+    bottom: -16px;
+  }
+}
+
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: rem(64px);
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(252, 106, 16, 0.1);
+    border-radius: 16px;
+    color: #fc6a10;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: rem(32px);
+    line-height: rem(43px);
+    color: #2c333e;
+    margin-top: rem(32px);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: rem(20px);
+    line-height: rem(27px);
+    color: #2c333e;
+    margin-top: rem(8px);
+  }
+}

@@ -35,6 +35,12 @@
     "FORM.ADDRESS": "Adres",
     "FORM.FAX": "Faks",
 
+    "VALIDATION.FORMAT": "Geçerli bir format girin.",
+    "VALIDATION.GENERAL": "Bu alan boş bırakılamaz.",
+
+    "MODAL.TITLE": "Başarılı",
+    "MODAL.TEXT": "Kaydınız başarılı bir şekilde gerçekleşti. En kısa sürede sizinle irtibata geçilecektir.",
+
     "FOOTER": {
         "IMAGE": "Sitedeki görsel materyaller izinsiz kullanılamaz.",
         "COPYRIGHT": "2022 Keskin Yapı Tüm Hakları Saklıdır"

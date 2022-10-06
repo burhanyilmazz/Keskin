@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import styles from './FormInput.module.scss';
-
 export const FormInput = (props) => { 
-  const { className, field, value, maxLength, onChange, onKeyUp, onFocus, name, dataDirty, type, autocomplete, required, autoFocus } = props;
+
+  const { className, field, value, maxLength, onChange, onKeyUp, onFocus, name, dataDirty, type, autocomplete, required, autoFocus, errorMessage, ...rest } = props;
   const [ dirty, setDirty ] = useState(dataDirty);
   const [ newValue, setNewValue ] = useState(value);
 
@@ -24,27 +24,31 @@ export const FormInput = (props) => {
   const handleFocus = (event) => onFocus && onFocus(event);
 
   useEffect(() => {
-      setDirty(newValue ? true : false);
+    setDirty(newValue ? true : false);
   }, [value, newValue])
   
   return (
-    <div className={classNames(styles['input'], className)}>
-      <input 
-        maxLength = {maxLength}
-        onChange = {handleChange}
-        onKeyUp = {handleKeyUp}
-        onFocus = {handleFocus}
-        name = {name}
-        defaultValue={newValue}
-        data-dirty = {dirty}
-        type = {type}
-        autoComplete = {autocomplete}
-        autoFocus={autoFocus}
-        id={name}
-        required={required}
-      />
-      {field && <label htmlFor={name}>{field} {required && <span>*</span>}</label> }
-    </div>
+    <>
+      <div className={classNames(styles['input'], className)}>
+        <input 
+          maxLength = {maxLength}
+          onChange = {handleChange}
+          onKeyUp = {handleKeyUp}
+          onFocus = {handleFocus}
+          name = {name}
+          defaultValue={newValue}
+          data-dirty = {dirty}
+          type = {type}
+          autoComplete = {autocomplete}
+          autoFocus={autoFocus}
+          id={name}
+          required={required}
+          {...rest}
+        />
+        {field && <label htmlFor={name}>{field} {required && <span>*</span>}</label> }
+        {required && <pre>{errorMessage}</pre>}
+      </div>
+    </>
   )
 }
 

@@ -18,138 +18,146 @@ vertical-align: top;
   content: "\f101";
   }
 
-  %icon-circle {
+  %icon-check {
   content: "\f102";
+  }
+
+  .icon-check:before {
+  content: "\f102";
+  }
+
+  %icon-circle {
+  content: "\f103";
   }
 
   .icon-circle:before {
-  content: "\f102";
+  content: "\f103";
   }
 
   %icon-close {
-  content: "\f103";
+  content: "\f104";
   }
 
   .icon-close:before {
-  content: "\f103";
+  content: "\f104";
   }
 
   %icon-credit-card {
-  content: "\f104";
+  content: "\f105";
   }
 
   .icon-credit-card:before {
-  content: "\f104";
+  content: "\f105";
   }
 
   %icon-download {
-  content: "\f105";
+  content: "\f106";
   }
 
   .icon-download:before {
-  content: "\f105";
+  content: "\f106";
   }
 
   %icon-enter {
-  content: "\f106";
+  content: "\f107";
   }
 
   .icon-enter:before {
-  content: "\f106";
+  content: "\f107";
   }
 
   %icon-facebook {
-  content: "\f107";
+  content: "\f108";
   }
 
   .icon-facebook:before {
-  content: "\f107";
+  content: "\f108";
   }
 
   %icon-instagram {
-  content: "\f108";
+  content: "\f109";
   }
 
   .icon-instagram:before {
-  content: "\f108";
+  content: "\f109";
   }
 
   %icon-linkedin {
-  content: "\f109";
+  content: "\f10a";
   }
 
   .icon-linkedin:before {
-  content: "\f109";
+  content: "\f10a";
   }
 
   %icon-mail {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   .icon-mail:before {
-  content: "\f10a";
+  content: "\f10b";
   }
 
   %icon-map {
-  content: "\f10b";
+  content: "\f10c";
   }
 
   .icon-map:before {
-  content: "\f10b";
+  content: "\f10c";
   }
 
   %icon-park {
-  content: "\f10c";
+  content: "\f10d";
   }
 
   .icon-park:before {
-  content: "\f10c";
+  content: "\f10d";
   }
 
   %icon-pin {
-  content: "\f10d";
+  content: "\f10e";
   }
 
   .icon-pin:before {
-  content: "\f10d";
+  content: "\f10e";
   }
 
   %icon-qr {
-  content: "\f10e";
+  content: "\f10f";
   }
 
   .icon-qr:before {
-  content: "\f10e";
+  content: "\f10f";
   }
 
   %icon-search {
-  content: "\f10f";
+  content: "\f110";
   }
 
   .icon-search:before {
-  content: "\f10f";
+  content: "\f110";
   }
 
   %icon-trasnport {
-  content: "\f110";
+  content: "\f111";
   }
 
   .icon-trasnport:before {
-  content: "\f110";
+  content: "\f111";
   }
 
   %icon-upload {
-  content: "\f111";
+  content: "\f112";
   }
 
   .icon-upload:before {
-  content: "\f111";
+  content: "\f112";
   }
 
   %icon-youtube {
-  content: "\f112";
+  content: "\f113";
   }
 
   .icon-youtube:before {
-  content: "\f112";
+  content: "\f113";
   }

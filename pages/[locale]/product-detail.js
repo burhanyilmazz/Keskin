@@ -14,7 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../../assets/styles/ProductDetail.module.scss'
 
 import { products } from '../../utils/Products';
-import { LinkButton, TopBar, SeniorContact, Modal, FormInput, FormTextarea, Icon, Card, ContactForm } from '../../components';
+import { LinkButton, TopBar, SeniorContact, Modal, Icon, Card, ContactForm } from '../../components';
 import classNames from 'classnames';
 
 export default function ProductDetail() {
