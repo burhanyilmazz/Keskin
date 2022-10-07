@@ -27,7 +27,7 @@ export const ContactForm = (props) => {
     email: '',
     phone: '',
     subject: '',
-    cv: '',
+    cv: {},
     message: ''
   })
 
@@ -79,7 +79,7 @@ export const ContactForm = (props) => {
             {type === 'hr' && <FileInput 
                                 field={t('FORM.CHOOSE')}
                                 name={'cv'}
-                                {...formik.getFieldProps('cv')}
+                                onChange={(event) => formik.setFieldValue('cv', event.currentTarget.files[0])}
                                 accept="image/*,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
                               /> }
           </div>

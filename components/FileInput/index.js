@@ -5,7 +5,7 @@ import styles from './FileInput.module.scss';
 import { Icon } from '../';
 
 export const FileInput = (props) => { 
-  const { name, onChange, accept, maxFileSize, field, ...rest } = props;
+  const { name, onChange, accept, maxFileSize, field, value, ...rest } = props;
   const [fileName, setFileName] = useState();
 
   const handleOnChange = (event) => {
@@ -14,7 +14,7 @@ export const FileInput = (props) => {
 
     setFileName(file.name)
 
-    if (maxFileSize > uploadFileSize) onChange && onChange(file);
+    if (maxFileSize > uploadFileSize) onChange && onChange(event);
   }
   
   return (
@@ -29,6 +29,7 @@ export const FileInput = (props) => {
           name={name} 
           onChange={(event) => handleOnChange(event)}
           accept={accept}
+          defaultValue={value}
           {...rest}
         />
       </div>
@@ -41,4 +42,8 @@ FileInput.propTypes = {
   maxFileSize: PropTypes.number,
   accept: PropTypes.string,
   onChange: PropTypes.func,
+};
+
+FileInput.defaultProps = {
+	maxFileSize: 9765625
 };
