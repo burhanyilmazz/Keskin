@@ -5,14 +5,14 @@ import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
+import fetch from 'isomorphic-unfetch'
 
 import styles from '../../assets/styles/Search.module.scss'
 
-import { products } from '../../utils/Products';
 import { blogs } from '../../utils/Blog';
 import { TopBar, Search, Card } from '../../components';
 
-export default function SearchPage() {
+export default function SearchPage({products}) {
   const { t } = useTranslation('common');
 
   return (
@@ -71,8 +71,22 @@ export const getStaticPaths = () => ({
   paths: getI18nPaths(),
 })
 
-export const getStaticProps = async (ctx) => ({
-  props: {
-    ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-  },
-})
+export async function getStaticProps(ctx) {
+  const language = ctx.params.locale;
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ language })
+  }
+
+  const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
+
+  return {
+    props: {
+      products,
+      ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
+    }
+  }
+}

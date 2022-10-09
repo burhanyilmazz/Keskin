@@ -11,7 +11,7 @@ import fetch from 'isomorphic-unfetch'
 import {Loader} from '@googlemaps/js-api-loader';
 
 import { Layout } from '../../layout'
-import { ContactCard, ContactForm, Newsletter } from '../../components/';
+import { ContactCard, ContactForm, Newsletter } from '../../components';
 
 import styles from '../../assets/styles/Contact.module.scss'
 

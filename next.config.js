@@ -8,7 +8,7 @@ const nextConfig = {
       },
       styledComponents: true
    },
-   async rewrites() {
+  /*  async rewrites() {
       return [
          {
             source: '/tr/hakkimizda',
@@ -47,7 +47,7 @@ const nextConfig = {
             destination: '/tr/blog-detail/:slug*'
          },
       ]
-   }
+   } */
 }
 
 module.exports = nextConfig
