@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image'
 import { useTranslation } from 'next-i18next';
 import { StaticI18nLink, SocialMedia, Icon } from '../';
+import slug from 'slug'
 
 import { navlist } from '../../utils/Nav'
 
@@ -15,6 +16,8 @@ export const Footer = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { t, i18n } = useTranslation('common')
+
+  const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   
   return (
     <div className={styles['footer']}>
@@ -45,7 +48,7 @@ export const Footer = (props) => {
             <ul>
               {
                 products?.map((item, index) => {
-                  return <li key={index}><StaticI18nLink href='/product'>{item?.category?.title}</StaticI18nLink></li>
+                  return <li key={index}><StaticI18nLink href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`}>{item?.category?.title}</StaticI18nLink></li>
                 })
               }
             </ul>

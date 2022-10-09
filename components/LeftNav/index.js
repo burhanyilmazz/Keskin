@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
-import { useRouter } from "next/router";
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
@@ -40,10 +39,12 @@ export const LeftNav = (props) => {
     setList([...list])
   }
 
-  const router = useRouter();
-  const route = `/${router.asPath.split('/')[2]}`;
 
-  const { t } = useTranslation('common')
+  const { t,i18n } = useTranslation('common')
+
+  const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
+  const brandsUrl = i18n.language === 'tr' ? '/marka' : '/brands';
+  const productsUrl = i18n.language === 'tr' ? '/urun-detay' : '/product-detail';
 
   return (
     <>
@@ -76,20 +77,18 @@ export const LeftNav = (props) => {
                           <Icon icon={'arrow'} />
                         </div>
                         <ul>
-                          <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
+                          <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
                           {
                             item.subcategories.map((children, child) => {
-                              //if (route == children.href) item.isActive = true;
-
                               if (children?.products) {
                                 return (
                                   <li key={child} className={classNames({[styles['child--active']] : children?.isActive, [styles['child--open']] : children?.isOpen })}  >
                                     <div onClick={(event) => onClick(event, index, child)}>{children.category.title}</div>
                                     <ul>
-                                      <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>{t('ALL_BUTTON')}</StaticI18nLink></li>
+                                      <li className={classNames(styles['all'])} ><StaticI18nLink href={`${brandsUrl}/${slug(children.category.title)}-${children.category.id}-${item.category.id}`}>{t('ALL_BUTTON')}</StaticI18nLink></li>
                                       {
                                         children.products.map((product, i) => {
-                                          return <li key={i} ><StaticI18nLink href={''}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
+                                          return <li key={i} ><StaticI18nLink href={`${productsUrl}/${slug(product.title)}-${product.id}-${children.category.id}-${item.category.id}`}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
                                         })
                                       }
                                     </ul>
@@ -97,7 +96,7 @@ export const LeftNav = (props) => {
                                 )
                               }
                               
-                              return <li key={child} className={classNames({[styles['nav--active']] : children?.isActive || route == children?.href })} ><StaticI18nLink href={''}>{children.category.title}</StaticI18nLink></li>
+                              //return <li key={child} className={classNames({[styles['nav--active']] : children?.isActive || route == children?.href })} ><StaticI18nLink href={''}>{children.category.title}</StaticI18nLink></li>
                             })
                           }
                         </ul>
@@ -105,7 +104,7 @@ export const LeftNav = (props) => {
                     )
                   }
 
-                  return <li key={index} className={classNames({[styles['nav--active']] : item?.isActive || route == item?.href })} ><StaticI18nLink href={''}>{item.category.title}</StaticI18nLink></li>
+                  //return <li key={index} className={classNames({[styles['nav--active']] : item?.isActive || route == item?.href })} ><StaticI18nLink href={''}>{item.category.title}</StaticI18nLink></li>
                 })
               }
             </ul>
