@@ -12,40 +12,15 @@ import Image from 'next/image'
 import { Navigation, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import fetch from 'isomorphic-unfetch'
+import slug from 'slug'
+
 import styles from '../../assets/styles/Home.module.scss'
 
-import { products } from '../../utils/Products';
 import { blogs } from '../../utils/Blog';
 
-export default function Homepage() {
+export default function Homepage({carousel, products}) {
   const { t } = useTranslation('common');
-
-  const carousel = [
-    {
-      title: 'NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
-      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
-      href: '/product',
-      image: '/images/dummy/carousel.jpg',
-      thumb: '/images/dummy/carousel.jpg',
-      category: 'Banyo / Seramik',
-    },
-    {
-      title: '2NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
-      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
-      href: '/product',
-      image: '/images/dummy/carousel.jpg',
-      thumb: '/images/dummy/carousel.jpg',
-      category: 'Banyo / Seramik2',
-    },
-    {
-      title: '3NG Kütahya Seramik, şık ve estetik çizgisi ile yaşam alanlarına farklı bir boyut kazandırıyor.',
-      desc: 'Doğayı tüm gerçekliği ile dijital baskı tekniği kullanarak seramiği işleyen NG Kütahya Seramik, yepyeni teknolojileri kullanarak, evlerinize yeni bir ışıltı katıyor.',
-      href: '/product',
-      image: '/images/dummy/carousel.jpg',
-      thumb: '/images/dummy/carousel.jpg',
-      category: 'Banyo / Seramik3',
-    }
-  ]
 
   return (
     <>
@@ -80,7 +55,7 @@ export default function Homepage() {
             <div className={styles['products']}>
               {
                 products?.map((item, index) => {
-                  return <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product'} /></div>
+                  return <div key={index} className={styles['products__item']}><Card title={item.category.title} src={item.category.image} href={`/urunler/${slug(item.category.title)}-${item.category.id}`} /></div>
                 })
               }
             </div>
@@ -166,10 +141,26 @@ export default function Homepage() {
 export const getStaticPaths = () => ({
   fallback: false,
   paths: getI18nPaths(),
-})
+}) 
 
-export const getStaticProps = async (ctx) => ({
-  props: {
-    ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-  },
-})
+export async function getStaticProps(ctx) {
+  const language = ctx.params.locale;
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ language })
+  }
+
+  const carousel = await fetch(`${process.env.API_URL}/sliders`, options).then(r => r.json()).then(data => data.Result);
+  const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
+
+  return {
+    props: {
+      carousel,
+      products,
+      ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
+    }
+  }
+}

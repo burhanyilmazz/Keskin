@@ -14,7 +14,7 @@ export const TopBar = (props) => {
       <div className={styles['content']}>
         <div className='container'>
           <h1>{title}</h1>
-          <Breadcrumb data={breadcrumbs} />
+          {breadcrumbs && <Breadcrumb data={breadcrumbs} /> }
         </div>
       </div>
     </div>

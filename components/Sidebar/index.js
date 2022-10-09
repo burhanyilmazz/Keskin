@@ -51,10 +51,10 @@ export const Sidebar = (props) => {
             }}
             className={'sidebar__slider'}
           >
-            {
+            { 
               products?.map((item, index) => {
-                return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item.title} href={'/product'} /></SwiperSlide>
-              })
+                return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item?.category?.title} src={item?.category?.image} href={'/product'} /></SwiperSlide>
+              }) 
             }
             
           </Swiper>

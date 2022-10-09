@@ -40,11 +40,11 @@ export const Carousel = (props) => {
           data?.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <Image src={item.image} layout={'fill'} alt={item.title} objectFit={'cover'} />
+                {item.image && <Image src={item.image} layout={'fill'} alt={item.title} objectFit={'cover'} /> }
                 <div className={styles['carousel__slide']}>
                   <h1>{item.title}</h1>
-                  <p>{item.desc}</p>
-                  <LinkButton href={item.href} text={t('MORE_INFO')} locale transparent/>
+                  <p>{item.miniTitle}</p>
+                  <LinkButton href={item.url} text={t('MORE_INFO')} locale transparent/>
                 </div>
               </SwiperSlide>
             )
@@ -52,9 +52,8 @@ export const Carousel = (props) => {
         }
 
         <div className={styles['box']}>
-          <div className={styles['box__image']}> <Image src={nextItem?.thumb} width={80} height={80} layout={'responsive'} objectFit={'cover'} alt={nextItem?.title} /></div>
+          <div className={styles['box__image']}> {nextItem && <Image src={nextItem?.thumb} width={80} height={80} layout={'responsive'} objectFit={'cover'} alt={nextItem?.title} />}</div>
           <div className={styles['box__text']}>
-            <span>{nextItem?.category} </span>
             <div>{nextItem?.title} </div>
           </div>
         </div>

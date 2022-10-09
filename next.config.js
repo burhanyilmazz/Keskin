@@ -30,6 +30,22 @@ const nextConfig = {
             source: '/tr/ihracat',
             destination: '/tr/export'
          },
+         {
+            source: '/tr/urunler/:slug*',
+            destination: '/tr/products/:slug*'
+         },
+         {
+            source: '/tr/marka/:slug*',
+            destination: '/tr/brands/:slug*'
+         },
+         {
+            source: '/tr/urun-detay/:slug*',
+            destination: '/tr/product-detail/:slug*'
+         },
+         {
+            source: '/tr/blog-detay/:slug*',
+            destination: '/tr/blog-detail/:slug*'
+         },
       ]
    }
 }

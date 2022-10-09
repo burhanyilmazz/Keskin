@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image'
 import classNames from 'classnames';
+import slug from 'slug'
 import {StaticI18nLink, Icon, Hamburger} from ".."
 
 import { useTranslation } from 'next-i18next';
@@ -40,32 +41,44 @@ export const RightNav = (props) => {
           <h6>{t('CATEGORIES')}</h6>
           <div className={styles['categories']}>
             <ul>
-              { categories.map((item, index) => <li key={index}><StaticI18nLink href="#"><a><span>{item.title}</span> <div>{item.count}</div></a></StaticI18nLink></li>) }
+              { categories.map((item, index) => <li key={index}><StaticI18nLink href={`/blog/${slug(item.category.title)}-${item.category.id}`}><a><span>{item.category.title}</span> <div>{item.blogs.length}</div></a></StaticI18nLink></li>) }
             </ul>
           </div>
 
-          <h6>{t('POPULAR')}</h6>
-          <div className={styles['menu']}>
-            <ul>
-              {
-                popular.map((item, index) => <li key={index}>
-                    <StaticI18nLink href="#">
-                      <a>
-                        <div className={styles['list']}>
-                          <Image src={item.images.thumbnail} width={'64px'} height={'48px'} layout={'fixed'} alt={item.title} />
-                          <div className={styles['desc']}>
-                            <h6>{item.title}</h6>
-                            <p>{item.date}</p>
-                          </div>
-                        </div>
-                        <Icon icon='arrow' />
-                      </a>
-                    </StaticI18nLink>
-                  </li>
-                )
-              }
-            </ul>
-          </div>
+          { popular && 
+            <>
+              <h6>{t('POPULAR')}</h6>
+              <div className={styles['menu']}>
+                <ul>
+                  {
+                    popular.map((item, index) => {
+                      const date = new Date(item.created_at);
+                      const day = date.getDay() > 9 ? date.getDay() : `0${date.getDay()}`
+                      const month = date.getMonth() > 9 ? date.getMonth() : `0${date.getMonth()}`
+
+                      return (
+                        <li key={index}>
+                          <StaticI18nLink href="#">
+                            <a>
+                              <div className={styles['list']}>
+                                <Image src="/images/dummy/card.jpg" width={'64px'} height={'48px'} layout={'fixed'} alt={item.title} />
+                                <div className={styles['desc']}>
+                                  <h6>{item.title}</h6>
+                                  <p>{day}.{month}.{date.getFullYear()}</p>
+                                </div>
+                              </div>
+                              <Icon icon='arrow' />
+                            </a>
+                          </StaticI18nLink>
+                        </li>
+                      )
+                    }
+                    )
+                  }
+                </ul>
+              </div>
+            </>
+          }
         </div>
       </div>
     </>

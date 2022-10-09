@@ -8,6 +8,7 @@ import { useTranslation } from 'next-i18next';
 import styles from './LeftNav.module.scss';
 import { StaticI18nLink, Icon, Hamburger } from '../';
 import Image from 'next/image'
+import slug from 'slug'
 
 
 export const LeftNav = (props) => {
@@ -25,9 +26,9 @@ export const LeftNav = (props) => {
 
   const onClick = (event, index, child) => {
     if (child !== undefined) {
-      list[index].children[child].isOpen = !list[index].children[child].isOpen;
-      list[index].children.map((item, i) => {
-        if (i !== child) list[index].children[i].isOpen = false
+      list[index].subcategories[child].isOpen = !list[index].subcategories[child].isOpen;
+      list[index].subcategories.map((item, i) => {
+        if (i !== child) list[index].subcategories[i].isOpen = false
       })
     } else {
       list[index].isOpen = !list[index].isOpen;
@@ -63,32 +64,32 @@ export const LeftNav = (props) => {
             <ul>
               {
                 list?.map((item, index) => {
-                  if (item?.children) {
+                  if (item?.subcategories) {
                     return (
                       <li 
-                        className={classNames({[styles['parent--active']] : item.isActive, [styles['parent--open']] : item.isOpen })} 
+                        className={classNames({[styles['parent--active']] : item?.isActive, [styles['parent--open']] : item?.isOpen })} 
                         key = {index}
                       >
                         <div className={styles['item']} onClick={(event) => onClick(event, index)}>
-                          <Image src={item.images.thumbnail} width={32} height={32} layout={'fixed'} /> 
-                          <div>{item.title}</div>
+                          <Image src={item.category.thumb} width={32} height={32} layout={'fixed'} /> 
+                          <div>{item.category.title}</div>
                           <Icon icon={'arrow'} />
                         </div>
                         <ul>
                           <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={'/'}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
                           {
-                            item.children.map((children, child) => {
-                              if (route == children.href) item.isActive = true;
+                            item.subcategories.map((children, child) => {
+                              //if (route == children.href) item.isActive = true;
 
                               if (children?.products) {
                                 return (
-                                  <li key={child} className={classNames({[styles['child--active']] : children.isActive, [styles['child--open']] : children.isOpen })}  >
-                                    <div onClick={(event) => onClick(event, index, child)}>{children.title}</div>
+                                  <li key={child} className={classNames({[styles['child--active']] : children?.isActive, [styles['child--open']] : children?.isOpen })}  >
+                                    <div onClick={(event) => onClick(event, index, child)}>{children.category.title}</div>
                                     <ul>
                                       <li className={classNames(styles['all'])} ><StaticI18nLink href={'/'}>{t('ALL_BUTTON')}</StaticI18nLink></li>
                                       {
                                         children.products.map((product, i) => {
-                                          return <li key={i} ><StaticI18nLink href={product.href}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
+                                          return <li key={i} ><StaticI18nLink href={''}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
                                         })
                                       }
                                     </ul>
@@ -96,7 +97,7 @@ export const LeftNav = (props) => {
                                 )
                               }
                               
-                              return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == children.href })} ><StaticI18nLink href={children.href}>{children.title}</StaticI18nLink></li>
+                              return <li key={child} className={classNames({[styles['nav--active']] : children?.isActive || route == children?.href })} ><StaticI18nLink href={''}>{children.category.title}</StaticI18nLink></li>
                             })
                           }
                         </ul>
@@ -104,7 +105,7 @@ export const LeftNav = (props) => {
                     )
                   }
 
-                  return <li key={index} className={classNames({[styles['nav--active']] : item.isActive || route == item.href })} ><StaticI18nLink href={item.href}>{item.title}</StaticI18nLink></li>
+                  return <li key={index} className={classNames({[styles['nav--active']] : item?.isActive || route == item?.href })} ><StaticI18nLink href={''}>{item.category.title}</StaticI18nLink></li>
                 })
               }
             </ul>

@@ -45,7 +45,7 @@ export const Footer = (props) => {
             <ul>
               {
                 products?.map((item, index) => {
-                  return <li key={index}><StaticI18nLink href='/product'>{item.title}</StaticI18nLink></li>
+                  return <li key={index}><StaticI18nLink href='/product'>{item?.category?.title}</StaticI18nLink></li>
                 })
               }
             </ul>

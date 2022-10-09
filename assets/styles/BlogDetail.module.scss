@@ -40,6 +40,21 @@
   }
 }
 
+.desc {
+  > div {
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(20px);
+    color: #64748b;
+    margin-bottom: 30px;
+
+    @media screen and (max-width: 1440px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
 .blog-post {
   padding: 64px;
   width: 70%;
@@ -105,5 +120,6 @@
 
   &__slider {
     margin-left: 50px;
+    width: 100%;
   }
 }

@@ -87,10 +87,19 @@ export default function Contact() {
   )
 }
 
-export const getStaticPaths = () => ({
+/* export const getStaticPaths = () => ({
   fallback: false,
   paths: getI18nPaths(),
-})
+}) */
+
+export async function getStaticPaths(a, b, c) {
+  console.log(a, b, c)
+
+  return {
+    paths: getI18nPaths(),
+    fallback: false
+  }
+}
 
 export const getStaticProps = async (ctx) => ({
   props: {
