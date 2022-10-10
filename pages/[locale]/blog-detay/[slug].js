@@ -132,7 +132,7 @@ export async function getStaticPaths() {
 
   const blogsTr = await fetch(`${process.env.API_URL}/blogs/aio`, optionsTr).then(r => r.json()).then(data => data.Result);
 
-  blogsTr?.map(cat => cat.blogs.map(blog => {
+  blogsTr?.map(cat => cat?.blogs?.map(blog => {
     blog['catid'] = cat.category.id
     blogListTr.push(blog)
   }))
@@ -151,7 +151,7 @@ export async function getStaticPaths() {
 
   const blogsEn = await fetch(`${process.env.API_URL}/blogs/aio`, optionsEn).then(r => r.json()).then(data => data.Result);
 
-  blogsEn?.map(cat => cat.blogs.map(blog => {
+  blogsEn?.map(cat => cat?.blogs?.map(blog => {
     blog['catid'] = cat.category.id
     blogListEn.push(blog)
   }))

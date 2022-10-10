@@ -133,7 +133,7 @@ export async function getStaticPaths() {
 
   const productsTr = await fetch(`${process.env.API_URL}/products/aio`, optionsTr).then(r => r.json()).then(data => data.Result);
 
-  productsTr?.map(cat => cat.subcategories.map(subcategories => subcategories.products.map(products => {
+  productsTr?.map(cat => cat?.subcategories?.map(subcategories => subcategories?.products?.map(products => {
     products['catid'] = cat.category.id;
     products['subcatid'] = subcategories.category.id;
     productListTr.push(products)
@@ -153,7 +153,7 @@ export async function getStaticPaths() {
 
   const productsEn = await fetch(`${process.env.API_URL}/products/aio`, optionsEn).then(r => r.json()).then(data => data.Result);
 
-  productsEn?.map(cat => cat.subcategories.map(subcategories => subcategories.products.map(products => {
+  productsEn?.map(cat => cat?.subcategories?.map(subcategories => subcategories?.products?.map(products => {
     products['catid'] = cat.category.id;
     products['subcatid'] = subcategories.category.id;
     productListEn.push(products)
