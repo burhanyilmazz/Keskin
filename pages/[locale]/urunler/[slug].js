@@ -105,6 +105,7 @@ export async function getStaticProps(ctx) {
       products,
       category,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10
   }
 }

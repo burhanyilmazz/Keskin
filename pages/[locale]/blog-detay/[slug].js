@@ -200,6 +200,7 @@ export async function getStaticProps(ctx) {
       blog,
       blogCat,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10
   }
 }

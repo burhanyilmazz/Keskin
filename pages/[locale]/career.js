@@ -80,6 +80,7 @@ export async function getStaticProps(ctx) {
     props: {
       products,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10
   }
 }
