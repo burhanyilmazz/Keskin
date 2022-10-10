@@ -19,7 +19,7 @@ import styles from '../../assets/styles/Home.module.scss'
 
 import { blogs } from '../../utils/Blog';
 
-export default function Homepage({carousel, products}) {
+export default function Homepage({carousel, products, popular}) {
   const { t } = useTranslation('common');
 
   return (
@@ -120,7 +120,7 @@ export default function Homepage({carousel, products}) {
               className={styles['blogs__slider']}
             >
               {
-                blogs?.map((item, index) => {
+                popular?.map((item, index) => {
                   return <SwiperSlide key={index} className={styles['blogs__slide']}><Card title={item.title} desc={item.description} href={'/product'} /></SwiperSlide>
                 })
               }
@@ -155,11 +155,13 @@ export async function getStaticProps(ctx) {
 
   const carousel = await fetch(`${process.env.API_URL}/sliders`, options).then(r => r.json()).then(data => data.Result);
   const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
+  const popular = await fetch(`${process.env.API_URL}/blogs/populer`, options).then(r => r.json()).then(data => data.Result);
 
   return {
     props: {
       carousel,
       products,
+      popular,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
     }
   }
