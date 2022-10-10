@@ -83,7 +83,6 @@ export async function getStaticProps(ctx) {
       blogs,
       popular,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    },
-    revalidate: 10
+    }
   }
 }
