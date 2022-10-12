@@ -4,12 +4,13 @@ import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
+import {API_URL} from '../../utils/env'
 
 import {FormInput, FormTextarea, LinkButton, FileInput, Modal, Icon} from "../"
 import styles from './ContactForm.module.scss';
 
 export const ContactForm = (props) => { 
-  const { className, title, type } = props;
+  const { className, title, type, pid } = props;
   const [modalOpen, setModalOpen] = useState(false);
 
   const { t } = useTranslation('common');
@@ -18,17 +19,18 @@ export const ContactForm = (props) => {
     email: Yup.string()
       .email(t('VALIDATION.FORMAT'))
       .required(t('VALIDATION.GENERAL')),
-    name: Yup.string()
+    namesurname: Yup.string()
       .required(t('VALIDATION.GENERAL')),
   })
 
   const [contact] = useState({
-    name: '',
+    namesurname: '',
     email: '',
     phone: '',
     subject: '',
     cv: {},
-    message: ''
+    message: '',
+    product_id: pid
   })
 
   const formik = useFormik({
@@ -36,8 +38,33 @@ export const ContactForm = (props) => {
     validationSchema: contactSchema,
     onSubmit: async (values, {setSubmitting}) => {
       setSubmitting(true)
-      setModalOpen(true)
-      console.log(values)
+      let res;
+
+      if (type == 'contact') {
+        res =  await fetch(`${API_URL}/contact_form`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(values)
+        }).then(r => r.json()).then(data => data);
+      }
+
+      if (type == 'product') {
+        res =  await fetch(`${API_URL}/product_info_form`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(values)
+        }).then(r => r.json()).then(data => data);
+      }
+
+      console.log(res)
+
+      if (res.Success) {
+        setModalOpen(true)
+      }
     },
   })
   
@@ -49,11 +76,11 @@ export const ContactForm = (props) => {
           <div className='form-group'>
             <FormInput 
               field={t('FORM.NAME')}
-              name={'name'}
+              name={'namesurname'}
               required={true}
-              errorMessage={formik.errors.name}
-              {...formik.getFieldProps('name')}
-              className={classNames({'is-invalid': formik.touched.name && formik.errors.name})}
+              errorMessage={formik.errors.namesurname}
+              {...formik.getFieldProps('namesurname')}
+              className={classNames({'is-invalid': formik.touched.namesurname && formik.errors.namesurname})}
             />
             <FormInput 
               field={t('FORM.EMAIL')} 

@@ -17,8 +17,6 @@ import slug from 'slug'
 
 import styles from '../../assets/styles/Home.module.scss'
 
-import { blogs } from '../../utils/Blog';
-
 export default function Homepage({carousel, products, popular}) {
   const { t } = useTranslation('common');
 

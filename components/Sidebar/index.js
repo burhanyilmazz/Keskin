@@ -8,6 +8,7 @@ import { useTranslation } from 'next-i18next';
 
 import styles from './Sidebar.module.scss';
 import { StaticI18nLink, SocialMedia, LinkButton, Card, Icon } from '../';
+import slug from 'slug'
 
 import { navlist } from '../../utils/Nav';
 
@@ -28,7 +29,8 @@ export const Sidebar = (props) => {
   const route = `/${router.asPath.split('/')[2]}`;
 
   const { t, i18n } = useTranslation('common')
-
+  const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
+  
   return (
     <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
       <div className={styles['main']}>
@@ -53,7 +55,7 @@ export const Sidebar = (props) => {
           >
             { 
               products?.map((item, index) => {
-                return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item?.category?.title} src={item?.category?.image} href={'/product'} /></SwiperSlide>
+                return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item?.category?.title} src={item?.category?.image} href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`} /></SwiperSlide>
               }) 
             }
             

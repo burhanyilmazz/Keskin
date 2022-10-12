@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {LinkButton, FormInput, Modal, Icon} from "../"
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
+import {API_URL} from '../../utils/env'
 
 import { useTranslation } from 'next-i18next';
 
@@ -30,7 +31,17 @@ export const Newsletter = (props) => {
     validationSchema: newsletterSchema,
     onSubmit: async (values, {setSubmitting}) => {
       setSubmitting(true)
-      setModalOpen(true)
+      const newsletter =  await fetch(`${API_URL}/bulten`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(values)
+      }).then(r => r.json()).then(data => data);
+
+      if (newsletter.Success) {
+        setModalOpen(true)
+      }
     },
   })
   

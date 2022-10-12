@@ -73,7 +73,7 @@ export default function Contact({products}) {
                 <h3>{t('CONTACT_FORM.TEXT')}</h3>
               </div>
               <div className={styles['box']}>
-                <ContactForm title={t('CONTACT_FORM')} />
+                <ContactForm type={'contact'} title={t('CONTACT_FORM')} />
               </div>
             </div>
           </div>

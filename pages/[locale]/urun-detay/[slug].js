@@ -110,7 +110,7 @@ export default function ProductDetail({products, category, subcategories, produc
 
         {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className={styles['modal']}>
-            <ContactForm title={t('CONTACT_FORM')} />
+            <ContactForm type={'product'} title={t('CONTACT_FORM')} pid={product.id} />
           </div>
         </Modal> }
       </Layout>
