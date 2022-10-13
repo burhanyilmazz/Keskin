@@ -40,8 +40,8 @@ export default function Product({products, category, subcategories}) {
       
       <Layout products={products}>
         <TopBar 
-          img={subcategories?.category.headerImage}
-          title={subcategories?.category.title}
+          img={subcategories?.category?.headerImage}
+          title={subcategories?.category?.title}
           breadcrumbs={breadcrumbs}
         />
         <div className='content'>
