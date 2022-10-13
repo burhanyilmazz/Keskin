@@ -39,15 +39,15 @@ export default function Product({products, category, subcategories}) {
       </Head>
       
       <Layout products={products}>
-        {/* <TopBar 
+        <TopBar 
           img={subcategories?.category?.headerImage}
           title={subcategories?.category?.title}
           breadcrumbs={breadcrumbs}
-        /> */}
+        />
         <div className='content'>
           <div className={classNames('container', styles['product-list'])}>
             <LeftNav products={products} />
-            {/* <div className={styles['products']}>
+            <div className={styles['products']}>
               {
                 subcategories?.products?.map((item, index) => {
                   const url = `${productsUrl}/${slug(item.title)}-${item.id}-${subcategories.category.id}-${category.category.id}`
@@ -56,7 +56,7 @@ export default function Product({products, category, subcategories}) {
                   )
                 })
               }
-            </div> */}
+            </div>
           </div>
         </div>
       </Layout>
