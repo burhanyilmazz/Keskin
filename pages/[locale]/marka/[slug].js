@@ -39,11 +39,11 @@ export default function Product({products, category, subcategories}) {
       </Head>
       
       <Layout products={products}>
-        <TopBar 
+        {/* <TopBar 
           img={subcategories?.category?.headerImage}
           title={subcategories?.category?.title}
           breadcrumbs={breadcrumbs}
-        />
+        /> */}
         <div className='content'>
           <div className={classNames('container', styles['product-list'])}>
             <LeftNav products={products} />
