@@ -60,7 +60,7 @@ export const ContactForm = (props) => {
         }).then(r => r.json()).then(data => data);
       }
 
-      console.log(res)
+      console.log(values)
 
       if (res.Success) {
         setModalOpen(true)

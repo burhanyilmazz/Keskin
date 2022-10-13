@@ -18,7 +18,10 @@ import slug from 'slug'
 import styles from '../../assets/styles/Home.module.scss'
 
 export default function Homepage({carousel, products, popular}) {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+
+  const blogDetailUrl = i18n.language === 'tr' ? '/blog-detay' : '/blog-detail';
+  const productUrl = i18n.language === 'tr' ? '/urunler' : '/products';
 
   return (
     <>
@@ -36,7 +39,7 @@ export default function Homepage({carousel, products, popular}) {
             <div className={styles['content']}>
               <h2>{t('HOME.ABOUT.SUBTITLE')}</h2>
               <p>{t('HOME.ABOUT.DESC')}</p>
-              <LinkButton href='/about' text={t('MORE_INFO')} locale/>
+              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={t('MORE_INFO')} locale/>
             </div>
             <div className={classNames(styles['image'], 'image')}>
               <Image src='/images/content/homepage/about.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.ABOUT.TITLE')} />
@@ -53,7 +56,7 @@ export default function Homepage({carousel, products, popular}) {
             <div className={styles['products']}>
               {
                 products?.map((item, index) => {
-                  return <div key={index} className={styles['products__item']}><Card title={item.category.title} src={item.category.image} href={`/urunler/${slug(item.category.title)}-${item.category.id}`} /></div>
+                  return <div key={index} className={styles['products__item']}><Card title={item.category.title} src={item.category.image} href={`${productUrl}/${slug(item.category.title)}-${item.category.id}`} /></div>
                 })
               }
             </div>
@@ -85,7 +88,7 @@ export default function Homepage({carousel, products, popular}) {
             <div className={styles['content']}>
               <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
               <p>{t('HOME.QUALITY.DESC')}</p>
-              <LinkButton href='/about' text={t('MORE_INFO')} locale/>
+              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={t('MORE_INFO')} locale/>
             </div>
             <div className={classNames(styles['image'], 'image')}>
               <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.QUALITY.TITLE')} />
@@ -98,7 +101,7 @@ export default function Homepage({carousel, products, popular}) {
             <div className='min-title'>{t('HOME.BLOG.TITLE')}</div>
             <div className={styles['content']}>
               <h2>{t('HOME.BLOG.SUBTITLE')}</h2>
-              <LinkButton href='/about' text={t('MORE_INFO')} locale />
+              <LinkButton href='/blog' text={t('MORE_INFO')} locale />
             </div>
           </div>
 
@@ -119,7 +122,7 @@ export default function Homepage({carousel, products, popular}) {
             >
               {
                 popular?.map((item, index) => {
-                  return <SwiperSlide key={index} className={styles['blogs__slide']}><Card title={item.title} desc={item.description} href={'/product'} /></SwiperSlide>
+                  return <SwiperSlide key={index} className={styles['blogs__slide']}><Card src={item.listing} title={item.title} desc={item.description} href={`${blogDetailUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} /></SwiperSlide>
                 })
               }
             </Swiper>

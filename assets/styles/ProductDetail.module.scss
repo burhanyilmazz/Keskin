@@ -48,11 +48,20 @@
     margin: 0 0 rem(24px);
   }
 
-  p, div {
-    font-weight: 400;
-    font-size: rem(16px);
-    line-height: rem(24px);
-    color: #64748b;
+  p, .pd-content {
+    font-weight: 400 !important;
+    font-size: rem(16px) !important;
+    line-height: rem(24px) !important;
+    color: #64748b !important;
+    background: transparent !important; 
+
+    * {
+      font-weight: 400 !important;
+      font-size: rem(16px) !important;
+      line-height: rem(24px) !important;
+      color: #64748b !important;
+      background: transparent !important;
+    }
   }
 }
 

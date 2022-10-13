@@ -80,23 +80,19 @@ export const LeftNav = (props) => {
                           <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
                           {
                             item.subcategories.map((children, child) => {
-                              if (children?.products) {
-                                return (
-                                  <li key={child} className={classNames({[styles['child--active']] : children?.isActive, [styles['child--open']] : children?.isOpen })}  >
-                                    <div onClick={(event) => onClick(event, index, child)}>{children.category.title}</div>
-                                    <ul>
-                                      <li className={classNames(styles['all'])} ><StaticI18nLink href={`${brandsUrl}/${slug(children.category.title)}-${children.category.id}-${item.category.id}`}>{t('ALL_BUTTON')}</StaticI18nLink></li>
-                                      {
-                                        children.products.map((product, i) => {
-                                          return <li key={i} ><StaticI18nLink href={`${productsUrl}/${slug(product.title)}-${product.id}-${children.category.id}-${item.category.id}`}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
-                                        })
-                                      }
-                                    </ul>
-                                  </li>
-                                )
-                              }
-                              
-                              //return <li key={child} className={classNames({[styles['nav--active']] : children?.isActive || route == children?.href })} ><StaticI18nLink href={''}>{children.category.title}</StaticI18nLink></li>
+                              return (
+                                <li key={child} className={classNames({[styles['child--active']] : children?.isActive, [styles['child--open']] : children?.isOpen })}  >
+                                  <div onClick={(event) => onClick(event, index, child)}>{children.category.title}</div>
+                                  <ul>
+                                    <li className={classNames(styles['all'])} ><StaticI18nLink href={`${brandsUrl}/${slug(children.category.title)}-${children.category.id}-${item.category.id}`}>{t('ALL_BUTTON')}</StaticI18nLink></li>
+                                    {
+                                      children.products?.map((product, i) => {
+                                        return <li key={i} ><StaticI18nLink href={`${productsUrl}/${slug(product.title)}-${product.id}-${children.category.id}-${item.category.id}`}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>
+                                      })
+                                    }
+                                  </ul>
+                                </li>
+                              )                              
                             })
                           }
                         </ul>
@@ -104,7 +100,6 @@ export const LeftNav = (props) => {
                     )
                   }
 
-                  //return <li key={index} className={classNames({[styles['nav--active']] : item?.isActive || route == item?.href })} ><StaticI18nLink href={''}>{item.category.title}</StaticI18nLink></li>
                 })
               }
             </ul>

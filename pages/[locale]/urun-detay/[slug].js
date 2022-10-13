@@ -59,7 +59,7 @@ export default function ProductDetail({products, category, subcategories, produc
           <div className={classNames('container', styles['product-detail'])}>
             <div className={styles['text']}>
               <h2>{product.title}</h2>
-              <div dangerouslySetInnerHTML={{__html: product.content}} />
+              <div className={styles['pd-content']} dangerouslySetInnerHTML={{__html: product.content}} />
               {product.pdfFile && <LinkButton href={product.pdfFile} text={t('TDS')} icon={'download'} className={styles['button']}/> }
             </div>
             <div className={styles['image']}>

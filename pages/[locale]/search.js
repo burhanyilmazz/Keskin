@@ -8,6 +8,7 @@ import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import { Layout } from '../../layout'
 import fetch from 'isomorphic-unfetch'
+import slug from 'slug'
 import {API_URL} from '../../utils/env'
 
 import styles from '../../assets/styles/Search.module.scss'
@@ -64,7 +65,7 @@ export default function SearchPage({products}) {
 
               <div className={styles['product-list']}>
                 {
-                  data.products.map((item, index) => <div key={index} className={styles['products__item']}><Card title={item.title} href={'/product-detail'} /></div> )
+                  data.products.map((item, index) => <div key={index} className={styles['products__item']}><Card title={item.title} href={`${productUrl}/${slug(item.title)}-${item.id}-${item.subcat_id}-${item.cat_id}`} /></div> )
                 }
               </div>
             </div>
@@ -76,7 +77,7 @@ export default function SearchPage({products}) {
 
               <div className={styles['blog-list']}>
                 {
-                  data.blogs.map((item, index) => <div key={index} className={styles['products__item']}> <Card title={item.title} desc={item.description}  href={'/blog-detail'} src={item.listing} /></div>)
+                  data.blogs.map((item, index) => <div key={index} className={styles['products__item']}> <Card title={item.title} desc={item.description} href={`${blogUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} src={item.listing} /></div>)
                 }
               </div>
             </div>

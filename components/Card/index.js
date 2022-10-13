@@ -19,7 +19,7 @@ export const Card = (props) => {
             </div>
             <div className={styles['foot']}>
               <h2>{title}</h2>
-              { desc && <div dangerouslySetInnerHTML={{__html: desc}} />}
+              { desc && <div className={styles['card__content']} dangerouslySetInnerHTML={{__html: desc}} />}
             </div>
           </a>
         </StaticI18nLink>

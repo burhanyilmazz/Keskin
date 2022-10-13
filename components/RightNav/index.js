@@ -22,7 +22,9 @@ export const RightNav = (props) => {
       : document.querySelector('html').classList.remove('disable')
   }
 
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+
+  const detailUrl = i18n.language === 'tr' ? '/blog-detay' : '/blog-detail';
   
   return (
     <>
@@ -58,10 +60,10 @@ export const RightNav = (props) => {
 
                       return (
                         <li key={index}>
-                          <StaticI18nLink href="#">
+                          <StaticI18nLink href={`${detailUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} >
                             <a>
                               <div className={styles['list']}>
-                                <Image src="/images/dummy/card.jpg" width={'64px'} height={'48px'} layout={'fixed'} alt={item.title} />
+                                <Image src={item.thumbnail} width={'64px'} height={'48px'} layout={'fixed'} alt={item.title} />
                                 <div className={styles['desc']}>
                                   <h6>{item.title}</h6>
                                   <p>{day}.{month}.{date.getFullYear()}</p>
