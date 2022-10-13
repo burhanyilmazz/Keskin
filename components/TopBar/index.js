@@ -28,5 +28,5 @@ TopBar.propTypes = {
 };
 
 TopBar.defaultProps = {
-  src: '/images/content/head/product-head.png'
+  img: '/images/content/head/product-head.png'
 }
