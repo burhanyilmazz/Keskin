@@ -181,8 +181,8 @@ export async function getStaticProps(ctx) {
   const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
   const blogs = await fetch(`${process.env.API_URL}/blogs/aio`, options).then(r => r.json()).then(data => data.Result);
   const popular = await fetch(`${process.env.API_URL}/blogs/populer`, options).then(r => r.json()).then(data => data.Result);
-  const blogCat = blogs.find(item => item.category.id == catid);
-  const blog = blogCat.blogs.find(item => item.id == id )
+  const blogCat = blogs.find(item => item?.category?.id == catid);
+  const blog = blogCat?.blogs?.find(item => item?.id == id )
 
   await fetch(`${process.env.API_URL}/blogs/counter`, {
     method: 'POST',

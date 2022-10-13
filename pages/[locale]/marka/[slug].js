@@ -127,8 +127,8 @@ export async function getStaticProps(ctx) {
   }
 
   const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
-  const category = products.find(item => item.category.id == catid);
-  const subcategories = category.subcategories.find(item => item.category.id == id )
+  const category = products?.find(item => item?.category?.id == catid);
+  const subcategories = category?.subcategories?.find(item => item?.category?.id == id )
 
   return {
     props: {

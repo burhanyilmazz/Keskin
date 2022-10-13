@@ -114,7 +114,7 @@ export async function getStaticProps(ctx) {
 
   const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
   const blogs = await fetch(`${process.env.API_URL}/blogs/aio`, options).then(r => r.json()).then(data => data.Result);
-  const category = blogs.find(item => item.category.id == id);
+  const category = blogs.find(item => item?.category?.id == id);
   const popular = await fetch(`${process.env.API_URL}/blogs/populer`, options).then(r => r.json()).then(data => data.Result);
 
   return {
