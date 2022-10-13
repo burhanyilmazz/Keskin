@@ -26,3 +26,7 @@ TopBar.propTypes = {
   title: PropTypes.string,
   breadcrumbs: PropTypes.array
 };
+
+TopBar.defaultProps = {
+  src: '/images/content/head/product-head.png'
+}
