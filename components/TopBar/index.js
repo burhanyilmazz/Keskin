@@ -10,7 +10,7 @@ export const TopBar = (props) => {
   
   return (
     <div className={classNames(styles['topbar'], {[styles['topbar--nonimg']]: !img})}>
-      { img && <div className={styles['image']}><img src={img} alt='' /></div> }
+      { img && <div className={styles['image']}><img src={img} alt={title} /></div> }
       <div className={styles['content']}>
         <div className='container'>
           <h1>{title}</h1>
