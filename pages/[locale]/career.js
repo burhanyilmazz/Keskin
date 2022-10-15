@@ -28,7 +28,7 @@ export default function Career({products}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | Career</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
       

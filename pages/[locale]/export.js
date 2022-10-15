@@ -32,7 +32,7 @@ export default function Export({products}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı |  Export</title>
         <meta name="description" content={t('EXPORT.SUBTITLE')} />
       </Head>
       

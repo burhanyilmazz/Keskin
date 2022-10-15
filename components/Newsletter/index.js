@@ -14,7 +14,9 @@ export const Newsletter = (props) => {
   const { className, title, type, text } = props;
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
+
+  const career = i18n.language === 'tr' ? '/kariyer' : '/career'
 
   const newsletterSchema = Yup.object().shape({
     email: Yup.string()
@@ -62,7 +64,7 @@ export const Newsletter = (props) => {
                                           className={classNames({'is-invalid': formik.touched.email && formik.errors.email})}
                                         /> }
             {type === 'subscription' &&<span>{t('AGREEMENT_INFO')}</span>}
-            {type === 'joinUs' && <LinkButton text={t('MORE_INFO')} href='/career' /> }
+            {type === 'joinUs' && <LinkButton text={t('MORE_INFO')} href={career} locale /> }
             {type === 'subscription' && <LinkButton text={t('NEWSLETTER_BUTTON')} button transparent />}
           </form>
         </div>

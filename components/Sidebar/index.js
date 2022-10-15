@@ -58,13 +58,12 @@ export const Sidebar = (props) => {
                 return <SwiperSlide key={index} className={styles['main__slide']}><Card title={item?.category?.title} src={item?.category?.image} href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`} /></SwiperSlide>
               }) 
             }
-            
           </Swiper>
         </div>
         <div className={styles['main__foot']}>
           <h3>{t('CATALOG')}</h3>
           <p>{t('CATALOG.DESC')}</p>
-          <LinkButton href='#' text={t('DOWNLOAD')} icon={'download'} className={styles['download']} />
+          <LinkButton href='/pdf/E-Katalog.pdf' text={t('DOWNLOAD')} icon={'download'} className={styles['download']} />
         </div>
       </div>
       <div className={styles['nav']}>

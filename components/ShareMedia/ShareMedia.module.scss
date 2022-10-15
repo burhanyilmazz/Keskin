@@ -1,0 +1,38 @@
+.social-media {
+  display: flex;
+  list-style: none;
+
+  li {
+    margin: 0 8px;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 100%;
+      background: #f2f2f2;
+      color: #1f242b;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: #fc6a10;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    li {
+      margin: 8px 0;
+
+      a {
+        background: rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+    }
+  }
+}

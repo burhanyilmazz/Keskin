@@ -24,3 +24,4 @@ export * from './SearchBar';
 export * from './Search';
 export * from './RightNav';
 export * from './ContactCard';
+export * from './ShareMedia';

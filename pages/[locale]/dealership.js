@@ -26,7 +26,7 @@ export default function Dealership({products, dealer}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | Dealership</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
       

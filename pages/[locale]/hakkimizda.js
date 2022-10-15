@@ -32,7 +32,7 @@ export default function About({products}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | Hakkımızda</title>
         <meta name="description" content={t('ABOUT.SUBTITLE')} />
       </Head>
       

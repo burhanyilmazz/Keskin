@@ -15,13 +15,74 @@ import { ContactCard, ContactForm, Newsletter } from '../../components';
 
 import styles from '../../assets/styles/Contact.module.scss'
 
-import { contact } from '../../utils/Contact';
 import { mapOptions } from '../../utils/Map';
 
 export default function Contact({products}) {
   const { t } = useTranslation('common');
-
   const googlemap = useRef(null);
+
+  const contact = [
+    {
+      id: 1,
+      title: "Showroom / Bakırköy Merkez Şube",
+      address: "Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-1.jpg",
+      coordinate: {lat: 40.9842221, lng: 28.882086}
+    },
+    {
+      id: 2,
+      title: "Yapı Market / Çemberlitaş Şube",
+      address: "Binbirdirek Mah. Peykhane Sk. No:16/A Çemberlitaş / Eminönü / İstanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-2.jpg",
+      coordinate: {lat: 41.0120348, lng: 28.9676527}
+    },
+    {
+      id: 3,
+      title: "İnşaat Malzemeleri / Bakırköy Şube",
+      address: "Kartaltepe, Aksu Cd. No:9, Bakırköy / Istanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-3.jpg",
+      coordinate: {lat: 40.983691, lng: 28.8820653}
+    },
+    {
+      id: 4,
+      title: "İnşaat Malzemeleri / Zeytinburnu Şube",
+      address: "Seyitnizam Mah. Demirciler Sitesi 8.Yol /68 Zeytinburnu - Istanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-4.jpg",
+      coordinate: {lat: 41.0057562, lng: 28.8953089}
+    },
+   /*  {
+      id: 5,
+      title: "Showroom / Bakırköy Merkez Şube",
+      address: "Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-5.jpg",
+      coordinate: {lat: 33.0243554, lng: 23.6873023}
+    },
+    {
+      id: 6,
+      title: "Showroom / Bakırköy Merkez Şube",
+      address: "Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul",
+      phone: "+90 (212) 542 40 61",
+      fax: "+90 (212) 542 40 62",
+      email: "info@keskinyapimarket.com.tr",
+      image: "/images/content/contact/contact-6.jpg",
+      coordinate: {lat: 34.0343554, lng: 26.6873023}
+    } */
+  ]
 
   useEffect(() => {
     const loader = new Loader({
@@ -55,7 +116,7 @@ export default function Contact({products}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | İletişim</title>
         <meta name="description" content={t('CONTACT.SUBTITLE')} />
       </Head>
       

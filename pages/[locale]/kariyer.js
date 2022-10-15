@@ -28,7 +28,7 @@ export default function Career({products}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | Kariyer</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
       
@@ -51,7 +51,7 @@ export default function Career({products}) {
             </div>
           </div>
           <div className={classNames('container', 'contact', styles['contact'])}>
-            <ContactForm title={t('CAREER_FORM')} type = 'hr'/>
+            <ContactForm title={t('CAREER_FORM')} type='hr'/>
           </div>
         </div>
       </Layout>

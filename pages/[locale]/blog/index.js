@@ -21,7 +21,7 @@ export default function Blog({products, blogs, popular}) {
   return (
     <>
       <Head>
-        <title>Keskin Yapı</title>
+        <title>Keskin Yapı | Blog</title>
         <meta name="description" content="Keskin Yapı" />
       </Head>
       

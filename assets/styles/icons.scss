@@ -146,18 +146,26 @@ vertical-align: top;
   content: "\f111";
   }
 
-  %icon-upload {
+  %icon-twitter {
   content: "\f112";
+  }
+
+  .icon-twitter:before {
+  content: "\f112";
+  }
+
+  %icon-upload {
+  content: "\f113";
   }
 
   .icon-upload:before {
-  content: "\f112";
+  content: "\f113";
   }
 
   %icon-youtube {
-  content: "\f113";
+  content: "\f114";
   }
 
   .icon-youtube:before {
-  content: "\f113";
+  content: "\f114";
   }

@@ -3,12 +3,11 @@ import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../../next-i18next.config'
-import { getI18nPaths } from '../../../getI18nPaths'
 import { Layout } from '../../../layout'
 
 import styles from '../../../assets/styles/BlogDetail.module.scss'
 
-import { TopBar, Card, RightNav, SocialMedia, Icon } from '../../../components';
+import { TopBar, Card, RightNav, ShareMedia, Icon } from '../../../components';
 import Image from 'next/image'
 import { Navigation, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -71,7 +70,7 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
 
               <div className={styles['social-media']}>
                 <span>{t('SHARE')}</span>
-                <SocialMedia />
+                <ShareMedia />
               </div>
             </div>
             <RightNav categories={blogs} popular={popular} />

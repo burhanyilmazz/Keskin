@@ -60,7 +60,15 @@ export const ContactForm = (props) => {
         }).then(r => r.json()).then(data => data);
       }
 
-      console.log(values)
+      if (type == 'hr') {
+        res =  await fetch(`${API_URL}/hr_form`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: values
+        }).then(r => r.json()).then(data => data);
+      }
 
       if (res.Success) {
         setModalOpen(true)

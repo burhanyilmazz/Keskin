@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../../next-i18next.config'
-import { getI18nPaths } from '../../../getI18nPaths'
 import { Layout } from '../../../layout'
 
 import styles from '../../../assets/styles/BlogDetail.module.scss'
