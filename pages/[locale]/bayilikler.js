@@ -53,7 +53,7 @@ export default function Dealership({products, dealer}) {
 }
 
 export const getStaticPaths = () => ({
-    fallback: false,
+    fallback: 'blocking',
     paths: getI18nPaths(),
   })
   
@@ -71,6 +71,7 @@ export const getStaticPaths = () => ({
     const dealer = await fetch(`${process.env.API_URL}/dealer_logos`, options).then(r => r.json()).then(data => data.Result);
   
     return {
+      revalidate: 10,
       props: {
         products,
 				dealer,
