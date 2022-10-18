@@ -1,5 +1,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { useRouter } from "next/router";
+import {HOST_URL} from '../../utils/env'
 
 import {Icon} from ".."
 import styles from './ShareMedia.module.scss';
@@ -7,7 +9,9 @@ import styles from './ShareMedia.module.scss';
 export const ShareMedia = (props) => { 
   const { className } = props;
 
-  const pageUrl = window.location.href;
+  const router = useRouter();
+
+  const pageUrl = `${HOST_URL}${router.asPath}`
   
   return (
     <ul className={classNames(styles['social-media'], className)}>
