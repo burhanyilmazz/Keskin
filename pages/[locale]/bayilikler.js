@@ -42,7 +42,7 @@ export default function Dealership({products, dealer}) {
             <div className={styles['content']}>
 							<h2>{t('DEALER.SUBTITLE')}</h2>
 							<ul className={styles['list']}>
-								{ dealer.map((item, index) => <li key={index}><Image alt={item?.title} src={item.logo} width={76} height={30} layout={'responsive'} /></li> )}
+								{ dealer.map((item, index) => <li key={index}><Image alt={item?.title} src={item.logo} width={140} height={32} layout={'responsive'} /></li> )}
 							</ul>
             </div>
           </div>
