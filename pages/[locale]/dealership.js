@@ -53,28 +53,29 @@ export default function Dealership({products, dealer}) {
 }
 
 export const getStaticPaths = () => ({
-    fallback: false,
-    paths: getI18nPaths(),
-  })
-  
-  export async function getStaticProps(ctx) {
-    const language = ctx.params.locale;
-    const options = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ language })
-    }
-  
-    const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
-    const dealer = await fetch(`${process.env.API_URL}/dealer_logos`, options).then(r => r.json()).then(data => data.Result);
-  
-    return {
-      props: {
-        products,
-				dealer,
-        ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-      }
-    }
+  fallback: false,
+  paths: getI18nPaths(),
+})
+
+export async function getStaticProps(ctx) {
+  const language = ctx.params.locale;
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ language })
   }
+
+  const products = await fetch(`${process.env.API_URL}/products/aio`, options).then(r => r.json()).then(data => data.Result);
+  const dealer = await fetch(`${process.env.API_URL}/dealer_logos`, options).then(r => r.json()).then(data => data.Result);
+
+  return {
+    props: {
+      products,
+      dealer,
+      ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
+    },
+    revalidate: 10,
+  }
+}
