@@ -75,6 +75,6 @@ export async function getStaticProps(ctx) {
       products,
       dealer,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    },
+    }
   }
 }

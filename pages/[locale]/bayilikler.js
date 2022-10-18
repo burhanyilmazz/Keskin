@@ -74,7 +74,8 @@ export const getStaticPaths = () => ({
       props: {
         products,
 				dealer,
-        ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
+        ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
       },
+      revalidate: 10
     }
   }
