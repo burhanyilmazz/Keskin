@@ -3,4 +3,5 @@ module.exports = {
     defaultLocale: 'tr',
     locales: ['tr', 'en'],
   },
+  reloadOnPrerender: true,
 }
