@@ -20,11 +20,11 @@ export default function About({products}) {
 
   const breadcrumbs = [
     {
-      title: t('SIDEBAR.CORPARATE'),
+      title: 'Corparate',
       href: pageUrl
     },
     {
-      title: t('ABOUT.TITLE'),
+      title: "About Us",
       href: pageUrl
     }
   ]
@@ -33,21 +33,23 @@ export default function About({products}) {
     <>
       <Head>
         <title>Keskin Yapı | About</title>
-        <meta name="description" content={t('ABOUT.SUBTITLE')} />
+        <meta name="description" content="Since 1969..." />
       </Head>
       
       <Layout products={products}>
         <TopBar 
           img={"/images/content/about/head.jpg"}
-          title={t('ABOUT.TITLE')}
+          title={"About Us"}
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['about'])}>
-            <div className='min-title'>{t('ABOUT.TITLE')}</div>
+            <div className='min-title'>About Us</div>
             <div className={styles['content']}>
-              <h2>{t('ABOUT.SUBTITLE')}</h2>
-              <div dangerouslySetInnerHTML={{__html: t('ABOUT.DESC')}} />
+              <h2>Since 1969...</h2>
+              <div>
+                <p>Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range. It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area.</p> <p>As Keskin Yapı, we are the main dealer of NG Kütahya Seramik in Bakırköy and provide you with impressive solutions for your living spaces in a closed area of 1,500 m2. With the dynamism of our continuous development of our product range; We offer a wide range of services from ceramic and bathroom products to paint products, from rough construction materials to electrical materials.</p><p>We continue to move forward with strong steps in the sector by offering a wide range of products, reaching 20,000 varieties, to the dealers or dealers of many different domestic and foreign companies that have proven themselves in the world.</p><p>We have an active presence in the market by serving nationally and internationally, with our strong logistics fleet of 20 vehicles, our experienced staff of 60, and our years of experience. </p><p>Working in integration with Geyik Architecture, which was founded in 2019 by Ahmet Geyik's grandchildren, we produce modern and useful solutions for our customers.</p>
+              </div>
             </div>
             <div className={classNames(styles['image'], 'image')}>
               <Image src='/images/content/about/about.jpg' width={442} height={480} layout={'responsive'} />
@@ -55,7 +57,7 @@ export default function About({products}) {
           </div>
           
           <div className={classNames('container', styles['quality'])}>
-            <div className='min-title'>{t('HOME.QUALITY.TITLE')}</div>
+            <div className='min-title'>Our Quality Policy</div>
             <div className={styles['content']}>
               <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
                 
