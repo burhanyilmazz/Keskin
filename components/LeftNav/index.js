@@ -40,7 +40,7 @@ export const LeftNav = (props) => {
   }
 
 
-  const { t,i18n } = useTranslation('common')
+  const { i18n } = useTranslation('common')
 
   const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   const brandsUrl = i18n.language === 'tr' ? '/marka' : '/brands';
@@ -50,17 +50,17 @@ export const LeftNav = (props) => {
     <>
       <div className={styles['mobile-nav']}>
         <div className='container'>
-          <div className={styles['button']} onClick={handleClick}>{t('HOME.PRODUCTS.TITLE')} <Icon icon={'arrow'} /></div>
+          <div className={styles['button']} onClick={handleClick}>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'} <Icon icon={'arrow'} /></div>
         </div>
       </div>
       
       <aside className={classNames(styles['left-nav'], {[styles['left-nav--open']] : isChecked })}>
         <div className={styles['head']}>
-          <h5>{t('HOME.PRODUCTS.TITLE')}</h5>
+          <h5>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</h5>
           <Hamburger isCloseImportant={true} onClick={handleClick} />
         </div>
         <div className={styles['wrap']}>
-          <h3>{t('HOME.PRODUCTS.TITLE')}</h3>
+          <h3>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</h3>
           <nav>
             <ul>
               {
@@ -77,14 +77,14 @@ export const LeftNav = (props) => {
                           <Icon icon={'arrow'} />
                         </div>
                         <ul>
-                          <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`}><a>{t('ALL_BUTTON')} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
+                          <li className={classNames(styles['all-cat'])} ><StaticI18nLink href={`${catUrl}/${slug(item.category.title)}-${item.category.id}`}><a>{i18n.language === 'tr' ? 'Tümünü Gör' : 'View All'} <Icon icon={'arrow'} /></a></StaticI18nLink></li>
                           {
                             item.subcategories.map((children, child) => {
                               return (
                                 <li key={child} className={classNames({[styles['child--active']] : children?.isActive, [styles['child--open']] : children?.isOpen })}  >
                                   <div onClick={(event) => onClick(event, index, child)}>{children.category.title}</div>
                                   <ul>
-                                    <li className={classNames(styles['all'])} ><StaticI18nLink href={`${brandsUrl}/${slug(children.category.title)}-${children.category.id}-${item.category.id}`}>{t('ALL_BUTTON')}</StaticI18nLink></li>
+                                    <li className={classNames(styles['all'])} ><StaticI18nLink href={`${brandsUrl}/${slug(children.category.title)}-${children.category.id}-${item.category.id}`}>{i18n.language === 'tr' ? 'Tümünü Gör' : 'View All'}</StaticI18nLink></li>
                                     {
                                       children.products?.map((product, i) => {
                                         return <li key={i} ><StaticI18nLink href={`${productsUrl}/${slug(product.title)}-${product.id}-${children.category.id}-${item.category.id}`}><a>{product.title} <Icon icon={'circle'} /></a></StaticI18nLink></li>

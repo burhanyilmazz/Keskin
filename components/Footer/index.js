@@ -15,7 +15,7 @@ export const Footer = (props) => {
   const { products } = props;
   const [isOpen, setIsOpen] = useState(false);
 
-  const { t, i18n } = useTranslation('common')
+  const { i18n } = useTranslation('common')
 
   const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   
@@ -33,18 +33,18 @@ export const Footer = (props) => {
                   if (item?.children) {
                     return (
                       item.children.map((children, child) => {
-                        return <li key={child}><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{t(children.title)}</StaticI18nLink></li>
+                        return <li key={child}><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{i18n.language === 'tr' ? children.title : children.title_en}</StaticI18nLink></li>
                       })
                     )
                   }
 
-                  return <li key={index} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{t(item.title)}</StaticI18nLink></li>
+                  return <li key={index} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{i18n.language === 'tr' ? item.title : item.title_en}</StaticI18nLink></li>
                 })
               }
             </ul>
           </div>
           <div className={classNames(styles['products'], {[styles['products--open']]: isOpen})}>
-            <h3 onClick={() => setIsOpen(!isOpen)}>{t('HOME.PRODUCTS.TITLE')}</h3>
+            <h3 onClick={() => setIsOpen(!isOpen)}>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</h3>
             <ul>
               {
                 products?.map((item, index) => {
@@ -66,8 +66,8 @@ export const Footer = (props) => {
       </div>
       <div className={styles['bottom']}>
         <div className={classNames('container', styles['container'])}>
-          <span>&copy; {t('FOOTER.COPYRIGHT')}</span>
-          <span>{t('FOOTER.IMAGE')}</span>
+          <span>&copy; {i18n.language === 'tr' ? '2022 Keskin Yapı Tüm Hakları Saklıdır' : '2022 Keskin Yapı All Rights Reserved'}</span>
+          <span>{i18n.language === 'tr' ? 'Sitedeki görsel materyaller izinsiz kullanılamaz.' : 'Visual materials used on this site can not be used without permission.'}</span>
         </div>
       </div>
     </div>

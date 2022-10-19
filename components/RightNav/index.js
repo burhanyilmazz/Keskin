@@ -30,17 +30,17 @@ export const RightNav = (props) => {
     <>
       <div className={styles['mobile-nav']}>
         <div className='container'>
-          <div className={styles['button']} onClick={handleClick}>{t('SIDEBAR.BLOG')} <Icon icon={'arrow'} /></div>
+          <div className={styles['button']} onClick={handleClick}>Blog <Icon icon={'arrow'} /></div>
         </div>
       </div>
 
       <div className={classNames(styles['right-nav'], {[styles['right-nav--open']] : isChecked } )}>
         <div className={styles['head']}>
-          <h5>{t('SIDEBAR.BLOG')}</h5>
+          <h5>Blog</h5>
           <Hamburger isCloseImportant={true} onClick={handleClick} />
         </div>
         <div className={styles['wrap']}>
-          <h6>{t('CATEGORIES')}</h6>
+          <h6>{i18n.language === 'tr' ? 'Kategoriler' : 'Categories'}</h6>
           <div className={styles['categories']}>
             <ul>
               { categories.map((item, index) => <li key={index}><StaticI18nLink href={`/blog/${slug(item.category.title)}-${item.category.id}`}><a><span>{item.category.title}</span> <div>{item.blogs.length}</div></a></StaticI18nLink></li>) }
@@ -49,7 +49,7 @@ export const RightNav = (props) => {
 
           { popular && 
             <>
-              <h6>{t('POPULAR')}</h6>
+              <h6>{i18n.language === 'tr' ? 'Popüler Makaleler' : 'Popular Articles'}</h6>
               <div className={styles['menu']}>
                 <ul>
                   {

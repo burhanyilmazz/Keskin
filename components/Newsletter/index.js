@@ -20,8 +20,8 @@ export const Newsletter = (props) => {
 
   const newsletterSchema = Yup.object().shape({
     email: Yup.string()
-      .email(t('VALIDATION.FORMAT'))
-      .required(t('VALIDATION.GENERAL')),
+      .email(i18n.language === 'tr' ? 'Geçerli bir format girin.' : 'Wrong format.')
+      .required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
   })
 
   const [newsletter] = useState({
@@ -55,7 +55,7 @@ export const Newsletter = (props) => {
             <h3>{title}</h3>
             <p>{text}</p>
             {type === 'subscription' && <FormInput 
-                                          field={t('FORM.EMAIL')} 
+                                          field={i18n.language === 'tr' ? 'E-Posta' : 'E-Mail'} 
                                           name={'email'} 
                                           type="email" 
                                           required={true}
@@ -63,9 +63,9 @@ export const Newsletter = (props) => {
                                           {...formik.getFieldProps('email')}
                                           className={classNames({'is-invalid': formik.touched.email && formik.errors.email})}
                                         /> }
-            {type === 'subscription' &&<span>{t('AGREEMENT_INFO')}</span>}
-            {type === 'joinUs' && <LinkButton text={t('MORE_INFO')} href={career} locale /> }
-            {type === 'subscription' && <LinkButton text={t('NEWSLETTER_BUTTON')} button transparent />}
+            {type === 'subscription' &&<span>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</span>}
+            {type === 'joinUs' && <LinkButton text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} href={career} locale /> }
+            {type === 'subscription' && <LinkButton text={i18n.language === 'tr' ? 'Bültene Kaydol' : 'Subscribe to Newsletter'} button transparent />}
           </form>
         </div>
       </div>
@@ -73,8 +73,8 @@ export const Newsletter = (props) => {
       {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className='success-modal'>
             <div className='success-modal__icon'><Icon icon='check' /></div>
-            <div className='success-modal__title'>{t('MODAL.TITLE')}</div>
-            <div className='success-modal__text'>{t('MODAL.TEXT')}</div>
+            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Başarılı' : 'Success'}</div>
+            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti. En kısa sürede sizinle irtibata geçilecektir.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
           </div>
         </Modal> }
     </>

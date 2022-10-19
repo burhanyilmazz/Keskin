@@ -59,7 +59,7 @@ export default function Blog({products, blogs, popular}) {
 }
 
 export const getStaticPaths = () => ({
-  fallback: false,
+  fallback: "blocking",
   paths: getI18nPaths(),
 })
 
@@ -83,6 +83,7 @@ export async function getStaticProps(ctx) {
       blogs,
       popular,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10,
   }
 }

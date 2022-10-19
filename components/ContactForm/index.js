@@ -13,14 +13,14 @@ export const ContactForm = (props) => {
   const { className, title, type, pid } = props;
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { t } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const contactSchema = Yup.object().shape({
     email: Yup.string()
-      .email(t('VALIDATION.FORMAT'))
-      .required(t('VALIDATION.GENERAL')),
+      .email(i18n.language === 'tr' ? 'Geçerli bir format girin.' : 'Wrong format.')
+      .required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
     namesurname: Yup.string()
-      .required(t('VALIDATION.GENERAL')),
+      .required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
   })
 
   const [contact] = useState({
@@ -83,7 +83,7 @@ export const ContactForm = (props) => {
         <form onSubmit={formik.handleSubmit} noValidate encType="multipart/form-data">
           <div className='form-group'>
             <FormInput 
-              field={t('FORM.NAME')}
+              field={i18n.language === 'tr' ? 'Adınız Soyadınız' : 'Name Surname'}
               name={'namesurname'}
               required={true}
               errorMessage={formik.errors.namesurname}
@@ -91,7 +91,7 @@ export const ContactForm = (props) => {
               className={classNames({'is-invalid': formik.touched.namesurname && formik.errors.namesurname})}
             />
             <FormInput 
-              field={t('FORM.EMAIL')} 
+              field={i18n.language === 'tr' ? 'E-Posta' : 'E-Mail'} 
               name={'email'} 
               type="email" 
               required={true}
@@ -102,17 +102,17 @@ export const ContactForm = (props) => {
           </div>
           <div className='form-group'>
             <FormInput 
-              field={t('FORM.PHONE')}
+              field={i18n.language === 'tr' ? 'Telefon' : 'Phone'}
               name={'phone'}
               {...formik.getFieldProps('phone')}
             />
             {type === 'contact' && <FormInput 
-                                      field={t('FORM.SUBJECT')}
+                                      field={i18n.language === 'tr' ? 'Konu' : 'Subject'}
                                       name={'subject'}
                                       {...formik.getFieldProps('subject')}
                                     /> }
             {type === 'hr' && <FileInput 
-                                field={t('FORM.CHOOSE')}
+                                field={i18n.language === 'tr' ? 'Dosya Seçin' : 'Choose File'}
                                 name={'cv'}
                                 onChange={(event) => formik.setFieldValue('cv', event.currentTarget.files[0])}
                                 accept="image/*,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -120,22 +120,22 @@ export const ContactForm = (props) => {
           </div>
           <div className='form-group'>
             <FormTextarea 
-              field={t('FORM.MESSAGE')} 
+              field={i18n.language === 'tr' ? 'Mesaj' : 'Message'} 
               rows={5}
               name={'message'}
               {...formik.getFieldProps('message')}
             />
           </div>
-          <p>{t('AGREEMENT_INFO')}</p>
-          <LinkButton className={styles['send']} button text={t('SEND')}/>
+          <p>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</p>
+          <LinkButton className={styles['send']} button text={i18n.language === 'tr' ? 'Gönder' : 'Send'}/>
         </form>
       </div>
 
       {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className='success-modal'>
             <div className='success-modal__icon'><Icon icon='check' /></div>
-            <div className='success-modal__title'>{t('MODAL.TITLE')}</div>
-            <div className='success-modal__text'>{t('MODAL.TEXT')}</div>
+            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Başarılı' : 'Success'}</div>
+            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti. En kısa sürede sizinle irtibata geçilecektir.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
           </div>
         </Modal> }
     </>

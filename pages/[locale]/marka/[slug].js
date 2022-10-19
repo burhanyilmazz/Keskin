@@ -110,7 +110,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false
+    fallback: "blocking"
   }
 }
 
@@ -136,6 +136,7 @@ export async function getStaticProps(ctx) {
       category,
       subcategories,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10,
   }
 }

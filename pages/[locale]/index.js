@@ -18,7 +18,7 @@ import slug from 'slug'
 import styles from '../../assets/styles/Home.module.scss'
 
 export default function Homepage({carousel, products, popular}) {
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const blogDetailUrl = i18n.language === 'tr' ? '/blog-detay' : '/blog-detail';
   const productUrl = i18n.language === 'tr' ? '/urunler' : '/products';
@@ -35,23 +35,23 @@ export default function Homepage({carousel, products, popular}) {
 
         <section className={classNames('text', styles['section'], 'white-bg',)}>
           <div className='container'>
-            <div className='min-title'>{t('HOME.ABOUT.TITLE')}</div>
+            <div className='min-title'>{i18n.language === 'tr' ? 'Hakkımızda' : 'About Us'}</div>
             <div className={styles['content']}>
-              <h2>{t('HOME.ABOUT.SUBTITLE')}</h2>
-              <p>{t('HOME.ABOUT.DESC')}</p>
-              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={t('MORE_INFO')} locale/>
+              <h2>{i18n.language === 'tr' ? '1969 yılından bu yana yaşam alanlarınız için zarif çözümler sunuyoruz.' : 'Since 1969, we offer elegant solutions for your living spaces.'}</h2>
+              <p>{i18n.language === 'tr' ? '1969 yılında mütevazi bir şirket olarak temellerini attığımız Keskin Yapı, bugün onlarca ulusal ve uluslararası markanın distribütörlüğünü yaparken, 1000’den fazla ürün çeşitliliğiyle yaşam alanlarınız için zengin içeriği sunuyor. Toplamda 10.000m2 mağaza ve depolama alanıyla birlikte, 20 araçlık lojistik filosu sayesinde doğru ve hızlı teslimat sağlayarak sektörün lider firmalarından biri olmanın gururunu yaşamaktadır.' : 'Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range.It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area.'}</p>
+              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale/>
             </div>
             <div className={classNames(styles['image'], 'image')}>
-              <Image src='/images/content/homepage/about.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.ABOUT.TITLE')} />
+              <Image src='/images/content/homepage/about.jpg' width={485} height={431} layout={'responsive'} alt={i18n.language === 'tr' ? 'Hakkımızda' : 'About Us'} />
             </div>
           </div>
         </section>
 
         <section className={classNames('text', styles['section'])}>
           <div className='container'>
-            <div className='min-title'>{t('HOME.PRODUCTS.TITLE')}</div>
+            <div className='min-title'>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</div>
             <div className={styles['content']}>
-              <h2>{t('HOME.PRODUCTS.SUBTITLE')}</h2>
+              <h2>{i18n.language === 'tr' ? '11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!' : 'Easy access to thousands of national and international products in 11 different categories!'}</h2>
             </div>
             <div className={styles['products']}>
               {
@@ -65,18 +65,50 @@ export default function Homepage({carousel, products, popular}) {
 
         <section className={classNames('text', styles['section'], 'white-bg')}>
           <div className='container'>
-            <div className='min-title'>{t('HOME.SERVICES.TITLE')}</div>
+            <div className='min-title'>{i18n.language === 'tr' ? 'Hizmetler' : 'Services'}</div>
             <div className={styles['wrap']}>
               <div className={styles['content']}>
-                <h2>{t('HOME.SERVICES.SUBTITLE')}</h2>
-                <p>{t('HOME.SERVICES.DESC')}</p>
+                <h2>{i18n.language === 'tr' ? 'Kaliteli ve güvenilir hizmet!' : 'Quality and reliable service!'}</h2>
+                <p>{i18n.language === 'tr' ? 'Geniş ürün yelpazemiz ile satış ve satış sonrası destek ekibimizle birlikte, kaliteli ve güvenilir hizmet anlayışını tüm müşterilerimizle buluşturuyoruz.' : 'Together with our wide product range and our sales and after-sales support team, we bring together the understanding of quality and reliable service with all our customers.'}</p>
               </div>
               <div className={styles['icon-boxes']}>
-                <div className={styles['icon-box']}><CardIcon icon={'pin'} title={t('HOME.SERVICES.ITEMS.TITLE1')} desc={t('HOME.SERVICES.ITEMS.DESC1')} /></div>
-                <div className={styles['icon-box']}><CardIcon icon={'park'} title={t('HOME.SERVICES.ITEMS.TITLE2')} desc={t('HOME.SERVICES.ITEMS.DESC2')} /></div>
-                <div className={styles['icon-box']}><CardIcon icon={'qr'} title={t('HOME.SERVICES.ITEMS.TITLE3')} desc={t('HOME.SERVICES.ITEMS.DESC3')} /></div>
-                <div className={styles['icon-box']}><CardIcon icon={'trasnport'} title={t('HOME.SERVICES.ITEMS.TITLE4')} desc={t('HOME.SERVICES.ITEMS.DESC4')} vertical /></div>
-                <div className={styles['icon-box']}><CardIcon icon={'credit-card'} title={t('HOME.SERVICES.ITEMS.TITLE5')} desc={t('HOME.SERVICES.ITEMS.DESC5')} vertical /></div>
+                <div className={styles['icon-box']}>
+                  <CardIcon 
+                    icon={'pin'} 
+                    title={i18n.language === 'tr' ? 'Kolay Ulaşım' : 'Easy Access'} 
+                    desc={i18n.language === 'tr' ? 'Birçok lokasyona maksimum "30 dakika" uzaklıkta!' : 'Maximum "30 minutes" away from many locations!'} 
+                  />
+                </div>
+                <div className={styles['icon-box']}>
+                  <CardIcon 
+                    icon={'park'} 
+                    title={i18n.language === 'tr' ? 'Otopark' : 'Car Park'} 
+                    desc={i18n.language === 'tr' ? 'Mağazamızda gelen müşterilerimiz için özel otopark alanı mevcuttur.' : 'There is a private parking area for our customers who come to our store.'} 
+                  />
+                </div>
+                <div className={styles['icon-box']}>
+                  <CardIcon 
+                    icon={'qr'} 
+                    title={i18n.language === 'tr' ? 'QR Ödeme' : 'QR Payment'} 
+                    desc={i18n.language === 'tr' ? '20.000’nin üzerinde ürün çeşidi ile, seçtiğiniz ürünler için QR ile ödeme yapma kolaylığı ilk kez Keskin Yapı’da!' : 'With more than 20,000 product types, the ease of paying with QR for the products you choose is at Keskin Yapı for the first time!'} 
+                  />
+                </div>
+                <div className={styles['icon-box']}>
+                  <CardIcon 
+                    icon={'trasnport'} 
+                    title={i18n.language === 'tr' ? 'Sevkiyat' : 'Delivery'} 
+                    desc={i18n.language === 'tr' ? 'Geniş araç filomuz ve hızlı teslimat ilkemiz ile ihtiyacınız olan her şey anında kapınızda...' : 'With our wide vehicle fleet and fast delivery policy, everything you need is at your doorstep...'} 
+                    vertical 
+                  />
+                </div>
+                <div className={styles['icon-box']}>
+                  <CardIcon 
+                    icon={'credit-card'} 
+                    title={i18n.language === 'tr' ? 'Taksit İmkanı' : 'Installment Opportunity'} 
+                    desc={i18n.language === 'tr' ? 'Tüm kredi kartlarında geçerli taksit imkanları ile bütçenizi zorlamadan alışveriş fırsatı sizi bekliyor.' : 'The opportunity to shop without straining your budget is waiting for you with installment opportunities available on all credit cards.'} 
+                    vertical 
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -84,24 +116,24 @@ export default function Homepage({carousel, products, popular}) {
 
         <section className={classNames('text', styles['section'])}>
           <div className='container'>
-            <div className='min-title'>{t('HOME.QUALITY.TITLE')}</div>
+            <div className='min-title'>{i18n.language === 'tr' ? 'Kalite Politikamız' : 'Our Quality Policy'}</div>
             <div className={styles['content']}>
-              <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
-              <p>{t('HOME.QUALITY.DESC')}</p>
-              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={t('MORE_INFO')} locale/>
+              <h2>{i18n.language === 'tr' ? 'Çevreye ve topluma saygılı bir firmayız!' : 'We are a company that respects the environment and society!'}</h2>
+              <p>{i18n.language === 'tr' ? 'Ürün ve hizmet kalitesinde sürdürülebilirliği sağlayarak, çevreye ve topluma örnek bir firma olup, iş ortaklarımızla güven içerisinde müşteri memnuniyetine yönelik karar alma, hizmet üretme ve dinamik çözüm ortaklığı ile sürekli gelişim ve ilerlemeyi sağlamak, etik değerlere saygı, eğitimden asla taviz vermeme gibi değerler çerçevesinde süreçlerimizi daha verimli hale getirmeyi hedefliyoruz.' : 'By providing sustainability in product and service quality, it is an exemplary company for the environment and society, and we continue our processes within the framework of values such as making decisions for customer satisfaction in trust with our business partners, providing services, and ensuring continuous development and progress with dynamic solution partnership, respect for ethical values, and never compromising on education. We aim to make it more efficient.'}</p>
+              <LinkButton href={i18n.language === 'tr' ? '/hakkimizda' : '/about'} text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale/>
             </div>
             <div className={classNames(styles['image'], 'image')}>
-              <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} alt={t('HOME.QUALITY.TITLE')} />
+              <Image src='/images/content/homepage/quality.jpg' width={485} height={431} layout={'responsive'} alt={i18n.language === 'tr' ? 'Kalite Politikamız' : 'Our Quality Policy'} />
             </div>
           </div>
         </section>
 
         <section className={classNames('text', styles['section'], 'white-bg', styles['blog'])}>
           <div className='container'>
-            <div className='min-title'>{t('HOME.BLOG.TITLE')}</div>
+            <div className='min-title'>{i18n.language === 'tr' ? 'Blog ve Haberler' : 'Blog and News'}</div>
             <div className={styles['content']}>
-              <h2>{t('HOME.BLOG.SUBTITLE')}</h2>
-              <LinkButton href='/blog' text={t('MORE_INFO')} locale />
+              <h2>{i18n.language === 'tr' ? 'Güncel haberler ve gelişmelerden haberdar olun!' : 'Be informed about current news and developments!'}</h2>
+              <LinkButton href='/blog' text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale />
             </div>
           </div>
 
@@ -131,7 +163,7 @@ export default function Homepage({carousel, products, popular}) {
 
 
         <section className={classNames(styles['section'], styles['newsletter'], 'white-bg')}>
-          <Newsletter title={t('NEWSLETTER.NEWS_TITLE')} text={t('NEWSLETTER.NEWS_DESC')} type='subscription'/>
+          <Newsletter title={i18n.language === 'tr' ? 'E-Bülten' : 'E-Newsletter'} text={i18n.language === 'tr' ? 'Kampanya ve duyurulardan haberdar olmak için e-bültene abone olun.' : 'Subscribe to the e-newsletter to be informed about campaigns and announcements.'} type='subscription'/>
         </section>
         
       </Layout>
@@ -140,7 +172,7 @@ export default function Homepage({carousel, products, popular}) {
 }
 
 export const getStaticPaths = () => ({
-  fallback: false,
+  fallback: "blocking",
   paths: getI18nPaths(),
 }) 
 
@@ -164,6 +196,7 @@ export async function getStaticProps(ctx) {
       products,
       popular,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10,
   }
 }

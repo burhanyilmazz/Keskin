@@ -10,7 +10,7 @@ import styles from './ContactCard.module.scss';
 export const ContactCard = (props) => { 
   const { data } = props;
 
-  const { t } = useTranslation('common');
+  const { i18n } = useTranslation('common');
   
   return (
     <div className={styles['contact-card']}>
@@ -21,7 +21,7 @@ export const ContactCard = (props) => {
           rel="noreferrer" 
           className={styles['map-btn']}
         >
-          <span>{t('DIRECTIONS')}</span> <Icon icon={'map'} />
+          <span>{i18n.language === 'tr' ? 'Yol Tarifi' : 'Directions'}</span> <Icon icon={'map'} />
         </a>
         <Image src={data.image} width={'100%'} height={'100%'} layout={'responsive'} alt='' /> 
         <div className={styles['text']}>{data.title}</div>
@@ -30,25 +30,25 @@ export const ContactCard = (props) => {
 
         {data.address && <div className={classNames(styles['item'], styles['item--borderless'])}>
           <div>
-            <h2>{t('FORM.ADDRESS')}</h2>
+            <h2>{i18n.language === 'tr' ? 'Adres' : 'Address'}</h2>
             <span>{data.address}</span>
           </div>
         </div> }
 
         {data.phone && <div className={styles['item']}>
           <div>
-            <h2>{t('FORM.PHONE')}</h2>
+            <h2>{i18n.language === 'tr' ? 'Telefon' : 'Phone'}</h2>
             <span>{data.phone}</span>
           </div>
           <div>
-            <h2>{t('FORM.FAX')}</h2>
+            <h2>{i18n.language === 'tr' ? 'Faks' : 'Fax'}</h2>
             <span>{data.fax}</span>
           </div>
         </div> }
 
         { data.email && <div className={styles['item']}>
           <div>
-            <h2>{t('FORM.EMAIL')}</h2>
+            <h2>{i18n.language === 'tr' ? 'E-posta' : 'E-mail'}</h2>
             <span>{data.email}</span>
           </div>
           <div>

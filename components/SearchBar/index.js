@@ -9,14 +9,14 @@ import { Search } from '../';
 export const SearchBar = (props) => {
   const { isShow } = props;
 
-  const { t } = useTranslation('common')
+  const { i18n } = useTranslation('common')
 
   return (
     <div className={classNames(styles['search'], {[styles['search--open']] : isShow })}>
       <div className={styles['wrap']}>
         <div className='container'>
-          <h4>{t('SEARCH.BAR.TITLE')}</h4>
-          <p>{t('SEARCH.BAR.DESC')}</p>
+          <h4>{i18n.language === 'tr' ? 'Ne Aramıştınız?' : 'What are you looking for?'}</h4>
+          <p>{i18n.language === 'tr' ? 'Ürün hizmet ve daha fazlası' : 'Products, services and more'}</p>
 
           <Search />
         </div>

@@ -12,10 +12,10 @@ import { FormInput, Icon } from '../';
 
 export const Search = () => {
   const router = useRouter()
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const searchSchema = Yup.object().shape({
-    keyword: Yup.string().required(t('VALIDATION.GENERAL')),
+    keyword: Yup.string().required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
   })
 
   const [search] = useState({
@@ -41,7 +41,7 @@ export const Search = () => {
         <div className={styles['input']}>
           <div className={styles['input-icon']}><Icon icon={'search'} /></div>
           <FormInput 
-            field={t('SEARCH.BAR.INPUT')} 
+            field={i18n.language === 'tr' ? 'Arama' : 'Search'} 
             name={'keyword'} 
             type="text" 
             required={true}

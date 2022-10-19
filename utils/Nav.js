@@ -1,36 +1,43 @@
 export const navlist = [
   {
-    title: "SIDEBAR.CORPARATE",
+    title: "Kurumsal",
+    title_en: "Corparate",
     children: [
       {
-        title: "SIDEBAR.CORPARATE.ABOUT",
+        title: "Hakkımızda",
+        title_en: "About",
         tr: '/hakkimizda',
         en: '/about'
       },
       {
-        title: "SIDEBAR.CORPARATE.EXPORT",
+        title: "İhracat",
+        title_en: "Export",
         tr: '/ihracat',
         en: '/export'
       }
     ]
   },
   {
-    title: "SIDEBAR.DEALER",
+    title: "Bayilikler",
+    title_en: "Dealership",
     tr: '/bayilikler',
     en: '/dealership',
   },
   {
-    title: "SIDEBAR.BLOG",
+    title: "Blog",
+    title_en: "Blog",
     tr: '/blog',
     en: '/blog',
   },
   {
-    title: "SIDEBAR.CAREER",
+    title: "Kariyer",
+    title_en: "Career",
     tr: '/kariyer',
     en: '/career',
   },
   {
-    title: "SIDEBAR.CONTACT",
+    title: "İletişim",
+    title_en: "Contact",
     tr: '/iletisim',
     en: '/contact',
   },

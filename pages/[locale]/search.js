@@ -17,7 +17,7 @@ import { TopBar, Search, Card } from '../../components';
 
 export default function SearchPage({products}) {
   const [data, setData] = useState();
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
   const router = useRouter();
 
   useEffect(() => {
@@ -47,9 +47,7 @@ export default function SearchPage({products}) {
       </Head>
       
       <Layout products={products}>
-        <TopBar 
-          title={t('SEARCH.TITLE')}
-        />
+        <TopBar title={i18n.language === 'tr' ? 'Arama Sonuçları' : 'Search Results'} />
         <div className='content'>
          <div className={styles['search']}>
 
@@ -61,7 +59,7 @@ export default function SearchPage({products}) {
 
           {data?.products && <div className={styles['search-list']}>
             <div className='container'>
-              <div className='min-title'>{t('HOME.PRODUCTS.TITLE')}</div>
+              <div className='min-title'>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</div>
 
               <div className={styles['product-list']}>
                 {
@@ -73,7 +71,7 @@ export default function SearchPage({products}) {
 
           {data?.blogs && <div className={styles['search-list']}>
             <div className='container'>
-              <div className='min-title'>{t('SIDEBAR.BLOG')}</div>
+              <div className='min-title'>Blog</div>
 
               <div className={styles['blog-list']}>
                 {
@@ -91,7 +89,7 @@ export default function SearchPage({products}) {
 }
 
 export const getStaticPaths = () => ({
-  fallback: false,
+  fallback: "blocking",
   paths: getI18nPaths(),
 })
 
@@ -111,6 +109,7 @@ export async function getStaticProps(ctx) {
     props: {
       products,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10,
   }
 }

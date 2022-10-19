@@ -53,7 +53,7 @@ export default function Dealership({products, dealer}) {
 }
 
 export const getStaticPaths = () => ({
-  fallback: false,
+  fallback: "blocking",
   paths: getI18nPaths(),
 })
 
@@ -75,6 +75,7 @@ export async function getStaticProps(ctx) {
       products,
       dealer,
       ...await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig),
-    }
+    },
+    revalidate: 10,
   }
 }

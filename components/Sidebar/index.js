@@ -35,8 +35,8 @@ export const Sidebar = (props) => {
     <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
       <div className={styles['main']}>
         <div className={styles['main__head']}>
-          <span>{t('HOME.PRODUCTS.TITLE')}</span>
-          <p>{t('HOME.PRODUCTS.SUBTITLE')}</p>
+          <span>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</span>
+          <p>{i18n.language === 'tr' ? '11 farklı kategoride Ulusal ve Uluslararası binlerce ürüne kolay ulaşma imkanı!' : 'Easy access to thousands of national and international products in 11 different categories!'}</p>
         </div>
         <div className={styles['main__body']}>
           <div className={styles['navigation']}>
@@ -61,9 +61,9 @@ export const Sidebar = (props) => {
           </Swiper>
         </div>
         <div className={styles['main__foot']}>
-          <h3>{t('CATALOG')}</h3>
-          <p>{t('CATALOG.DESC')}</p>
-          <LinkButton href='/pdf/E-Katalog.pdf' text={t('DOWNLOAD')} icon={'download'} className={styles['download']} />
+          <h3>{i18n.language === 'tr' ? 'E-Katalog' : 'E-Catalog'}</h3>
+          <p>{i18n.language === 'tr' ? 'Güncel ürün kataloğumuz için lütfen aşağıdaki butona tıklayınız.' : 'Please click the button below for our current product catalog.'}</p>
+          <LinkButton href='/pdf/E-Katalog.pdf' text={i18n.language === 'tr' ? 'İndir' : 'Download'} icon={'download'} className={styles['download']} />
         </div>
       </div>
       <div className={styles['nav']}>
@@ -78,14 +78,15 @@ export const Sidebar = (props) => {
                       onClick={(event) => onClick(event, index)}
                       key = {index}
                     >
-                      <span>{t(item.title)}</span>
+                      <span>{i18n.language === 'tr' ? item.title : item.title_en}</span>
                       <ul>
                         {
                           item.children.map((children, child) => {
                             if (route == children.tr || route == children.en) item.isActive = true;
                             const langItem = i18n.language === 'tr' ? children.tr : children.en;
+                            const title = i18n.language === 'tr' ? children.title : children.title_en;
                             
-                            return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == langItem })} ><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{t(children.title)}</StaticI18nLink></li>
+                            return <li key={child} className={classNames({[styles['nav--active']] : children.isActive || route == langItem })} ><StaticI18nLink href={i18n.language === 'tr' ? children.tr : children.en}>{title}</StaticI18nLink></li>
                           })
                         }
                       </ul>
@@ -93,7 +94,7 @@ export const Sidebar = (props) => {
                   )
                 }
 
-                return <li key={index} className={classNames({[styles['nav--active']] : (route == item.tr || route == item.en) ? true : false })} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{t(item.title)}</StaticI18nLink></li>
+                return <li key={index} className={classNames({[styles['nav--active']] : (route == item.tr || route == item.en) ? true : false })} ><StaticI18nLink href={i18n.language === 'tr' ? item.tr : item.en}>{i18n.language === 'tr' ? item.title : item.title_en}</StaticI18nLink></li>
               })
             }
           </ul>
@@ -108,7 +109,7 @@ export const Sidebar = (props) => {
         </div>
 
         <div className={styles['mobile-download']}>
-          <LinkButton href='#' text={t('CATALOG')} icon={'download'} className={styles['download']} />
+          <LinkButton href='#' text={i18n.language === 'tr' ? 'E-Katalog' : 'E-Catalog'} icon={'download'} className={styles['download']} />
         </div>
       </div>
     </aside>

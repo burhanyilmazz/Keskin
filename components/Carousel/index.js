@@ -13,7 +13,7 @@ export const Carousel = (props) => {
   const { data } = props;
   const [nextItem, setNextItem] = useState(data[1])
   
-  const { t } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   return (
     <section className={styles['carousel']}>
@@ -44,7 +44,7 @@ export const Carousel = (props) => {
                 <div className={styles['carousel__slide']}>
                   <h1>{item.title}</h1>
                   <p>{item.miniTitle}</p>
-                  <LinkButton href={item.url} text={t('MORE_INFO')} locale transparent/>
+                  <LinkButton href={item.url} text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale transparent/>
                 </div>
               </SwiperSlide>
             )
