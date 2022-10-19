@@ -20,7 +20,7 @@ export default function Export({products}) {
 
   const breadcrumbs = [
     {
-      title: t('SIDEBAR.CORPARATE'),
+      title: 'Corparate',
       href: pageUrl
     },
     {
@@ -33,24 +33,28 @@ export default function Export({products}) {
     <>
       <Head>
         <title>Keskin Yapı |  Export</title>
-        <meta name="description" content={t('EXPORT.SUBTITLE')} />
+        <meta name="description" content="We export to 3 continents and 28 different countries!" />
       </Head>
       
       <Layout products={products}>
         <TopBar 
           img={"/images/content/export/head.jpg"}
-          title={t('EXPORT.TITLE')}
+          title="Export"
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['export'])}>
-            <div className='min-title'>{t('EXPORT.TITLE')}</div>
+            <div className='min-title'>Export</div>
             <div className={styles['content']}>
-              <h2>{t('EXPORT.SUBTITLE')}</h2>
-              <div dangerouslySetInnerHTML={{__html: t('EXPORT.DESC')}} />
+              <h2>We export to 3 continents and 28 different countries!</h2>
+              <div>
+                <p>As Keskin Yapı, we proudly represent our country abroad and export to 28 different countries on 3 continents, primarily Europe. </p>
+                <p>Our company, which brings the manufacturers and the world together, aims to deliver many products and brands such as ceramics, sanitary ware, sanitary ware and electrical materials to our customers with a quality above world standards. </p>
+                <p>We make sure that we take responsibility for the trust and belief that our customers show in us, with timely delivery and a transparent work. While doing this, we hope that we add value to both our internal and external stakeholders by believing in every step we take. </p>
+              </div>
             </div>
             <div className={classNames(styles['image'], 'image')}>
-              <Image alt={t('EXPORT.TITLE')} src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />
+              <Image alt='Export' src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />
             </div>
           </div>
         </div>

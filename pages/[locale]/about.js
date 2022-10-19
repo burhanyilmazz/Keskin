@@ -48,7 +48,7 @@ export default function About({products}) {
             <div className={styles['content']}>
               <h2>Since 1969...</h2>
               <div>
-                <p>Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range. It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area.</p> <p>As Keskin Yapı, we are the main dealer of NG Kütahya Seramik in Bakırköy and provide you with impressive solutions for your living spaces in a closed area of 1,500 m2. With the dynamism of our continuous development of our product range; We offer a wide range of services from ceramic and bathroom products to paint products, from rough construction materials to electrical materials.</p><p>We continue to move forward with strong steps in the sector by offering a wide range of products, reaching 20,000 varieties, to the dealers or dealers of many different domestic and foreign companies that have proven themselves in the world.</p><p>We have an active presence in the market by serving nationally and internationally, with our strong logistics fleet of 20 vehicles, our experienced staff of 60, and our years of experience. </p><p>Working in integration with Geyik Architecture, which was founded in 2019 by Ahmet Geyik's grandchildren, we produce modern and useful solutions for our customers.</p>
+                <p>Keskin Yapı, which we laid the foundations of as a modest company in 1969, is the distributor of dozens of national and international brands and offers rich content for your living spaces with more than 1000 product range. It is proud of being one of the leading companies in the sector by providing accurate and fast delivery thanks to its logistics fleet of 20 vehicles, along with a total of 10.000m2 store and storage area.</p> <p>As Keskin Yapı, we are the main dealer of NG Kütahya Seramik in Bakırköy and provide you with impressive solutions for your living spaces in a closed area of 1,500 m2. With the dynamism of our continuous development of our product range; We offer a wide range of services from ceramic and bathroom products to paint products, from rough construction materials to electrical materials.</p><p>We continue to move forward with strong steps in the sector by offering a wide range of products, reaching 20,000 varieties, to the dealers or dealers of many different domestic and foreign companies that have proven themselves in the world.</p><p>We have an active presence in the market by serving nationally and internationally, with our strong logistics fleet of 20 vehicles, our experienced staff of 60, and our years of experience. </p><p>Working in integration with Geyik Architecture, which was founded in 2019 by Ahmet Geyik`s grandchildren, we produce modern and useful solutions for our customers.</p>
               </div>
             </div>
             <div className={classNames(styles['image'], 'image')}>
@@ -59,19 +59,19 @@ export default function About({products}) {
           <div className={classNames('container', styles['quality'])}>
             <div className='min-title'>Our Quality Policy</div>
             <div className={styles['content']}>
-              <h2>{t('HOME.QUALITY.SUBTITLE')}</h2>
+              <h2>We are a company that respects the environment and society!</h2>
                 
               <div className={styles['policy']}>
                 <div className={classNames(styles['image'], 'image')}>
                   <Image src='/images/content/about/quality.jpg' width={572} height={480} layout={'responsive'} />
                 </div>
-                <p>{t('HOME.QUALITY.DESC')}</p>            
+                <p>By providing sustainability in product and service quality, it is an exemplary company for the environment and society, and we continue our processes within the framework of values such as making decisions for customer satisfaction in trust with our business partners, providing services, and ensuring continuous development and progress with dynamic solution partnership, respect for ethical values, and never compromising on education. We aim to make it more efficient.</p>            
               </div>
             </div>
           </div>
 
           <section className={classNames(styles['newsletter'], 'white-bg')}>
-            <Newsletter type='joinUs' title={t('NEWSLETTER.HR_TITLE')} text={t('NEWSLETTER.HR_DESC')} />
+            <Newsletter type='joinUs' title="Join Our Team" text="All of our candidates are very valuable to us in the recruitment processes!" />
           </section>
         </div>
       </Layout>

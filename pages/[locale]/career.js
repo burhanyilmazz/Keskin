@@ -20,7 +20,7 @@ export default function Career({products}) {
 
   const breadcrumbs = [
     {
-      title: t('CAREER.TITLE'),
+      title: 'Career',
       href: pageUrl
     }
   ]
@@ -35,15 +35,20 @@ export default function Career({products}) {
       <Layout products={products}>
         <TopBar 
           img={"/images/content/career/head.jpg"}
-          title={t('CAREER.TITLE')}
+          title='Career'
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['career'])}>
-            <div className='min-title'>{t('CAREER.TITLE')}</div>
+            <div className='min-title'>Career</div>
             <div className={styles['content']}>
-              <h2>{t('CAREER.SUBTITLE')}</h2>
-              <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />
+              <h2>All of our candidates are very valuable to us in our recruitment processes!</h2>
+              <div>
+                <p>It is aimed to select and place the most suitable candidates for the job, who will carry our company to the future, who have our corporate values. In this way, we believe that a long-term, efficient and effective working life will be created.</p>
+                <p>In our recruitment process, it is regularly planned every year in line with company development and organizational needs. Our recruitment process starts with the evaluation of the applications submitted to our company. After the pre-selection on the CV, candidates who meet the determined criteria are invited to job interviews.</p>
+                <p>Candidates invited for an interview are evaluated based on their competencies and, if necessary, their experience for the relevant position. The related process is also supported by different measurement and evaluation tools in line with the needs. The process is completed with the appropriate candidate.</p>
+                <p>At Keskin Yapı, where every employee is accepted as a value, all of our candidates are equally valuable to us.</p>
+              </div>
             </div>
 
             <div className={classNames(styles['image'], 'image')}>
@@ -51,7 +56,7 @@ export default function Career({products}) {
             </div>
           </div>
           <div className={classNames('container', 'contact', styles['contact'])}>
-            <ContactForm title={t('CAREER_FORM')} type = 'hr'/>
+            <ContactForm title='Creer Form' type = 'hr'/>
           </div>
         </div>
       </Layout>

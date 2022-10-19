@@ -18,7 +18,7 @@ export default function Dealership({products, dealer}) {
 
   const breadcrumbs = [
     {
-      title: t('DEALER.TITLE'),
+      title: 'Dealerships',
       href: '/dealership'
     }
   ]
@@ -33,14 +33,14 @@ export default function Dealership({products, dealer}) {
       <Layout products={products}>
         <TopBar 
           img={"/images/content/dealership/head.jpg"}
-          title={t('DEALER.TITLE')}
+          title="Dealerships"
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['dealership'])}>
-						<div className='min-title'>{t('DEALER.TITLE')}</div>
+						<div className='min-title'>Dealerships</div>
             <div className={styles['content']}>
-							<h2>{t('DEALER.SUBTITLE')}</h2>
+							<h2>We continue to grow by adhering to the principles of honesty and trust, and by continuing our solution partnership with the biggest brands in their fields!</h2>
 							<ul className={styles['list']}>
 								{ dealer.map((item, index) => <li key={index}><Image alt={item?.title} src={item.logo} width={76} height={30} layout={'responsive'} /></li> )}
 							</ul>

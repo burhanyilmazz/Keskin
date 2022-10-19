@@ -59,7 +59,7 @@ export default function ProductDetail({products, category, subcategories, produc
             <div className={styles['text']}>
               <h2>{product.title}</h2>
               <div className={styles['pd-content']} dangerouslySetInnerHTML={{__html: product.content}} />
-              {product.pdfFile && <LinkButton href={product.pdfFile} text={t('TDS')} icon={'download'} className={styles['button']}/> }
+              {product.pdfFile && <LinkButton href={product.pdfFile} text="TDS Download" icon={'download'} className={styles['button']}/> }
             </div>
             <div className={styles['image']}>
               <Image src={product.image} width={'100%'} height={'100%'} layout={'responsive'} objectFit={'cover'} objectPosition={'center'} /> 
@@ -77,7 +77,7 @@ export default function ProductDetail({products, category, subcategories, produc
               <h2>
                 {product.title}
                 <br />
-                {t('RECOMMEND_PRODUCT')}
+                Recommended Products
               </h2>
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ProductDetail({products, category, subcategories, produc
 
         {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className={styles['modal']}>
-            <ContactForm type={'product'} title={t('CONTACT_FORM')} pid={product.id} />
+            <ContactForm type={'product'} title="Contact Form" pid={product.id} />
           </div>
         </Modal> }
       </Layout>

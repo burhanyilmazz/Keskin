@@ -69,7 +69,7 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
               <div className={styles['content']} dangerouslySetInnerHTML={{__html: blog.content}} />
 
               <div className={styles['social-media']}>
-                <span>{t('SHARE')}</span>
+                <span>Yazıyı Paylaş</span>
                 <ShareMedia />
               </div>
             </div>
@@ -80,9 +80,9 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
             <div className='container'>
               <div className={styles['content']}>
                 <h2>
-                  {t('INTERESTED')}
+                İlgini Çekebilecek
                   <br />
-                  {t('OTHER_POSTS')}
+                  Diğer Yazılar
                 </h2>
               </div>
             </div>

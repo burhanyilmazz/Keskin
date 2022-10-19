@@ -20,7 +20,7 @@ export default function Career({products}) {
 
   const breadcrumbs = [
     {
-      title: t('CAREER.TITLE'),
+      title: 'Kariyer',
       href: pageUrl
     }
   ]
@@ -35,15 +35,20 @@ export default function Career({products}) {
       <Layout products={products}>
         <TopBar 
           img={"/images/content/career/head.jpg"}
-          title={t('CAREER.TITLE')}
+          title='Kariyer'
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['career'])}>
-            <div className='min-title'>{t('CAREER.TITLE')}</div>
+            <div className='min-title'>Kariyer</div>
             <div className={styles['content']}>
-              <h2>{t('CAREER.SUBTITLE')}</h2>
-              <div dangerouslySetInnerHTML={{__html: t('CAREER.DESC')}} />
+              <h2>İşe alım süreçlerimizde tüm adaylarımız bizim için çok değerli!</h2>
+              <div>
+                <p>Şirketimizi geleceğe taşıyacak, kurumsal değerlerimize sahip, işe en uygun nitelikteki adayları seçmek ve yerleştirmek amaçlanmaktadır. Bu sayede uzun vadeli, verimli ve etkin bir çalışma hayatı oluşturulacağına inanmaktayız.</p>
+                <p>İşe alım sürecimizde, şirket gelişim ve organizasyonel ihtiyaçlar doğrultusunda her yıl düzenli olarak planlanmaktadır. İşe alım sürecimiz, şirketimize ulaştırılan başvuruların değerlendirilmesi ile başlar. Özgeçmiş üzerinden yapılacak ön elemelerin ardından belirlenen kriterlere sahip adaylarımız iş görüşmelerine davet edilirler.</p>
+                <p>Görüşmeye davet edilen adaylarımız, yetkinlikleri ve ilgili pozisyon için gerekli ise deneyimleri doğrultusunda değerlendirilirler. İlgili süreç, ihtiyaçlar doğrultusunda farklı ölçme ve değerlendirme araçları ile de desteklenir. Süreç uygun aday ile tamamlanır.</p>
+                <p>Her çalışanın değer olarak kabul edildiği Keskin Yapı’da tüm adaylarımız da aynı şekilde bizler için değerlidir.</p>
+              </div>
             </div>
 
             <div className={classNames(styles['image'], 'image')}>
@@ -51,7 +56,7 @@ export default function Career({products}) {
             </div>
           </div>
           <div className={classNames('container', 'contact', styles['contact'])}>
-            <ContactForm title={t('CAREER_FORM')} type='hr'/>
+            <ContactForm title='Kariyer Formu' type='hr'/>
           </div>
         </div>
       </Layout>

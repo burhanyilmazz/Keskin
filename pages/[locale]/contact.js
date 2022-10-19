@@ -116,7 +116,7 @@ export default function Contact({products}) {
     <>
       <Head>
         <title>Keskin Yapı | Contact</title>
-        <meta name="description" content={t('CONTACT.SUBTITLE')} />
+        <meta name="description" content="" />
       </Head>
       
       <Layout products={products}>
@@ -129,18 +129,18 @@ export default function Contact({products}) {
 
             <div className={styles['form']}>
               <div className={styles['text']}>
-                <div className='min-title'>{t('SIDEBAR.CONTACT')}</div>
-                <h3>{t('CONTACT_FORM.TEXT')}</h3>
+                <div className='min-title'>Contact</div>
+                <h3>You can reach our products from our showrooms located at 6 different points in Istanbul!</h3>
               </div>
               <div className={styles['box']}>
-                <ContactForm type={'contact'} title={t('CONTACT_FORM')} />
+                <ContactForm type={'contact'} title="Contact Form" />
               </div>
             </div>
           </div>
         </div>
 
         <section className={styles['newsletter']}>
-          <Newsletter title={t('NEWSLETTER.NEWS_TITLE')} text={t('NEWSLETTER.NEWS_DESC')} type='subscription'/>
+          <Newsletter title="E-Newsletter" text="Subscribe to the e-newsletter to be informed about campaigns and announcements." type='subscription'/>
         </section>
       </Layout>
     </>

@@ -20,11 +20,11 @@ export default function Export({products}) {
 
   const breadcrumbs = [
     {
-      title: t('SIDEBAR.CORPARATE'),
+      title: 'Kurumsal',
       href: pageUrl
     },
     {
-      title: t('EXPORT.TITLE'),
+      title: 'İhracat',
       href: pageUrl
     }
   ]
@@ -33,24 +33,28 @@ export default function Export({products}) {
     <>
       <Head>
         <title>Keskin Yapı | İhracat</title>
-        <meta name="description" content={t('EXPORT.SUBTITLE')} />
+        <meta name="description" content='3 kıta, 28 farklı ülkede ihracatımızı gerçekleştiriyoruz!' />
       </Head>
       
       <Layout products={products}>
         <TopBar 
           img={"/images/content/export/head.jpg"}
-          title={t('EXPORT.TITLE')}
+          title=' İhracat'
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['export'])}>
-            <div className='min-title'>{t('EXPORT.TITLE')}</div>
+            <div className='min-title'> İhracat</div>
             <div className={styles['content']}>
-              <h2>{t('EXPORT.SUBTITLE')}</h2>
-              <div dangerouslySetInnerHTML={{__html: t('EXPORT.DESC')}} />
+              <h2>3 kıta, 28 farklı ülkede ihracatımızı gerçekleştiriyoruz!</h2>
+              <div>
+                <p>Keskin Yapı olarak yurtdışında da ülkemizi gururla temsil ederek başta Avrupa olmak üzere 3 kıta 28 farklı ülkeye ihracatımızı gerçekleştirmekteyiz. </p>
+                <p>Üreticiler ile dünyayı buluşturan firmamız, müşterilerimize dünya standartlarının üzerinde bir kalite ile seramik, vitrifiye, sıhhi tesisat ve elektrik malzemeleri gibi pek çok ürünü ve markayı ulaştırmayı hedeflemektedir. </p>
+                <p>Zamanında sevkiyat ve şeffaf bir çalışma ile müşterilerimizin bize gösterdiği güven ve inancın sorumluluğunu üstlendiğimizden emin oluruz. Bunu yaparken her adımımıza inanarak hem iç̧ hem de dış̧ paydaşlarımıza değer kattığımızı ümit ediyoruz. </p>
+              </div>
             </div>
             <div className={classNames(styles['image'], 'image')}>
-              <Image alt={t('EXPORT.TITLE')} src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />
+              <Image alt=' İhracat' src='/images/content/export/export.jpg' width={485} height={431} layout={'responsive'} />
             </div>
           </div>
         </div>
