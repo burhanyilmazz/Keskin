@@ -60,7 +60,7 @@ export default function About({products}) {
           </div>
           
           <div className={classNames('container', styles['quality'])}>
-            <div className='min-title'>Our Quality Policy</div>
+            <div className='min-title'>Kalite Politikamız</div>
             <div className={styles['content']}>
               <h2>Çevreye ve topluma saygılı bir firmayız!</h2>
                 

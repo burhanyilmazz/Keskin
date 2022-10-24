@@ -100,7 +100,7 @@ export default function ProductDetail({products, category, subcategories, produc
               {
                 subcategories.products?.map((item, index) => {
                   const url = `${productsUrl}/${slug(item.title)}-${item.id}-${subcategories.category.id}-${category.category.id}`
-                  return <SwiperSlide key={index} className={styles['recommended__slide']}><Card title={item.title} src={item.listing} desc={item.content} href={url} /></SwiperSlide>
+                  return <SwiperSlide key={index} className={styles['recommended__slide']}><Card title={item.title} src={item.listing} href={url} /></SwiperSlide>
                 })
               }
             </Swiper>
