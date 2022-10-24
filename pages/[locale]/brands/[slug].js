@@ -10,7 +10,7 @@ import styles from '../../../assets/styles/ProductList.module.scss'
 import fetch from 'isomorphic-unfetch'
 import slug from 'slug'
 
-import { LeftNav, TopBar, Card } from '../../../components';
+import { LeftNav, TopBar, Card, BackButton } from '../../../components';
 import classNames from 'classnames';
 
 export default function Product({products, category, subcategories}) {
@@ -46,6 +46,7 @@ export default function Product({products, category, subcategories}) {
         />
         <div className='content'>
           <div className={classNames('container', styles['product-list'])}>
+            <BackButton />
             <LeftNav products={products} />
             <div className={styles['products']}>
               {

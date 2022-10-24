@@ -25,3 +25,4 @@ export * from './Search';
 export * from './RightNav';
 export * from './ContactCard';
 export * from './ShareMedia';
+export * from './BackButton';

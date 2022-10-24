@@ -28,7 +28,7 @@ export const Sidebar = (props) => {
   const router = useRouter();
   const route = `/${router.asPath.split('/')[2]}`;
 
-  const { t, i18n } = useTranslation('common')
+  const {i18n } = useTranslation('common')
   const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   
   return (

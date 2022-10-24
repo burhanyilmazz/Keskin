@@ -7,7 +7,7 @@ import { Layout } from '../../../layout'
 
 import styles from '../../../assets/styles/BlogDetail.module.scss'
 
-import { TopBar, Card, RightNav, ShareMedia, Icon } from '../../../components';
+import { TopBar, Card, RightNav, ShareMedia, Icon, BackButton } from '../../../components';
 import Image from 'next/image'
 import { Navigation, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -55,6 +55,7 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
         />
         <div className='content'>
           <div className={classNames('container', styles['blog-detail'])}>
+            <BackButton />
             <div className={styles['blog-post']}>
               <div className={styles['desc']}>
                 <h3>{day}.{month}.{date.getFullYear()}</h3>

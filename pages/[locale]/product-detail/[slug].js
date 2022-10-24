@@ -15,7 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import styles from '../../../assets/styles/ProductDetail.module.scss'
 
-import { LinkButton, TopBar, SeniorContact, Modal, Icon, Card, ContactForm } from '../../../components';
+import { LinkButton, TopBar, SeniorContact, Modal, Icon, Card, ContactForm, BackButton } from '../../../components';
 import classNames from 'classnames';
 
 export default function ProductDetail({products, category, subcategories, product}) {
@@ -56,6 +56,7 @@ export default function ProductDetail({products, category, subcategories, produc
         />
         <div className='content'>
           <div className={classNames('container', styles['product-detail'])}>
+            <BackButton />
             <div className={styles['text']}>
               <h2>{product.title}</h2>
               <div className={styles['pd-content']} dangerouslySetInnerHTML={{__html: product.content}} />

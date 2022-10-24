@@ -6,7 +6,7 @@ import i18nextConfig from '../../../next-i18next.config'
 import { Layout } from '../../../layout'
 
 import styles from '../../../assets/styles/Blog.module.scss'
-import { TopBar, Card,  RightNav } from '../../../components';
+import { TopBar, Card,  RightNav, BackButton } from '../../../components';
 import classNames from 'classnames';
 
 import fetch from 'isomorphic-unfetch'
@@ -43,6 +43,7 @@ export default function Blog({products, blogs, popular, category}) {
         />
         <div className='content'>
           <div className={classNames('container', styles['blog'])}>
+            <BackButton />
             <div className={styles['list']}>
               {
                 category?.blogs?.map((item, index) => <Card 

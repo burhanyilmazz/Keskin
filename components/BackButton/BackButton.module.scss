@@ -1,0 +1,21 @@
+.back-button {
+  position: absolute;
+  width: 143px;
+  height: 48px;
+  background: #ffffff;
+  border-radius: 8px 8px 8px 0px;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: -22px;
+  cursor: pointer;
+  z-index: 10;
+
+  i {
+    margin-right: 11px;
+  }
+}
