@@ -49,7 +49,7 @@ export const Search = () => {
             className={classNames(styles['search-input'], {'is-invalid': formik.touched.keyword && formik.errors.keyword})}
             {...formik.getFieldProps('keyword')}
           />
-          <button type='submit' className={styles['input-submit']}><Icon icon={'enter'} /></button>
+          <button type='submit' aria-label="Search" className={styles['input-submit']}><Icon icon={'enter'} /></button>
         </div>
       </form>
     </div>

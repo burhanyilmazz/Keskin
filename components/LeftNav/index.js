@@ -72,7 +72,7 @@ export const LeftNav = (props) => {
                         key = {index}
                       >
                         <div className={styles['item']} onClick={(event) => onClick(event, index)}>
-                          <Image src={item.category.thumb} width={32} height={32} layout={'fixed'} /> 
+                          <Image src={item.category.thumb} width={32} height={32} layout={'fixed'} alt={item.category.title} /> 
                           <div>{item.category.title}</div>
                           <Icon icon={'arrow'} />
                         </div>
