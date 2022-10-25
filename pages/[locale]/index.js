@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import classNames from 'classnames';
@@ -25,11 +25,6 @@ export default function Homepage({carousel, products, popular}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
-      </Head>
-      
       <Layout transparent products={products}>
         <Carousel data={carousel}/>
 

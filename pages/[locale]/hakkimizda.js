@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
@@ -14,7 +14,7 @@ import Image from 'next/image'
 import classNames from 'classnames';
 
 export default function About({products}) {
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const pageUrl = i18n.language === 'tr' ? '/hakkimizda' : '/about';
 
@@ -31,11 +31,6 @@ export default function About({products}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı | Hakkımızda</title>
-        <meta name="description" content='1969 yılından bu yana...' />
-      </Head>
-      
       <Layout products={products}>
         <TopBar 
           img={"/images/content/about/head.jpg"}

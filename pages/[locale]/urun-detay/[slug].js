@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from 'react';
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../../next-i18next.config'
@@ -20,7 +20,7 @@ import classNames from 'classnames';
 
 export default function ProductDetail({products, category, subcategories, product}) {
   const [modalOpen, setModalOpen] = useState(false);
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   const brandsUrl = i18n.language === 'tr' ? '/marka' : '/brands';
@@ -43,11 +43,6 @@ export default function ProductDetail({products, category, subcategories, produc
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content='' />
-      </Head>
-      
       <Layout products={products} className='white-bg'>
          <TopBar 
           img={product.headerImage}

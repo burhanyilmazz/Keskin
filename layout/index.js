@@ -36,7 +36,7 @@ export const Layout = (props) => {
       <SearchIcon transparent={transparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
       <SearchBar isShow={searchOpen} />
       <Hamburger transparent={transparent} onClick={(event) => handleOnClickNav(event)} isOpen={sidebarOpen} />
-      <Sidebar isShow={sidebarOpen} products={products} />
+      <Sidebar isShow={sidebarOpen} products={products} outsideClick={(event) => handleOnClickNav(event)} />
       <main className={className}>
         {props.children}
       </main>

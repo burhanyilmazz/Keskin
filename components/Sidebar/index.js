@@ -13,16 +13,24 @@ import slug from 'slug'
 import { navlist } from '../../utils/Nav';
 
 export const Sidebar = (props) => {
-  const { isShow, products } = props;
+  const { isShow, products, outsideClick } = props;
   const [list, setList] = useState(navlist)
 
   const onClick = (event, index) => {
     list[index].isOpen = !list[index].isOpen;
     list.map((item, i) => {
-        if (i !== index) list[i].isOpen = false
+      if (i !== index) list[i].isOpen = false
     })
     
     setList([...list])
+  }
+
+  const handleOutsideClick = (event) => {
+    const { target } = event;
+
+    if (target.nodeName === "ASIDE") {
+      outsideClick && outsideClick()
+    }
   }
 
   const router = useRouter();
@@ -32,7 +40,7 @@ export const Sidebar = (props) => {
   const catUrl = i18n.language === 'tr' ? '/urunler' : '/products';
   
   return (
-    <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })}>
+    <aside className={classNames(styles['sidebar'], {[styles['sidebar--open']] : isShow })} onClick={(event) => handleOutsideClick(event)}>
       <div className={styles['main']}>
         <div className={styles['main__head']}>
           <span>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</span>
@@ -118,7 +126,8 @@ export const Sidebar = (props) => {
 
 Sidebar.propTypes = {
 	isShow: PropTypes.bool,
-  products: PropTypes.array
+  products: PropTypes.array,
+  outsideClick: PropTypes.func
 };
 
 Sidebar.defaultProps = {

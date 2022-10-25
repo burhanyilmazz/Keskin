@@ -44,7 +44,7 @@ export const Carousel = (props) => {
                 <div className={styles['carousel__slide']}>
                   <h1>{item.title}</h1>
                   <p>{item.miniTitle}</p>
-                  <LinkButton href={item.url} text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale transparent/>
+                  {item.url && <LinkButton target={'_self'} href={item.url} text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} transparent/> }
                 </div>
               </SwiperSlide>
             )

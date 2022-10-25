@@ -15,7 +15,7 @@ export const Search = () => {
   const { i18n } = useTranslation('common');
 
   const searchSchema = Yup.object().shape({
-    keyword: Yup.string().required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
+    keyword: Yup.string().min(3, i18n.language === 'tr' ? 'Lütfen min. 3 karakter girin' : 'Please enter a min of 3 characters.').required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
   })
 
   const [search] = useState({

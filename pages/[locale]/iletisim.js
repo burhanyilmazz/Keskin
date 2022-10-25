@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import {useEffect, useRef} from 'react'
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
@@ -113,11 +113,6 @@ export default function Contact({products}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı | İletişim</title>
-        <meta name="description" content="" />
-      </Head>
-      
       <Layout products={products}>
         <div id="map" ref={googlemap} />
         <div className={classNames('content', styles['contact'])}>

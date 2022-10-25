@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { useState, useEffect } from 'react';
-import Head from 'next/head'
+
 import {useRouter} from 'next/router'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
@@ -41,11 +41,6 @@ export default function SearchPage({products}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
-      </Head>
-      
       <Layout products={products}>
         <TopBar title={i18n.language === 'tr' ? 'Arama Sonuçları' : 'Search Results'} />
         <div className='content'>

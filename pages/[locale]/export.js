@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
@@ -31,11 +31,6 @@ export default function Export({products}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı |  Export</title>
-        <meta name="description" content="We export to 3 continents and 28 different countries!" />
-      </Head>
-      
       <Layout products={products}>
         <TopBar 
           img={"/images/content/export/head.jpg"}

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Head from 'next/head'
+
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../../next-i18next.config'
@@ -30,11 +30,6 @@ export default function Blog({products, blogs, popular, category}) {
 
   return (
     <>
-      <Head>
-        <title>Keskin Yapı</title>
-        <meta name="description" content="Keskin Yapı" />
-      </Head>
-      
       <Layout products={products}>
         <TopBar 
           img={category.category.headerImage}
