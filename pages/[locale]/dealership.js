@@ -13,20 +13,12 @@ import Image from 'next/image'
 import classNames from 'classnames';
 
 export default function Dealership({products, dealer}) {
-  const breadcrumbs = [
-    {
-      title: 'Dealerships',
-      href: '/dealership'
-    }
-  ]
-
   return (
     <>
       <Layout products={products}>
         <TopBar 
           img={"/images/content/dealership/head.jpg"}
           title="Dealerships"
-          breadcrumbs={breadcrumbs}
         />
         <div className='content text'>
           <div className={classNames('container', styles['dealership'])}>
