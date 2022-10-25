@@ -2,7 +2,6 @@
 import {useEffect, useRef} from 'react'
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next';
 import i18nextConfig from '../../next-i18next.config'
 import { getI18nPaths } from '../../getI18nPaths'
 import classNames from 'classnames';
@@ -18,14 +17,13 @@ import styles from '../../assets/styles/Contact.module.scss'
 import { mapOptions } from '../../utils/Map';
 
 export default function Contact({products}) {
-  const { t } = useTranslation('common');
   const googlemap = useRef(null);
 
   const contact = [
     {
       id: 1,
       title: "Showroom / Bakırköy Merkez Şube",
-      address: "Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul",
+      address: "Kartaltepe Mh. Aksu Cd. No:5 Bakırköy / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
@@ -35,7 +33,7 @@ export default function Contact({products}) {
     {
       id: 2,
       title: "Yapı Market / Çemberlitaş Şube",
-      address: "Binbirdirek Mah. Peykhane Sk. No:16/A Çemberlitaş / Eminönü / İstanbul",
+      address: "Binbirdirek Mh. Peykane Sok No:16/A Çemberlitaş – Fatih / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
@@ -44,18 +42,18 @@ export default function Contact({products}) {
     },
     {
       id: 3,
-      title: "İnşaat Malzemeleri / Bakırköy Şube",
-      address: "Kartaltepe, Aksu Cd. No:9, Bakırköy / Istanbul",
+      title: "Yapı Market / Arnavutköy Şube",
+      address: "Deliklikaya Kayabaşı Cd. No:29  Arnavutköy / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
       image: "/images/content/contact/contact-3.jpg",
-      coordinate: {lat: 40.983691, lng: 28.8820653}
+      coordinate: {lat: 41.1135206, lng: 28.6523425}
     },
     {
       id: 4,
       title: "İnşaat Malzemeleri / Zeytinburnu Şube",
-      address: "Seyitnizam Mah. Demirciler Sitesi 8.Yol /68 Zeytinburnu - Istanbul",
+      address: "Seyitnizam Mh. Demirciler Sitesi. 8 Cd. No:68 Zeytinburnu / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",

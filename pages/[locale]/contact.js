@@ -24,7 +24,7 @@ export default function Contact({products}) {
     {
       id: 1,
       title: "Showroom / Bakırkoy Main Branch",
-      address: "Kartaltepe Mah. Aksu Cad. No:5/1 Bakırköy/İstanbul",
+      address: "Kartaltepe Mh. Aksu Cd. No:5 Bakırköy / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
@@ -34,7 +34,7 @@ export default function Contact({products}) {
     {
       id: 2,
       title: "Construction Market / Çemberlitaş Branch",
-      address: "Binbirdirek Mah. Peykhane Sk. No:16/A Çemberlitaş / Eminönü / İstanbul",
+      address: "Binbirdirek Mh. Peykane Sok No:16/A Çemberlitaş – Fatih / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
@@ -43,18 +43,18 @@ export default function Contact({products}) {
     },
     {
       id: 3,
-      title: "Construction Materials / Bakırköy Branch",
-      address: "Kartaltepe, Aksu Cd. No:9, Bakırköy / Istanbul",
+      title: "Construction Materials / Arnavutköy Branch",
+      address: "Deliklikaya Kayabaşı Cd. No:29  Arnavutköy / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
       image: "/images/content/contact/contact-3.jpg",
-      coordinate: {lat: 40.983691, lng: 28.8820653}
+      coordinate: {lat: 41.1135206, lng: 28.6523425}
     },
     {
       id: 4,
       title: "Construction Materials / Zeytinburnu Branch",
-      address: "Seyitnizam Mah. Demirciler Sitesi 8.Yol /68 Zeytinburnu - Istanbul",
+      address: "Seyitnizam Mh. Demirciler Sitesi. 8 Cd. No:68 Zeytinburnu / İstanbul",
       phone: "+90 (212) 542 40 61",
       fax: "+90 (212) 542 40 62",
       email: "info@keskinyapimarket.com.tr",
