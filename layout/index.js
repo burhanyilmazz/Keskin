@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Sidebar, Header, Hamburger, Footer, SearchIcon, SearchBar } from '../components/';
@@ -32,6 +33,10 @@ export const Layout = (props) => {
   
   return (
     <>
+      <Head>
+        <title>Keskin Yapı Çözümleri - Yapı malzemelerinde 1000`den fazla ürün çeşidi</title>
+        <meta name="description" content="1969 yılından bu yana ulusal ve uluslararası onlarca markanın distribütörlüğü ile yaşam alanlarınız için zarif çözümler sunuyoruz. " />
+      </Head>
       <Header transparent={transparent} isChange={headerTransparent} />
       <SearchIcon transparent={transparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
       <SearchBar isShow={searchOpen} />
