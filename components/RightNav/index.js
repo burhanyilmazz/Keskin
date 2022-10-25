@@ -43,7 +43,7 @@ export const RightNav = (props) => {
           <h6>{i18n.language === 'tr' ? 'Kategoriler' : 'Categories'}</h6>
           <div className={styles['categories']}>
             <ul>
-              { categories.map((item, index) => <li key={index}><StaticI18nLink href={`/blog/${slug(item.category.title)}-${item.category.id}`}><a><span>{item.category.title}</span> <div>{item.blogs.length}</div></a></StaticI18nLink></li>) }
+              { categories.map((item, index) => <li key={index}><StaticI18nLink href={`/blog/${slug(item.category.title)}-${item.category.id}`}><a><span>{item.category.title}</span> <div>{item.blogs?.length}</div></a></StaticI18nLink></li>) }
             </ul>
           </div>
 
