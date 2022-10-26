@@ -58,7 +58,7 @@ export default function SearchPage({products}) {
 
               <div className={styles['product-list']}>
                 {
-                  data.products.map((item, index) => <div key={index} className={styles['products__item']}><Card title={item.title} href={`${productUrl}/${slug(item.title)}-${item.id}-${item.subcat_id}-${item.cat_id}`} /></div> )
+                  data.products.map((item, index) => <div key={index} className={styles['products__item']}><Card title={item.title} src={item.listing} href={`${productUrl}/${slug(item.title)}-${item.id}-${item.subcat_id}-${item.cat_id}`} /></div> )
                 }
               </div>
             </div>

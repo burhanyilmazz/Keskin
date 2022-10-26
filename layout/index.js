@@ -35,8 +35,9 @@ export const Layout = (props) => {
     <>
       <Head>
         <title>Keskin Yapı Çözümleri - Yapı malzemelerinde 1000`den fazla ürün çeşidi</title>
-        <meta name="description" content="1969 yılından bu yana ulusal ve uluslararası onlarca markanın distribütörlüğü ile yaşam alanlarınız için zarif çözümler sunuyoruz. " />
+        <meta name="description" content="1969 yılından bu yana ulusal ve uluslararası onlarca markanın distribütörlüğü ile yaşam alanlarınız için zarif çözümler sunuyoruz." />
       </Head>
+
       <Header transparent={transparent} isChange={headerTransparent} />
       <SearchIcon transparent={transparent} onClick={(event) => handleOnClickSearch(event)} isOpen={searchOpen} />
       <SearchBar isShow={searchOpen} />
