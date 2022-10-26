@@ -17,7 +17,7 @@ export const Hamburger = (props) => {
   }, [isOpen])
   
   return (
-    <div className={classNames(styles['menu-icon'], {[styles['active']] : isChecked, [styles['menu-icon--transparent']] : transparent, [styles['important']] : isCloseImportant } )} onClick={handleClick}>
+    <div className={classNames(styles['menu-icon'], {[styles['active']] : isChecked, [styles['menu-icon--transparent']] : transparent, [styles['important']] : isCloseImportant }, 'menu-sticky' )} onClick={handleClick}>
       <div>
         <span></span>
         <span></span>

@@ -24,7 +24,7 @@ export default function SearchPage({products}) {
     const params = new URLSearchParams(window.location.search)
     const language = i18n.language;
     const keyword = router.query.keyword || params.get('keyword');
-
+    
     if (!keyword) return
 
     fetch(`${API_URL}/search`, {
@@ -34,8 +34,8 @@ export default function SearchPage({products}) {
       },
       body: JSON.stringify({language, keyword})
     }).then(r => r.json()).then(data => setData(data.Result));
-  }, [])
-  
+  }, [router.query.keyword])
+
   const blogUrl = i18n.language === 'tr' ? '/blog-detay' : '/blog-detail';
   const productUrl = i18n.language === 'tr' ? '/urun-detay' : '/product-detail';
 
@@ -54,7 +54,7 @@ export default function SearchPage({products}) {
 
           {data?.products && <div className={styles['search-list']}>
             <div className='container'>
-              <div className='min-title'>{i18n.language === 'tr' ? 'Ürün Grupları' : 'Product Groups'}</div>
+              <div className='min-title'>{i18n.language === 'tr' ? 'Ürünler' : 'Products'}</div>
 
               <div className={styles['product-list']}>
                 {
@@ -70,7 +70,7 @@ export default function SearchPage({products}) {
 
               <div className={styles['blog-list']}>
                 {
-                  data.blogs.map((item, index) => <div key={index} className={styles['products__item']}> <Card title={item.title} desc={item.description} href={`${blogUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} src={item.listing} /></div>)
+                  data.blogs.map((item, index) => <div key={index} className={styles['products__item']}> <Card title={item.title} desc={item.description} href={`${blogUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} src={item.listing} blog /></div>)
                 }
               </div>
             </div>

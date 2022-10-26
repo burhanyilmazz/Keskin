@@ -17,7 +17,7 @@ export const SearchIcon = (props) => {
   }, [isOpen])
   
   return (
-    <div className={classNames(styles['search-icon'], {[styles['active']] : isChecked, [styles['search-icon--transparent']] : transparent } )} onClick={handleClick}>
+    <div className={classNames(styles['search-icon'], {[styles['active']] : isChecked, [styles['search-icon--transparent']] : transparent }, 'search-sticky' )} onClick={handleClick}>
       <div>
         <span className={classNames({[styles['close']] : isChecked} )}></span>
       </div>

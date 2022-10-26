@@ -9,7 +9,7 @@
 
 .content {
   width: calc(100% - 600px);
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1440px) {
     width: 60%;
   }
 
@@ -30,12 +30,11 @@
   bottom: -235px;
 
   @media screen and (max-width: 1440px) {
-    width: 50%;
+    width: 40%;
     right: 48px;
   }
 
   @media screen and (max-width: 1200px) {
-    width: 40%;
     bottom: -205px;
   }
 

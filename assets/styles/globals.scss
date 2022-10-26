@@ -391,3 +391,43 @@ ul {
     text-align: center;
   }
 }
+
+.header {
+  &--pinned {
+    transform: translateY(0);
+    
+    &:not(.header--top) {
+      background: #fff !important;
+      & ~ .search-sticky {
+        background: #f9f9fa !important;
+  
+        span {
+          &:before {
+            background: #1F242B !important;
+          }
+          &:after {
+            border: 1px solid #1F242B !important;
+          }
+        }
+      }
+      & ~ .menu-sticky {
+        background: #f9f9fa !important;
+  
+        span {
+          background-color: #1f242b !important;
+        }
+      }
+    }
+
+    
+  }
+
+  &--unpinned {
+    transform: translateY(-100%);
+
+    & ~ .search-sticky,
+    ~ .menu-sticky {
+      transform: translateY(-100%);
+    }
+  }
+}

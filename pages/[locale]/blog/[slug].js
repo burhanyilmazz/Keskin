@@ -35,6 +35,7 @@ export default function Blog({products, blogs, popular, category}) {
           img={category.category.headerImage}
           title={category.category.title}
           breadcrumbs={breadcrumbs}
+          standart
         />
         <div className='content'>
           <div className={classNames('container', styles['blog'])}>
@@ -46,7 +47,8 @@ export default function Blog({products, blogs, popular, category}) {
                   title={item.title} 
                   desc={item.description} 
                   href={`${detailUrl}/${slug(item.title)}-${item.id}-${category.category.id}`} 
-                  src={item.listing}                
+                  src={item.listing}
+                  blog
                 />
               )
               }

@@ -24,6 +24,7 @@ export default function Blog({products, blogs, popular}) {
         <TopBar 
           img={"/images/content/blog/head.jpg"}
           title={'Blog'}
+          standart
         />
         <div className='content'>
          <div className={classNames('container', styles['blog'])}>
@@ -37,7 +38,8 @@ export default function Blog({products, blogs, popular}) {
                         title={blog.title} 
                         desc={blog.description} 
                         href={`${detailUrl}/${slug(blog.title)}-${blog.id}-${item.category.id}`} 
-                        src={blog.listing}                
+                        src={blog.listing}
+                        blog
                       />)
                     )
                   }

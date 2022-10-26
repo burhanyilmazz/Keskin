@@ -38,6 +38,7 @@ export default function Product({products, category, subcategories}) {
           img={subcategories?.category?.headerImage}
           title={subcategories?.category?.title}
           breadcrumbs={breadcrumbs}
+          standart
         />
         <div className='content'>
           <div className={classNames('container', styles['product-list'])}>

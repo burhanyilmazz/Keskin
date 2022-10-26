@@ -14,7 +14,7 @@ export const Newsletter = (props) => {
   const { className, title, type, text } = props;
   const [modalOpen, setModalOpen] = useState(false);
 
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const career = i18n.language === 'tr' ? '/kariyer' : '/career'
 
@@ -41,9 +41,7 @@ export const Newsletter = (props) => {
         body: JSON.stringify(values)
       }).then(r => r.json()).then(data => data);
 
-      if (newsletter.Success) {
-        setModalOpen(true)
-      }
+      if (newsletter.Success) setModalOpen(true)
     },
   })
   
@@ -65,7 +63,7 @@ export const Newsletter = (props) => {
                                         /> }
             {type === 'subscription' &&<span>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</span>}
             {type === 'joinUs' && <LinkButton text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} href={career} locale /> }
-            {type === 'subscription' && <LinkButton text={i18n.language === 'tr' ? 'Bültene Kaydol' : 'Subscribe to Newsletter'} button transparent />}
+            {type === 'subscription' && <LinkButton text={i18n.language === 'tr' ? 'Kaydol' : 'Subscribe'} button transparent />}
           </form>
         </div>
       </div>

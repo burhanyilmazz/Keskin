@@ -23,6 +23,7 @@ export default function Product({products, category}) {
         <TopBar 
           img={category?.category.headerImage}
           title={category?.category.title}
+          standart
         />
         <div className='content'>
           <div className={classNames('container', styles['product-list'])}>

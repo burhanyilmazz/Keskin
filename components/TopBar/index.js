@@ -6,10 +6,10 @@ import { Breadcrumb } from '../';
 import classNames from 'classnames';
 
 export const TopBar = (props) => { 
-  const { img, title, breadcrumbs } = props;
+  const { img, title, breadcrumbs, standart } = props;
   
   return (
-    <div className={classNames(styles['topbar'], {[styles['topbar--nonimg']]: !img})}>
+    <div className={classNames(styles['topbar'], {[styles['topbar--nonimg']]: !img, [styles['topbar--standart']]: standart})}>
       { img && <div className={styles['image']}><img src={img} alt={title} /></div> }
       <div className={styles['content']}>
         <div className='container'>
@@ -24,5 +24,6 @@ export const TopBar = (props) => {
 TopBar.propTypes = {
 	img: PropTypes.string,
   title: PropTypes.string,
-  breadcrumbs: PropTypes.array
+  breadcrumbs: PropTypes.array,
+  standart: PropTypes.bool
 };

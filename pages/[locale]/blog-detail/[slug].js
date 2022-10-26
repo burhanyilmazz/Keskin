@@ -17,7 +17,7 @@ import fetch from 'isomorphic-unfetch'
 import slug from 'slug'
 
 export default function Blogetail({products, blogs, popular, blog, blogCat}) {
-  const { t, i18n } = useTranslation('common');
+  const { i18n } = useTranslation('common');
 
   const detailUrl = i18n.language === 'tr' ? '/blog-detay' : '/blog-detail';
 
@@ -47,6 +47,7 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
           img={blog.headerImage}
           title={blog.title}
           breadcrumbs={breadcrumbs}
+          standart
         />
         <div className='content'>
           <div className={classNames('container', styles['blog-detail'])}>
@@ -100,7 +101,7 @@ export default function Blogetail({products, blogs, popular, blog, blogCat}) {
               >
                 {
                   blogCat.blogs?.map((item, index) => {
-                    return <SwiperSlide key={index} className={styles['recommended__slide']}><Card src={item.listing} title={item.title} desc={item.description} href={`${detailUrl}/${slug(item.title)}-${item.id}-${blogCat.category.id}`}  /></SwiperSlide>
+                    return <SwiperSlide key={index} className={styles['recommended__slide']}><Card src={item.listing} title={item.title} desc={item.description} href={`${detailUrl}/${slug(item.title)}-${item.id}-${blogCat.category.id}`} blog /></SwiperSlide>
                   })
                 }
               </Swiper>

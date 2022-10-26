@@ -7,10 +7,10 @@ import {Icon, StaticI18nLink} from "../"
 import styles from './Card.module.scss';
 
 export const Card = (props) => { 
-  const { className, src, title, desc, href } = props;
+  const { className, src, title, desc, href, blog } = props;
   
   return (
-      <div className={classNames(styles['card'], className)}>
+      <div className={classNames(styles['card'], {[styles['card--blog']]: blog }, className)}>
         <StaticI18nLink href={href}>
           <a>
             <div className={styles['head']}>
@@ -33,6 +33,7 @@ Card.propTypes = {
 	href: PropTypes.string,
 	title: PropTypes.string,
 	desc: PropTypes.string,
+	blog: PropTypes.bool,
 };
 
 Card.defaultProps = {

@@ -48,6 +48,7 @@ export default function ProductDetail({products, category, subcategories, produc
           img={product.headerImage}
           title={product.title}
           breadcrumbs={breadcrumbs}
+          standart
         />
         <div className='content'>
           <div className={classNames('container', styles['product-detail'])}>

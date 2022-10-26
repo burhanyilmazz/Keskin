@@ -128,7 +128,7 @@ export default function Homepage({carousel, products, popular}) {
             <div className='min-title'>{i18n.language === 'tr' ? 'Blog ve Haberler' : 'Blog and News'}</div>
             <div className={styles['content']}>
               <h2>{i18n.language === 'tr' ? 'Güncel haberler ve gelişmelerden haberdar olun!' : 'Be informed about current news and developments!'}</h2>
-              <LinkButton href='/blog' text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} locale />
+              <LinkButton href='/blog' text={i18n.language === 'tr' ? 'Tümünü Gör' : 'See All'} locale />
             </div>
           </div>
 
@@ -149,7 +149,7 @@ export default function Homepage({carousel, products, popular}) {
             >
               {
                 popular?.map((item, index) => {
-                  return <SwiperSlide key={index} className={styles['blogs__slide']}><Card src={item.listing} title={item.title} desc={item.description} href={`${blogDetailUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} /></SwiperSlide>
+                  return <SwiperSlide key={index} className={styles['blogs__slide']}><Card src={item.listing} title={item.title} desc={item.description} href={`${blogDetailUrl}/${slug(item.title)}-${item.id}-${item.cat_id}`} blog /></SwiperSlide>
                 })
               }
             </Swiper>

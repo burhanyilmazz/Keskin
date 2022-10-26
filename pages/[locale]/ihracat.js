@@ -34,7 +34,7 @@ export default function Export({products}) {
       <Layout products={products}>
         <TopBar 
           img={"/images/content/export/head.jpg"}
-          title=' İhracat'
+          title='İhracat'
           breadcrumbs={breadcrumbs}
         />
         <div className='content text'>

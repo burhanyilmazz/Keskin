@@ -13,6 +13,15 @@
       color: #1f242b !important;
     }
   }
+
+  &--standart {
+    .image {
+      border-radius: 0 !important;
+      img {
+        max-height: 300px !important;
+      }
+    }
+  }
 }
 
 .image {
@@ -35,8 +44,6 @@
   width: 100%;
   top: 158px;
 
- 
-
   h1 {
     font-weight: 500;
     color: #ffffff;
@@ -50,7 +57,7 @@
   }
 
   ul {
-    margin-left: 40px;
+    margin-left: 42px;
 
     @media screen and (max-width: 768px) {
       margin-left: 0;
