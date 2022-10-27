@@ -62,6 +62,24 @@
       color: #64748b !important;
       background: transparent !important;
     }
+
+    ul {
+      li {
+        padding-left: 15px;
+        position: relative;
+        &:before {
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 100%;
+          background-color: #fc6a10;
+          display: flex;
+          position: absolute;
+          left: 0;
+          top: 14px
+        }
+      }
+    }
   }
 }
 
