@@ -61,7 +61,7 @@ export const Newsletter = (props) => {
                                           {...formik.getFieldProps('email')}
                                           className={classNames({'is-invalid': formik.touched.email && formik.errors.email})}
                                         /> }
-            {type === 'subscription' &&<span>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</span>}
+            {type === 'subscription' &&<span>{i18n.language === 'tr' ? 'Gönder butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</span>}
             {type === 'joinUs' && <LinkButton text={i18n.language === 'tr' ? 'Daha Fazla Bilgi' : 'Detail'} href={career} locale /> }
             {type === 'subscription' && <LinkButton text={i18n.language === 'tr' ? 'Kaydol' : 'Subscribe'} button transparent />}
           </form>

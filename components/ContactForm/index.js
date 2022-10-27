@@ -150,7 +150,7 @@ export const ContactForm = (props) => {
               {...formik.getFieldProps('message')}
             />
           </div>
-          <p>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</p>
+          <p>{i18n.language === 'tr' ? 'Gönder butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</p>
           <div className='form-group-buttons'>
             <div className={classNames('captcha', {'is-invalid': formik.touched.recaptcha && formik.errors.recaptcha})}>
               <div id="captcha"></div>
