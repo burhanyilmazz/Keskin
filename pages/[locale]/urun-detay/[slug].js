@@ -71,11 +71,7 @@ export default function ProductDetail({products, category, subcategories, produc
         <section className={classNames(styles['section'], styles['white'], styles['recommended'])}>
           <div className='container'>
             <div className={styles['content']}>
-              <h2>
-                {product.title}
-                <br />
-                Önerilen Ürünler
-              </h2>
+              <h2>Önerilen Ürünler</h2>
             </div>
           </div>
 

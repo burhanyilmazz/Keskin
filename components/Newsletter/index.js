@@ -71,8 +71,9 @@ export const Newsletter = (props) => {
       {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className='success-modal'>
             <div className='success-modal__icon'><Icon icon='check' /></div>
-            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Başarılı' : 'Success'}</div>
-            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti. En kısa sürede sizinle irtibata geçilecektir.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
+            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Tebrikler' : 'Congratulations'}</div>
+            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
+            <div className='success-modal__desc'>{i18n.language === 'tr' ? 'Kaydınız veri tabanımıza başarılı bir şekilde gerçekleşti. Teşekkürler.' : 'Your registration has been successful in our database. Thank you.'}</div>
           </div>
         </Modal> }
     </>

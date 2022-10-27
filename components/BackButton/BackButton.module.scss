@@ -15,6 +15,10 @@
   cursor: pointer;
   z-index: 10;
 
+  @media screen and (max-width: 990px) {
+    left: 24px;
+  }
+
   i {
     margin-right: 11px;
   }

@@ -171,5 +171,9 @@
 
   &__slider {
     margin-left: 50px;
+
+    @media screen and (max-width: 990px) {
+      margin-left: 20px;
+    }
   }
 }

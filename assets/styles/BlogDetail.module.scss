@@ -121,5 +121,9 @@
   &__slider {
     margin-left: 50px;
     width: 100%;
+
+    @media screen and (max-width: 990px) {
+      margin-left: 20px;
+    }
   }
 }

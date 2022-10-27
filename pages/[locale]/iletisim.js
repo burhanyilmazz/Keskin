@@ -93,21 +93,28 @@ export default function Contact({products}) {
     loader.load().then(() => {
       const google = window.google;
       const bounds = new google.maps.LatLngBounds();
-      const image = "/images/content/contact/pin.png";
+      const icon = "/images/content/contact/pin.png";
 
       map = new google.maps.Map(googlemap.current, mapOptions);
 
       contact.map((item, index) => {
         const marker = new google.maps.Marker({
           position: {lat: item.coordinate.lat, lng: item.coordinate.lng},
-          map: map,
-          icon: image
+          map,
+          icon
         });
 
         bounds.extend(marker.position);
+
+        marker.addListener("click", () => {
+          window.open(`https://www.google.com/maps/dir//${item.coordinate.lat},${item.coordinate.lng}`, '_blank');
+        });
       })
 
-      map.fitBounds(bounds);
+      //map.fitBounds(bounds);
+
+      map.setCenter(bounds.getCenter());
+      map.setZoom(10);
     });
   });
 

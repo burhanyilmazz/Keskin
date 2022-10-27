@@ -1,5 +1,5 @@
 export const mapOptions = {
-  zoom: 18,
+  zoom: 17,
   fullscreenControl: false,
   mapTypeControl: false,
   streetViewControl: false,

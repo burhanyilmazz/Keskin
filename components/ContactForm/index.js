@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import Head from 'next/head'
+import { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'next-i18next';
 import * as Yup from 'yup'
 import {useFormik} from 'formik'
+//import Recaptcha from "react-recaptcha";
+
 import {API_URL} from '../../utils/env'
 
 import {FormInput, FormTextarea, LinkButton, FileInput, Modal, Icon} from "../"
@@ -19,8 +22,8 @@ export const ContactForm = (props) => {
     email: Yup.string()
       .email(i18n.language === 'tr' ? 'Geçerli bir format girin.' : 'Wrong format.')
       .required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
-    namesurname: Yup.string()
-      .required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
+    namesurname: Yup.string().required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
+    recaptcha: Yup.string().required(i18n.language === 'tr' ? 'Bu alan boş bırakılamaz.' : 'This field cannot be left blank.'),
   })
 
   const [contact] = useState({
@@ -30,7 +33,8 @@ export const ContactForm = (props) => {
     subject: '',
     cv: {},
     message: '',
-    product_id: pid
+    product_id: pid,
+    recaptcha: ''
   })
 
   const formik = useFormik({
@@ -75,9 +79,29 @@ export const ContactForm = (props) => {
       }
     },
   })
+
+  const verifyCallback = (response) => formik.setFieldValue('recaptcha', response);
+
+  useEffect(() => {
+    window.onloadCallback = () => {
+      try {
+        window.grecaptcha.render('captcha', {
+          'sitekey' : '6LdUkLkiAAAAAK4MXrk7MXmUbxhiEWoUV8C8GxQ7',
+          'callback' : verifyCallback,
+        });
+      } catch (error) {
+        console.log(error)
+      }
+    };
+  }, [])
+  
   
   return (
     <>
+      <Head>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+      </Head>
+
       <div className={classNames(styles['contact-form'], styles[className])}>
         <h3>{title}</h3>
         <form onSubmit={formik.handleSubmit} noValidate encType="multipart/form-data">
@@ -127,15 +151,23 @@ export const ContactForm = (props) => {
             />
           </div>
           <p>{i18n.language === 'tr' ? 'Üye Olun Butonuna bastığınızda Kişisel verilerin korunması kapsamında aydınlatma metnini kabul etmiş olursunuz.' : 'By clicking the Sign-Up button, you accept the clarification text within the scope of the protection of personal data.'}</p>
-          <LinkButton className={styles['send']} button text={i18n.language === 'tr' ? 'Gönder' : 'Send'}/>
+          <div className='form-group-buttons'>
+            <div className={classNames('captcha', {'is-invalid': formik.touched.recaptcha && formik.errors.recaptcha})}>
+              <div id="captcha"></div>
+              <pre>{formik.errors.recaptcha}</pre>
+            </div>
+            
+            <LinkButton className={styles['send']} button text={i18n.language === 'tr' ? 'Gönder' : 'Send'}/>
+          </div>
         </form>
       </div>
 
       {modalOpen && <Modal onClose={() => setModalOpen(false)}>
           <div className='success-modal'>
             <div className='success-modal__icon'><Icon icon='check' /></div>
-            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Başarılı' : 'Success'}</div>
-            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti. En kısa sürede sizinle irtibata geçilecektir.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
+            <div className='success-modal__title'>{i18n.language === 'tr' ? 'Tebrikler' : 'Congratulations'}</div>
+            <div className='success-modal__text'>{i18n.language === 'tr' ? 'Kaydınız başarılı bir şekilde gerçekleşti.' : 'Your registration has been successful. You will be contacted as soon as possible.'}</div>
+            <div className='success-modal__desc'>{i18n.language === 'tr' ? 'Kaydınız veri tabanımıza başarılı bir şekilde gerçekleşti. Teşekkürler.' : 'Your registration has been successful in our database. Thank you.'}</div>
           </div>
         </Modal> }
     </>
