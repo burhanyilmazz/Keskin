@@ -12,7 +12,7 @@
 
 .text {
   width: 50%;
-  height: 500px;
+  min-height: 500px;
   background: #f9f9fa;
   border-radius: 0px 32px 0px 0px;
   padding: 63px 48px 24px 48px;
@@ -21,7 +21,7 @@
 
   @media screen and (max-width: 990px) {
     border-radius: 0;
-    height: auto;
+    min-height:fit-content;
     width: calc(100% + 48px);
     margin: 0 -24px;
   }
@@ -64,21 +64,12 @@
     }
 
     ul {
-      li {
-        padding-left: 15px;
-        position: relative;
-        &:before {
-          content: '';
-          width: 5px;
-          height: 5px;
-          border-radius: 100%;
-          background-color: #fc6a10;
-          display: flex;
-          position: absolute;
-          left: 0;
-          top: 14px
-        }
-      }
+      padding-left: 40px;
+      list-style: disc;
+    }
+
+    b {
+      font-weight: 500 !important;
     }
   }
 }
