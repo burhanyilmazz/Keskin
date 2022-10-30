@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Navigation, A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,8 +12,20 @@ import { LinkButton } from '../';
 export const Carousel = (props) => {
   const { data } = props;
   const [nextItem, setNextItem] = useState(data[1])
+  const [windowWidth, setWindowWidth] = useState()
   
   const { i18n } = useTranslation('common');
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth)
+  }
+
+  useEffect(() => {
+    if (!windowWidth) setWindowWidth(window.innerWidth)
+    window.addEventListener("resize", handleResize, false);
+  }, [])
+  
+  console.log(windowWidth)
 
   return (
     <section className={styles['carousel']}>
@@ -38,9 +50,11 @@ export const Carousel = (props) => {
       >
         {
           data?.map((item, index) => {
+            const mobile_image = item.mobile_image || item.image;
             return (
               <SwiperSlide key={index}>
-                {item.image && <Image src={item.image} layout={'fill'} alt={item.title} objectFit={'cover'} /> }
+                {windowWidth < 769 && <Image src={mobile_image} layout={'fill'} alt={item.title} objectFit={'cover'} /> }
+                {windowWidth > 767 && <Image src={item.image} layout={'fill'} alt={item.title} objectFit={'cover'} /> }
                 <div className={styles['carousel__slide']}>
                   <h1>{item.title}</h1>
                   <p>{item.miniTitle}</p>
