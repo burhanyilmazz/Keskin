@@ -25,8 +25,6 @@ export const Carousel = (props) => {
     window.addEventListener("resize", handleResize, false);
   }, [])
   
-  console.log(windowWidth)
-
   return (
     <section className={styles['carousel']}>
       <Swiper
